@@ -17,8 +17,8 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contact': 'Kontakt',
     
     // Hero
-    'hero.title': 'Lernen Sie Sprachen mit Leidenschaft',
-    'hero.subtitle': 'Entdecken Sie neue Welten durch Sprache. Professionelle Kurse in Deutsch, Englisch und mehr.',
+    'hero.title': 'Lernen Sie Deutsch mit Leidenschaft',
+    'hero.subtitle': 'Ihr Weg nach Deutschland beginnt hier in Urganch. Professionelle Deutschkurse von A1 bis C2.',
     'hero.cta': 'Jetzt anmelden',
     'hero.secondary': 'Unsere Kurse',
     
@@ -38,8 +38,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // About
     'about.title': 'Über Sprachschule Berliner',
-    'about.text1': 'Seit über 15 Jahren sind wir Ihr Partner für erstklassigen Sprachunterricht in Berlin. Unsere erfahrenen Muttersprachler bringen Ihnen nicht nur die Sprache bei, sondern auch die Kultur.',
-    'about.text2': 'Wir bieten kleine Gruppen, flexible Kurszeiten und moderne Lehrmethoden für Ihren optimalen Lernerfolg.',
+    'about.text1': 'In Urganch sind wir Ihr Partner für erstklassigen Deutschunterricht. Unsere erfahrenen Lehrer bringen Ihnen nicht nur die Sprache bei, sondern auch die deutsche Kultur.',
+    'about.text2': 'Wir bieten kleine Gruppen, flexible Kurszeiten und moderne Lehrmethoden für Ihren optimalen Lernerfolg auf dem Weg nach Deutschland.',
     'about.students': 'Zufriedene Schüler',
     'about.experience': 'Jahre Erfahrung',
     'about.teachers': 'Qualifizierte Lehrer',
@@ -56,7 +56,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Footer
     'footer.rights': 'Alle Rechte vorbehalten',
-    'footer.tagline': 'Ihre Sprachschule in Berlin',
+    'footer.tagline': 'Ihre Deutschsprachschule in Urganch',
   },
   ru: {
     // Navigation
@@ -66,8 +66,8 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contact': 'Контакты',
     
     // Hero
-    'hero.title': 'Изучайте языки с увлечением',
-    'hero.subtitle': 'Откройте новые миры через язык. Профессиональные курсы немецкого, английского и других языков.',
+    'hero.title': 'Изучайте немецкий с увлечением',
+    'hero.subtitle': 'Ваш путь в Германию начинается здесь, в Ургенче. Профессиональные курсы немецкого от A1 до C2.',
     'hero.cta': 'Записаться сейчас',
     'hero.secondary': 'Наши курсы',
     
@@ -87,8 +87,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // About
     'about.title': 'О школе Sprachschule Berliner',
-    'about.text1': 'Более 15 лет мы являемся вашим партнером в области первоклассного языкового обучения в Берлине. Наши опытные носители языка обучат вас не только языку, но и культуре.',
-    'about.text2': 'Мы предлагаем небольшие группы, гибкое расписание и современные методы обучения для вашего оптимального успеха.',
+    'about.text1': 'В Ургенче мы являемся вашим партнером в области первоклассного обучения немецкому языку. Наши опытные преподаватели обучат вас не только языку, но и немецкой культуре.',
+    'about.text2': 'Мы предлагаем небольшие группы, гибкое расписание и современные методы обучения для вашего успешного пути в Германию.',
     'about.students': 'Довольных учеников',
     'about.experience': 'Лет опыта',
     'about.teachers': 'Квалифицированных преподавателей',
@@ -105,7 +105,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Footer
     'footer.rights': 'Все права защищены',
-    'footer.tagline': 'Ваша языковая школа в Берлине',
+    'footer.tagline': 'Ваша школа немецкого языка в Ургенче',
   },
   uz: {
     // Navigation
@@ -115,8 +115,8 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contact': 'Aloqa',
     
     // Hero
-    'hero.title': "Tillarni ishtiyoq bilan o'rganing",
-    'hero.subtitle': "Til orqali yangi dunyolarni kashf eting. Nemis, ingliz va boshqa tillardan professional kurslar.",
+    'hero.title': "Nemis tilini ishtiyoq bilan o'rganing",
+    'hero.subtitle': "Germaniyaga yo'lingiz shu yerda, Urganchda boshlanadi. A1 dan C2 gacha professional nemis tili kurslari.",
     'hero.cta': "Hozir ro'yxatdan o'ting",
     'hero.secondary': 'Bizning kurslar',
     
@@ -136,8 +136,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // About
     'about.title': 'Sprachschule Berliner haqida',
-    'about.text1': "15 yildan ortiq davomida biz Berlinda yuqori sifatli til ta'limi bo'yicha hamkoringizmiz. Tajribali ona tili egalarimiz sizga nafaqat tilni, balki madaniyatni ham o'rgatadi.",
-    'about.text2': "Biz kichik guruhlar, moslashuvchan dars jadvali va optimal muvaffaqiyatingiz uchun zamonaviy o'qitish usullarini taklif etamiz.",
+    'about.text1': "Urganchda biz sizning nemis tilini o'rganishdagi ishonchli hamkoringizmiz. Tajribali o'qituvchilarimiz sizga nafaqat tilni, balki nemis madaniyatini ham o'rgatadi.",
+    'about.text2': "Biz kichik guruhlar, moslashuvchan dars jadvali va Germaniyaga muvaffaqiyatli yo'lingiz uchun zamonaviy o'qitish usullarini taklif etamiz.",
     'about.students': "Mamnun o'quvchilar",
     'about.experience': 'Yillik tajriba',
     'about.teachers': "Malakali o'qituvchilar",
@@ -154,7 +154,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Footer
     'footer.rights': "Barcha huquqlar himoyalangan",
-    'footer.tagline': 'Berlindagi til maktabingiz',
+    'footer.tagline': 'Urganchdagi nemis tili maktabingiz',
   },
 };
 

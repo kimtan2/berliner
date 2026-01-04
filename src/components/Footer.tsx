@@ -58,15 +58,15 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-background/70">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span>Friedrichstraße 123, Berlin</span>
+                <span>Hamid Olimjon 20, Urganch, Xorazm</span>
               </li>
               <li className="flex items-center gap-2 text-background/70">
                 <Phone className="h-4 w-4 text-primary" />
-                <span>+49 30 1234 5678</span>
+                <span>+998 91 123 45 67</span>
               </li>
               <li className="flex items-center gap-2 text-background/70">
                 <Mail className="h-4 w-4 text-primary" />
-                <span>info@sprachschule-berliner.de</span>
+                <span>info@sprachschule-berliner.uz</span>
               </li>
             </ul>
           </div>

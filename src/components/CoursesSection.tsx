@@ -2,23 +2,16 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Clock, Users, ArrowRight } from 'lucide-react';
-
-const courseIcons: Record<string, string> = {
-  german: '🇩🇪',
-  english: '🇬🇧',
-  russian: '🇷🇺',
-  uzbek: '🇺🇿',
-};
+import { BookOpen, Clock, Users, ArrowRight, GraduationCap, FileCheck, Baby } from 'lucide-react';
 
 export function CoursesSection() {
   const { t } = useLanguage();
 
   const courses = [
-    { id: 'german', icon: courseIcons.german, color: 'from-yellow-500/20 to-red-500/20' },
-    { id: 'english', icon: courseIcons.english, color: 'from-blue-500/20 to-red-500/20' },
-    { id: 'russian', icon: courseIcons.russian, color: 'from-blue-500/20 to-red-500/20' },
-    { id: 'uzbek', icon: courseIcons.uzbek, color: 'from-blue-500/20 to-green-500/20' },
+    { id: 'germanA1C2', icon: '🇩🇪', color: 'from-yellow-500/20 to-red-500/20', lucideIcon: BookOpen },
+    { id: 'ausbildung', icon: '💼', color: 'from-blue-500/20 to-primary/20', lucideIcon: GraduationCap },
+    { id: 'testdaf', icon: '📝', color: 'from-primary/20 to-accent/20', lucideIcon: FileCheck },
+    { id: 'kids', icon: '👶', color: 'from-green-500/20 to-blue-500/20', lucideIcon: Baby },
   ];
 
   return (

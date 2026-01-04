@@ -1,6 +1,8 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle, Users, Award, BookOpen } from 'lucide-react';
+import berlinGate from '@/assets/berlin-brandenburg-gate.jpg';
+import berlinSkyline from '@/assets/berlin-skyline.jpg';
 
 export function AboutSection() {
   const { t } = useLanguage();
@@ -33,6 +35,28 @@ export function AboutSection() {
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               {t('about.text2')}
             </p>
+
+            {/* Berlin Images */}
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="relative overflow-hidden rounded-xl aspect-video">
+                <img 
+                  src={berlinGate} 
+                  alt="Brandenburg Gate, Berlin" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                <span className="absolute bottom-2 left-2 text-xs text-white/80 font-medium">Berlin, Deutschland 🇩🇪</span>
+              </div>
+              <div className="relative overflow-hidden rounded-xl aspect-video">
+                <img 
+                  src={berlinSkyline} 
+                  alt="Berlin Skyline" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                <span className="absolute bottom-2 left-2 text-xs text-white/80 font-medium">Deutschland 🇩🇪</span>
+              </div>
+            </div>
 
             {/* Checkmarks */}
             <div className="space-y-4">

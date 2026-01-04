@@ -28,7 +28,7 @@ export function Header() {
               className="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover group-hover:scale-105 transition-transform"
             />
             <span className="text-lg md:text-xl font-bold text-foreground">
-              Berliner <span className="text-primary">Deutschzentrum</span>
+              Berliner <span className="text-primary">Sprachschule</span>
             </span>
           </a>
 

@@ -20,7 +20,7 @@ export function Footer() {
                 className="h-10 w-10 rounded-full object-cover"
               />
               <span className="text-xl font-bold">
-                Berliner <span className="text-primary">Deutschzentrum</span>
+                Berliner <span className="text-primary">Sprachschule</span>
               </span>
             </div>
             <p className="text-background/70 max-w-md">
@@ -77,7 +77,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-background/20 text-center text-background/60 text-sm">
-          © {currentYear} Berliner Deutschzentrum. {t('footer.rights')}
+          © {currentYear} Berliner Sprachschule. {t('footer.rights')}
         </div>
       </div>
     </footer>

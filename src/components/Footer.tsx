@@ -1,5 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { GraduationCap, Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
+import logo from '@/assets/logo.jpg';
 
 export function Footer() {
   const { t } = useLanguage();
@@ -13,11 +14,13 @@ export function Footer() {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="p-2 rounded-lg bg-primary text-primary-foreground">
-                <GraduationCap className="h-6 w-6" />
-              </div>
+              <img 
+                src={logo} 
+                alt="Berliner Deutschzentrum Logo" 
+                className="h-10 w-10 rounded-full object-cover"
+              />
               <span className="text-xl font-bold">
-                Sprachschule <span className="text-primary">Berliner</span>
+                Berliner <span className="text-primary">Deutschzentrum</span>
               </span>
             </div>
             <p className="text-background/70 max-w-md">
@@ -74,7 +77,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-background/20 text-center text-background/60 text-sm">
-          © {currentYear} Sprachschule Berliner. {t('footer.rights')}
+          © {currentYear} Berliner Deutschzentrum. {t('footer.rights')}
         </div>
       </div>
     </footer>

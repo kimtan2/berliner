@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { Button } from '@/components/ui/button';
-import { Menu, X, GraduationCap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logo from '@/assets/logo.jpg';
 
 export function Header() {
   const { t } = useLanguage();
@@ -21,11 +22,13 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2 group">
-            <div className="p-2 rounded-lg bg-primary text-primary-foreground group-hover:scale-105 transition-transform">
-              <GraduationCap className="h-6 w-6" />
-            </div>
+            <img 
+              src={logo} 
+              alt="Berliner Deutschzentrum Logo" 
+              className="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover group-hover:scale-105 transition-transform"
+            />
             <span className="text-lg md:text-xl font-bold text-foreground">
-              Sprachschule <span className="text-primary">Berliner</span>
+              Berliner <span className="text-primary">Deutschzentrum</span>
             </span>
           </a>
 

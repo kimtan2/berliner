@@ -13,17 +13,17 @@ export function ContactSection() {
     {
       icon: MapPin,
       label: t('contact.address'),
-      value: 'Friedrichstraße 123, 10117 Berlin',
+      value: 'Hamid Olimjon 20, Urganch, Xorazm, Uzbekistan',
     },
     {
       icon: Phone,
       label: t('contact.phone'),
-      value: '+49 30 1234 5678',
+      value: '+998 91 123 45 67',
     },
     {
       icon: Mail,
       label: t('contact.email'),
-      value: 'info@sprachschule-berliner.de',
+      value: 'info@sprachschule-berliner.uz',
     },
   ];
 
@@ -112,7 +112,7 @@ export function ContactSection() {
             {/* Map Placeholder */}
             <div className="h-64 rounded-xl bg-muted/30 border border-border/50 overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.9089722946775!2d13.386978976988485!3d52.51877797981155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c655f20989%3A0x26bbfb4e84674c63!2sFriedrichstra%C3%9Fe%2C%20Berlin!5e0!3m2!1sen!2sde!4v1704380000000!5m2!1sen!2sde"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24758.98647307247!2d60.61!3d41.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41df19ef35e7f4d5%3A0x7e8b7e6e0e8b7e6e!2sUrganch%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1704380000000!5m2!1sen!2s"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

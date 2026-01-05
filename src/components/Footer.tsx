@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Instagram, Mail, MapPin, Phone, Youtube, Send } from 'lucide-react';
 import logo from '@/assets/logo.jpg';
 
 export function Footer() {
@@ -61,17 +61,45 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-background/70">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span>Hamid Olimjon 20, Urganch, Xorazm</span>
+                <span>Hamid Olimjon ko'chasi 2b uy, Urgench</span>
               </li>
               <li className="flex items-center gap-2 text-background/70">
                 <Phone className="h-4 w-4 text-primary" />
-                <span>+998 91 123 45 67</span>
+                <span>+998 99 132 55 21</span>
               </li>
               <li className="flex items-center gap-2 text-background/70">
                 <Mail className="h-4 w-4 text-primary" />
                 <span>info@sprachschule-berliner.uz</span>
               </li>
             </ul>
+            
+            {/* Social Media Links */}
+            <div className="flex gap-3 mt-4">
+              <a 
+                href="https://www.instagram.com/sprachschule_berliner/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a 
+                href="https://t.me/sprachschule_berliner" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <Send className="h-4 w-4" />
+              </a>
+              <a 
+                href="https://www.youtube.com/@sprachschuleberliner" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <Youtube className="h-4 w-4" />
+              </a>
+            </div>
           </div>
         </div>
 

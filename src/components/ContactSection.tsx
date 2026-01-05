@@ -13,12 +13,12 @@ export function ContactSection() {
     {
       icon: MapPin,
       label: t('contact.address'),
-      value: 'Hamid Olimjon 20, Urganch, Xorazm, Uzbekistan',
+      value: "Hamid Olimjon ko'chasi 2b uy, Urgench",
     },
     {
       icon: Phone,
       label: t('contact.phone'),
-      value: '+998 91 123 45 67',
+      value: '+998 99 132 55 21',
     },
     {
       icon: Mail,

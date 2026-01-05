@@ -3,9 +3,9 @@ import { Button } from '@/components/ui/button';
 import { Globe } from 'lucide-react';
 
 const languages: { code: Language; label: string; flag: string }[] = [
-  { code: 'de', label: 'DE', flag: '🇩🇪' },
-  { code: 'ru', label: 'RU', flag: '🇷🇺' },
   { code: 'uz', label: 'UZ', flag: '🇺🇿' },
+  { code: 'ru', label: 'RU', flag: '🇷🇺' },
+  { code: 'de', label: 'DE', flag: '🇩🇪' },
 ];
 
 export function LanguageSwitcher() {

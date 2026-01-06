@@ -76,26 +76,20 @@ const testimonials: Testimonial[] = [
 
 export function TestimonialsSection() {
   const { t, language } = useLanguage();
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [offset, setOffset] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
+      setOffset((prev) => prev + 1);
+    }, 50);
     return () => clearInterval(interval);
   }, []);
 
-  const getVisibleTestimonials = () => {
-    const visible = [];
-    for (let i = 0; i < 3; i++) {
-      const index = (currentIndex + i) % testimonials.length;
-      visible.push(testimonials[index]);
-    }
-    return visible;
-  };
+  // Double the testimonials for seamless loop
+  const doubledTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section id="testimonials" className="py-20 bg-background">
+    <section id="testimonials" className="py-20 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
@@ -105,12 +99,20 @@ export function TestimonialsSection() {
             {t('testimonials.subtitle')}
           </p>
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-500">
-          {getVisibleTestimonials().map((testimonial) => (
+      {/* Scrolling container */}
+      <div className="relative w-full">
+        <div 
+          className="flex gap-6 transition-none"
+          style={{ 
+            transform: `translateX(${-offset % (testimonials.length * 340)}px)`,
+          }}
+        >
+          {doubledTestimonials.map((testimonial, idx) => (
             <Card 
-              key={testimonial.id} 
-              className="bg-card border border-border hover:shadow-lg transition-all duration-300"
+              key={`${testimonial.id}-${idx}`}
+              className="bg-card border border-border hover:shadow-lg transition-shadow duration-300 flex-shrink-0 w-[320px]"
             >
               <CardContent className="p-6">
                 <div className="flex items-center gap-4 mb-4">
@@ -129,24 +131,11 @@ export function TestimonialsSection() {
                     </div>
                   </div>
                 </div>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-sm">
                   {testimonial.text[language]}
                 </p>
               </CardContent>
             </Card>
-          ))}
-        </div>
-
-        {/* Dots indicator */}
-        <div className="flex justify-center gap-2 mt-8">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all ${
-                index === currentIndex ? 'bg-primary w-6' : 'bg-border'
-              }`}
-            />
           ))}
         </div>
       </div>

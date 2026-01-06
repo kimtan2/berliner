@@ -41,7 +41,7 @@ export function Header() {
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm" className="text-foreground hover:text-primary gap-1.5 text-sm font-normal">
                   <Search className="h-4 w-4" />
-                  <span className="hidden sm:inline">Suche</span>
+                  <span className="hidden sm:inline">{t('header.search')}</span>
                   <ChevronDown className="h-3 w-3" />
                 </Button>
               </DropdownMenuTrigger>
@@ -49,7 +49,7 @@ export function Header() {
                 <div className="p-2">
                   <input
                     type="text"
-                    placeholder="Suche..."
+                    placeholder={t('header.search.placeholder')}
                     className="w-full px-3 py-2 text-sm border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                     autoFocus
                   />
@@ -57,18 +57,18 @@ export function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {/* Mein Berliner Zugang Dropdown */}
+            {/* Mein Berliner Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm" className="text-foreground hover:text-primary gap-1.5 text-sm font-normal">
                   <User className="h-4 w-4" />
-                  <span className="hidden sm:inline">Mein Berliner Zugang</span>
+                  <span className="hidden sm:inline">{t('header.myBerliner')}</span>
                   <ChevronDown className="h-3 w-3" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="bg-background border border-border">
-                <DropdownMenuItem className="cursor-pointer">Anmelden</DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">Registrieren</DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">{t('header.login')}</DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">{t('header.register')}</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 

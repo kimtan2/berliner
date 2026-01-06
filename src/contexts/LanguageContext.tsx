@@ -57,6 +57,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Footer
     'footer.rights': 'Alle Rechte vorbehalten',
     'footer.tagline': 'Ihre Deutschsprachschule in Urganch',
+    'footer.social': 'Soziale Netzwerke',
   },
   ru: {
     // Navigation
@@ -106,6 +107,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Footer
     'footer.rights': 'Все права защищены',
     'footer.tagline': 'Ваша школа немецкого языка в Ургенче',
+    'footer.social': 'Социальные сети',
   },
   uz: {
     // Navigation
@@ -155,6 +157,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Footer
     'footer.rights': "Barcha huquqlar himoyalangan",
     'footer.tagline': 'Urganchdagi nemis tili maktabingiz',
+    'footer.social': 'Ijtimoiy tarmoqlar',
   },
 };
 

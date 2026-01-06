@@ -56,21 +56,6 @@ export function HeroSection() {
             </Button>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-border/50 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary">500+</div>
-              <div className="text-sm text-muted-foreground">{t('about.students')}</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary">15+</div>
-              <div className="text-sm text-muted-foreground">{t('about.experience')}</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary">20+</div>
-              <div className="text-sm text-muted-foreground">{t('about.teachers')}</div>
-            </div>
-          </div>
         </div>
       </div>
 

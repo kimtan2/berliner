@@ -15,13 +15,13 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.courses': 'Kurse',
     'nav.about': 'Über uns',
     'nav.contact': 'Kontakt',
-    
+
     // Hero
     'hero.title': 'Lernen Sie Deutsch mit Leidenschaft',
     'hero.subtitle': 'Ihr Weg nach Deutschland beginnt hier in Urganch. Professionelle Deutschkurse von A1 bis C2.',
     'hero.cta': 'Jetzt anmelden',
     'hero.secondary': 'Unsere Kurse',
-    
+
     // Courses
     'courses.title': 'Unsere Angebote',
     'courses.subtitle': 'Ihr Weg nach Deutschland beginnt hier',
@@ -35,7 +35,7 @@ const translations: Record<Language, Record<string, string>> = {
     'courses.kids.desc': 'Spielerisch Deutsch lernen für Kinder',
     'courses.level': 'Alle Niveaus',
     'courses.duration': 'Wöchentlich',
-    
+
     // About
     'about.title': 'Über Sprachschule Berliner',
     'about.text1': 'In Urganch sind wir Ihr Partner für erstklassigen Deutschunterricht. Unsere erfahrenen Lehrer bringen Ihnen nicht nur die Sprache bei, sondern auch die deutsche Kultur.',
@@ -43,7 +43,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.students': 'Zufriedene Schüler',
     'about.experience': 'Jahre Erfahrung',
     'about.teachers': 'Qualifizierte Lehrer',
-    
+
     // Contact
     'contact.title': 'Kontaktieren Sie uns',
     'contact.subtitle': 'Wir freuen uns auf Ihre Nachricht',
@@ -53,27 +53,28 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.send': 'Nachricht senden',
     'contact.address': 'Adresse',
     'contact.phone': 'Telefon',
-    
+
     // Footer
     'footer.rights': 'Alle Rechte vorbehalten',
     'footer.tagline': 'Ihre Deutschsprachschule in Urganch',
     'footer.social': 'Soziale Netzwerke',
-    
+
     // Testimonials
     'testimonials.title': 'Bewertungen unserer Schüler',
     'testimonials.subtitle': 'Erfahren Sie, was unsere Schüler über uns sagen',
-    
+
     // Header utility
     'header.search': 'Suche',
     'header.search.placeholder': 'Suche...',
     'header.myBerliner': 'Mein Berliner',
     'header.login': 'Anmelden',
     'header.register': 'Registrieren',
-    
+
     // News
     'news.title': 'Neuigkeiten',
     'news.subtitle': 'Aktuelle Nachrichten aus unserer Sprachschule',
     'news.readMore': 'Weiterlesen',
+    'city.name': 'Urgentsch',
   },
   ru: {
     // Navigation
@@ -81,13 +82,13 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.courses': 'Курсы',
     'nav.about': 'О нас',
     'nav.contact': 'Контакты',
-    
+
     // Hero
     'hero.title': 'Изучайте немецкий с увлечением',
     'hero.subtitle': 'Ваш путь в Германию начинается здесь, в Ургенче. Профессиональные курсы немецкого от A1 до C2.',
     'hero.cta': 'Записаться сейчас',
     'hero.secondary': 'Наши курсы',
-    
+
     // Courses
     'courses.title': 'Наши предложения',
     'courses.subtitle': 'Ваш путь в Германию начинается здесь',
@@ -101,7 +102,7 @@ const translations: Record<Language, Record<string, string>> = {
     'courses.kids.desc': 'Немецкий для детей в игровой форме',
     'courses.level': 'Все уровни',
     'courses.duration': 'Еженедельно',
-    
+
     // About
     'about.title': 'О школе Sprachschule Berliner',
     'about.text1': 'В Ургенче мы являемся вашим партнером в области первоклассного обучения немецкому языку. Наши опытные преподаватели обучат вас не только языку, но и немецкой культуре.',
@@ -109,7 +110,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.students': 'Довольных учеников',
     'about.experience': 'Лет опыта',
     'about.teachers': 'Квалифицированных преподавателей',
-    
+
     // Contact
     'contact.title': 'Свяжитесь с нами',
     'contact.subtitle': 'Мы будем рады вашему сообщению',
@@ -119,27 +120,28 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.send': 'Отправить сообщение',
     'contact.address': 'Адрес',
     'contact.phone': 'Телефон',
-    
+
     // Footer
     'footer.rights': 'Все права защищены',
     'footer.tagline': 'Ваша школа немецкого языка в Ургенче',
     'footer.social': 'Социальные сети',
-    
+
     // Testimonials
     'testimonials.title': 'Отзывы наших учеников',
     'testimonials.subtitle': 'Узнайте, что говорят о нас наши ученики',
-    
+
     // Header utility
     'header.search': 'Поиск',
     'header.search.placeholder': 'Поиск...',
     'header.myBerliner': 'Мой Берлинер',
     'header.login': 'Войти',
     'header.register': 'Регистрация',
-    
+
     // News
     'news.title': 'Новости',
     'news.subtitle': 'Актуальные новости из нашей языковой школы',
     'news.readMore': 'Читать далее',
+    'city.name': 'Ургенч',
   },
   uz: {
     // Navigation
@@ -147,13 +149,13 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.courses': 'Kurslar',
     'nav.about': 'Biz haqimizda',
     'nav.contact': 'Aloqa',
-    
+
     // Hero
     'hero.title': "Nemis tilini ishtiyoq bilan o'rganing",
     'hero.subtitle': "Germaniyaga yo'lingiz shu yerda, Urganchda boshlanadi. A1 dan C2 gacha professional nemis tili kurslari.",
     'hero.cta': "Hozir ro'yxatdan o'ting",
     'hero.secondary': 'Bizning kurslar',
-    
+
     // Courses
     'courses.title': 'Bizning xizmatlar',
     'courses.subtitle': "Germaniyaga yo'lingiz shu yerdan boshlanadi",
@@ -167,7 +169,7 @@ const translations: Record<Language, Record<string, string>> = {
     'courses.kids.desc': "Bolalar uchun o'yin orqali nemis tili",
     'courses.level': 'Barcha darajalar',
     'courses.duration': 'Haftalik',
-    
+
     // About
     'about.title': 'Sprachschule Berliner haqida',
     'about.text1': "Urganchda biz sizning nemis tilini o'rganishdagi ishonchli hamkoringizmiz. Tajribali o'qituvchilarimiz sizga nafaqat tilni, balki nemis madaniyatini ham o'rgatadi.",
@@ -175,7 +177,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.students': "Mamnun o'quvchilar",
     'about.experience': 'Yillik tajriba',
     'about.teachers': "Malakali o'qituvchilar",
-    
+
     // Contact
     'contact.title': 'Biz bilan bog\'laning',
     'contact.subtitle': "Xabaringizni kutib qolamiz",
@@ -185,27 +187,28 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.send': 'Xabar yuborish',
     'contact.address': 'Manzil',
     'contact.phone': 'Telefon',
-    
+
     // Footer
     'footer.rights': "Barcha huquqlar himoyalangan",
     'footer.tagline': 'Urganchdagi nemis tili maktabingiz',
     'footer.social': 'Ijtimoiy tarmoqlar',
-    
+
     // Testimonials
     'testimonials.title': "O'quvchilarimiz fikrlari",
     'testimonials.subtitle': "O'quvchilarimiz biz haqimizda nima deyishlarini bilib oling",
-    
+
     // Header utility
     'header.search': 'Qidiruv',
     'header.search.placeholder': 'Qidirish...',
     'header.myBerliner': 'Mening Berliner',
     'header.login': 'Kirish',
     'header.register': "Ro'yxatdan o'tish",
-    
+
     // News
     'news.title': 'Yangiliklar',
     'news.subtitle': "Til maktabimizdan so'nggi yangiliklar",
     'news.readMore': "Ko'proq o'qish",
+    'city.name': 'Urganch',
   },
 };
 

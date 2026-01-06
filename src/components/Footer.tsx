@@ -1,5 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Instagram, Mail, MapPin, Phone, Youtube, Send } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logo from '@/assets/logo.jpg';
 
 export function Footer() {
@@ -14,25 +15,25 @@ export function Footer() {
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-2xl font-bold mb-6">{t('footer.social')}</h3>
           <div className="flex justify-center gap-6">
-            <a 
-              href="https://t.me/sprachschule_berliner" 
-              target="_blank" 
+            <a
+              href="https://t.me/sprachschule_berliner"
+              target="_blank"
               rel="noopener noreferrer"
               className="w-14 h-14 rounded-full bg-[#0088cc] flex items-center justify-center hover:scale-110 transition-transform"
             >
               <Send className="h-6 w-6 text-white" />
             </a>
-            <a 
-              href="https://www.instagram.com/sprachschule_berliner/" 
-              target="_blank" 
+            <a
+              href="https://www.instagram.com/sprachschule_berliner/"
+              target="_blank"
               rel="noopener noreferrer"
               className="w-14 h-14 rounded-full bg-gradient-to-br from-[#f09433] via-[#dc2743] to-[#bc1888] flex items-center justify-center hover:scale-110 transition-transform"
             >
               <Instagram className="h-6 w-6 text-white" />
             </a>
-            <a 
-              href="https://www.youtube.com/@sprachschuleberliner" 
-              target="_blank" 
+            <a
+              href="https://www.youtube.com/@sprachschuleberliner"
+              target="_blank"
               rel="noopener noreferrer"
               className="w-14 h-14 rounded-full bg-[#FF0000] flex items-center justify-center hover:scale-110 transition-transform"
             >
@@ -48,9 +49,9 @@ export function Footer() {
           {/* Logo & Description */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img 
-                src={logo} 
-                alt="Berliner Deutschzentrum Logo" 
+              <img
+                src={logo}
+                alt="Berliner Deutschzentrum Logo"
                 className="h-10 w-10 rounded-full object-cover"
               />
               <span className="text-xl font-bold">
@@ -67,24 +68,24 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-lg">Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
                   {t('nav.home')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#courses" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="/#courses" className="text-muted-foreground hover:text-primary transition-colors">
                   {t('nav.courses')}
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="/#about" className="text-muted-foreground hover:text-primary transition-colors">
                   {t('nav.about')}
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
                   {t('nav.contact')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

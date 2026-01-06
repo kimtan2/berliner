@@ -15,7 +15,7 @@ export function CoursesSection() {
   ];
 
   return (
-    <section id="courses" className="py-20 md:py-32 bg-card/30">
+    <section id="courses" className="py-20 md:py-32 bg-card/30 scroll-mt-24">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -41,7 +41,7 @@ export function CoursesSection() {
             >
               {/* Gradient Background */}
               <div className={`absolute inset-0 bg-gradient-to-br ${course.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-              
+
               <CardHeader className="relative">
                 <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                   {course.icon}
@@ -53,7 +53,7 @@ export function CoursesSection() {
                   {t(`courses.${course.id}.desc`)}
                 </CardDescription>
               </CardHeader>
-              
+
               <CardContent className="relative">
                 <div className="flex flex-col gap-3 mb-6">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -65,7 +65,7 @@ export function CoursesSection() {
                     {t('courses.duration')}
                   </div>
                 </div>
-                
+
                 <Button
                   variant="outline"
                   className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300"

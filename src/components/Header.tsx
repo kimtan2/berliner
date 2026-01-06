@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Search, User, ChevronDown, Globe } from "lucide-react";
@@ -12,15 +13,18 @@ import logo from "@/assets/logo.jpg";
 
 export function Header() {
   const { t, language, setLanguage } = useLanguage();
+  const { pathname } = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const navLinks = [
-    { href: "#home", label: t("nav.home") },
-    { href: "#courses", label: t("nav.courses") },
-    { href: "#about", label: t("nav.about") },
-    { href: "#contact", label: t("nav.contact") },
+    { href: "/", label: t("nav.home"), hideOnHome: true },
+    { href: "/#courses", label: t("nav.courses") },
+    { href: "/#about", label: t("nav.about") },
+    { href: "/contact", label: t("nav.contact") },
   ];
+
+  const filteredLinks = navLinks.filter(link => !(link.hideOnHome && pathname === "/"));
 
   const languages = [
     { code: "de" as const, label: "Deutsch" },
@@ -114,28 +118,47 @@ export function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20 md:h-24">
             {/* Logo Section */}
-            <a href="#home" className="flex items-center gap-4 group">
-              <img
-                src={logo}
-                alt="Berliner Sprachschule Logo"
-                className="h-14 w-14 md:h-16 md:w-16 rounded-full object-cover group-hover:scale-105 transition-transform shadow-md"
-              />
-              <div className="flex flex-col">
-                <span className="text-xl md:text-2xl font-bold text-foreground tracking-wide">BERLINER</span>
-                <span className="text-lg md:text-xl font-semibold text-primary">SPRACHSCHULE</span>
+            <Link to="/" className="flex items-center gap-4 group">
+              <div className="flex items-center gap-4">
+                <img
+                  src={logo}
+                  alt="Berliner Sprachschule Logo"
+                  className="h-14 w-14 md:h-16 md:w-16 rounded-full object-cover group-hover:scale-105 transition-transform shadow-md"
+                />
+                <div className="flex flex-col">
+                  <span className="text-xl md:text-2xl font-bold text-foreground tracking-wide">BERLINER</span>
+                  <span className="text-lg md:text-xl font-semibold text-primary">SPRACHSCHULE</span>
+                </div>
               </div>
-            </a>
+
+              <div className="hidden sm:flex items-center gap-4">
+                <div className="h-10 w-px bg-border/60" />
+                <span className="text-xl md:text-2xl font-light text-muted-foreground/60 tracking-tight">
+                  {t('city.name')}
+                </span>
+              </div>
+            </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-foreground hover:text-primary transition-colors font-medium text-base tracking-wide relative py-4 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
-                >
-                  {link.label}
-                </a>
+              {filteredLinks.map((link) => (
+                link.href.startsWith("/#") ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="text-foreground hover:text-primary transition-colors font-medium text-base tracking-wide relative py-4 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className="text-foreground hover:text-primary transition-colors font-medium text-base tracking-wide relative py-4 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
             </nav>
 
@@ -151,15 +174,26 @@ export function Header() {
       {isMenuOpen && (
         <div className="md:hidden py-4 px-4 bg-background border-t border-border/30 animate-in slide-in-from-top duration-200">
           <nav className="flex flex-col gap-2">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-foreground hover:text-primary hover:bg-muted/50 transition-colors font-medium py-3 px-4 rounded-lg"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.label}
-              </a>
+            {filteredLinks.map((link) => (
+              link.href.startsWith("/#") ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-foreground hover:text-primary hover:bg-muted/50 transition-colors font-medium py-3 px-4 rounded-lg"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="text-foreground hover:text-primary hover:bg-muted/50 transition-colors font-medium py-3 px-4 rounded-lg"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </nav>
         </div>

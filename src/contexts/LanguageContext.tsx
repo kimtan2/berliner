@@ -12,15 +12,14 @@ const translations: Record<Language, Record<string, string>> = {
   de: {
     // Navigation
     'nav.home': 'Startseite',
-    'nav.courses': 'Kurse',
+    'nav.courses': 'Angebote',
     'nav.about': 'Über uns',
     'nav.contact': 'Kontakt',
 
     // Hero
     'hero.title': 'Lernen Sie Deutsch mit Leidenschaft',
     'hero.subtitle': 'Ihr Weg nach Deutschland beginnt hier in Urganch. Professionelle Deutschkurse von A1 bis C2.',
-    'hero.cta': 'Jetzt anmelden',
-    'hero.secondary': 'Unsere Kurse',
+    'hero.cta': 'Angebote entdecken',
 
     // Courses
     'courses.title': 'Unsere Angebote',
@@ -79,15 +78,14 @@ const translations: Record<Language, Record<string, string>> = {
   ru: {
     // Navigation
     'nav.home': 'Главная',
-    'nav.courses': 'Курсы',
+    'nav.courses': 'Предложения',
     'nav.about': 'О нас',
     'nav.contact': 'Контакты',
 
     // Hero
     'hero.title': 'Изучайте немецкий с увлечением',
     'hero.subtitle': 'Ваш путь в Германию начинается здесь, в Ургенче. Профессиональные курсы немецкого от A1 до C2.',
-    'hero.cta': 'Записаться сейчас',
-    'hero.secondary': 'Наши курсы',
+    'hero.cta': 'Наши предложения',
 
     // Courses
     'courses.title': 'Наши предложения',
@@ -146,15 +144,14 @@ const translations: Record<Language, Record<string, string>> = {
   uz: {
     // Navigation
     'nav.home': 'Bosh sahifa',
-    'nav.courses': 'Kurslar',
+    'nav.courses': 'Xizmatlar',
     'nav.about': 'Biz haqimizda',
     'nav.contact': 'Aloqa',
 
     // Hero
     'hero.title': "Nemis tilini ishtiyoq bilan o'rganing",
     'hero.subtitle': "Germaniyaga yo'lingiz shu yerda, Urganchda boshlanadi. A1 dan C2 gacha professional nemis tili kurslari.",
-    'hero.cta': "Hozir ro'yxatdan o'ting",
-    'hero.secondary': 'Bizning kurslar',
+    'hero.cta': 'Xizmatlarimiz bilan tanishing',
 
     // Courses
     'courses.title': 'Bizning xizmatlar',

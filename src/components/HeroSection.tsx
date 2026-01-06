@@ -40,19 +40,13 @@ export function HeroSection() {
             {t('hero.subtitle')}
           </p>
 
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-            <Button size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
-              {t('hero.cta')}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="text-lg px-8 py-6 bg-card/50 backdrop-blur-sm hover:bg-card border-border"
-              asChild
-            >
-              <a href="#courses">{t('hero.secondary')}</a>
+            <Button size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105" asChild>
+              <a href="#courses">
+                {t('hero.cta')}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
           </div>
 

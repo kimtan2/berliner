@@ -6,27 +6,27 @@ export function CoursesSection() {
   const { t } = useLanguage();
 
   const courses = [
-    { 
-      id: 'germanA1C2', 
+    {
+      id: 'germanA1C2',
       badge: 'A1-C2',
       number: '01',
       bgClass: 'bg-primary',
     },
-    { 
-      id: 'ausbildung', 
+    {
+      id: 'ausbildung',
       badge: 'AUSBILDUNG',
       number: '02',
       bgClass: 'bg-[hsl(var(--chart-1))]',
     },
-    { 
-      id: 'testdaf', 
+    {
+      id: 'testdaf',
       badge: 'TESTDAF',
       number: '03',
       bgClass: 'bg-[hsl(var(--chart-2))]',
     },
-    { 
-      id: 'kids', 
-      badge: 'KIDS',
+    {
+      id: 'kids',
+      badge: 'KINDER',
       number: '04',
       bgClass: 'bg-[hsl(var(--chart-4))]',
     },

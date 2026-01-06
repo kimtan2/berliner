@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { Button } from '@/components/ui/button';
-import { Menu, X, Search, User, ChevronDown, Globe } from 'lucide-react';
+import React, { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Search, User, ChevronDown, Globe } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import logo from '@/assets/logo.jpg';
+} from "@/components/ui/dropdown-menu";
+import logo from "@/assets/logo.jpg";
 
 export function Header() {
   const { t, language, setLanguage } = useLanguage();
@@ -16,19 +16,19 @@ export function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const navLinks = [
-    { href: '#home', label: t('nav.home') },
-    { href: '#courses', label: t('nav.courses') },
-    { href: '#about', label: t('nav.about') },
-    { href: '#contact', label: t('nav.contact') },
+    { href: "#home", label: t("nav.home") },
+    { href: "#courses", label: t("nav.courses") },
+    { href: "#about", label: t("nav.about") },
+    { href: "#contact", label: t("nav.contact") },
   ];
 
   const languages = [
-    { code: 'de' as const, label: 'Deutsch' },
-    { code: 'ru' as const, label: 'Русский' },
-    { code: 'uz' as const, label: 'O\'zbekcha' },
+    { code: "de" as const, label: "Deutsch" },
+    { code: "ru" as const, label: "Русский" },
+    { code: "uz" as const, label: "O'zbekcha" },
   ];
 
-  const currentLang = languages.find(l => l.code === language);
+  const currentLang = languages.find((l) => l.code === language);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background shadow-sm">
@@ -39,9 +39,13 @@ export function Header() {
             {/* Suche Dropdown */}
             <DropdownMenu open={isSearchOpen} onOpenChange={setIsSearchOpen}>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="text-foreground hover:text-primary gap-1.5 text-sm font-normal">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-foreground hover:text-primary gap-1.5 text-sm font-normal"
+                >
                   <Search className="h-4 w-4" />
-                  <span className="hidden sm:inline">{t('header.search')}</span>
+                  <span className="hidden sm:inline">Suche</span>
                   <ChevronDown className="h-3 w-3" />
                 </Button>
               </DropdownMenuTrigger>
@@ -49,7 +53,7 @@ export function Header() {
                 <div className="p-2">
                   <input
                     type="text"
-                    placeholder={t('header.search.placeholder')}
+                    placeholder="Suche..."
                     className="w-full px-3 py-2 text-sm border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                     autoFocus
                   />
@@ -57,25 +61,33 @@ export function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {/* Mein Berliner Dropdown */}
+            {/* Mein Berliner Zugang Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="text-foreground hover:text-primary gap-1.5 text-sm font-normal">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-foreground hover:text-primary gap-1.5 text-sm font-normal"
+                >
                   <User className="h-4 w-4" />
-                  <span className="hidden sm:inline">{t('header.myBerliner')}</span>
+                  <span className="hidden sm:inline">Mein Berliner</span>
                   <ChevronDown className="h-3 w-3" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="bg-background border border-border">
-                <DropdownMenuItem className="cursor-pointer">{t('header.login')}</DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">{t('header.register')}</DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">Anmelden</DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">Registrieren</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
             {/* Sprachen Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="text-foreground hover:text-primary gap-1.5 text-sm font-normal">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-foreground hover:text-primary gap-1.5 text-sm font-normal"
+                >
                   <Globe className="h-4 w-4" />
                   <span className="hidden sm:inline">{currentLang?.code.toUpperCase()}</span>
                   <ChevronDown className="h-3 w-3" />
@@ -86,7 +98,7 @@ export function Header() {
                   <DropdownMenuItem
                     key={lang.code}
                     onClick={() => setLanguage(lang.code)}
-                    className={`cursor-pointer ${language === lang.code ? 'bg-muted' : ''}`}
+                    className={`cursor-pointer ${language === lang.code ? "bg-muted" : ""}`}
                   >
                     {lang.label}
                   </DropdownMenuItem>
@@ -103,18 +115,14 @@ export function Header() {
           <div className="flex items-center justify-between h-20 md:h-24">
             {/* Logo Section */}
             <a href="#home" className="flex items-center gap-4 group">
-              <img 
-                src={logo} 
-                alt="Berliner Sprachschule Logo" 
+              <img
+                src={logo}
+                alt="Berliner Sprachschule Logo"
                 className="h-14 w-14 md:h-16 md:w-16 rounded-full object-cover group-hover:scale-105 transition-transform shadow-md"
               />
               <div className="flex flex-col">
-                <span className="text-xl md:text-2xl font-bold text-foreground tracking-wide">
-                  BERLINER
-                </span>
-                <span className="text-lg md:text-xl font-semibold text-primary">
-                  SPRACHSCHULE
-                </span>
+                <span className="text-xl md:text-2xl font-bold text-foreground tracking-wide">BERLINER</span>
+                <span className="text-lg md:text-xl font-semibold text-primary">SPRACHSCHULE</span>
               </div>
             </a>
 
@@ -132,12 +140,7 @@ export function Header() {
             </nav>
 
             {/* Mobile Menu Button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
+            <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>

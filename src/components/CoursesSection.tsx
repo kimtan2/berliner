@@ -28,7 +28,7 @@ export function CoursesSection() {
       id: 'kids', 
       badge: 'KIDS',
       number: '04',
-      bgClass: 'bg-secondary',
+      bgClass: 'bg-[hsl(var(--chart-4))]',
     },
   ];
 

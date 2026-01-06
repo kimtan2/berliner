@@ -60,8 +60,15 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.social': 'Soziale Netzwerke',
     
     // Testimonials
-    'testimonials.title': 'Отзывы наших учеников',
-    'testimonials.subtitle': 'Узнайте, что говорят о нас наши ученики',
+    'testimonials.title': 'Bewertungen unserer Schüler',
+    'testimonials.subtitle': 'Erfahren Sie, was unsere Schüler über uns sagen',
+    
+    // Header utility
+    'header.search': 'Suche',
+    'header.search.placeholder': 'Suche...',
+    'header.myBerliner': 'Mein Berliner',
+    'header.login': 'Anmelden',
+    'header.register': 'Registrieren',
     
     // News
     'news.title': 'Neuigkeiten',
@@ -122,6 +129,13 @@ const translations: Record<Language, Record<string, string>> = {
     'testimonials.title': 'Отзывы наших учеников',
     'testimonials.subtitle': 'Узнайте, что говорят о нас наши ученики',
     
+    // Header utility
+    'header.search': 'Поиск',
+    'header.search.placeholder': 'Поиск...',
+    'header.myBerliner': 'Мой Берлинер',
+    'header.login': 'Войти',
+    'header.register': 'Регистрация',
+    
     // News
     'news.title': 'Новости',
     'news.subtitle': 'Актуальные новости из нашей языковой школы',
@@ -180,6 +194,13 @@ const translations: Record<Language, Record<string, string>> = {
     // Testimonials
     'testimonials.title': "O'quvchilarimiz fikrlari",
     'testimonials.subtitle': "O'quvchilarimiz biz haqimizda nima deyishlarini bilib oling",
+    
+    // Header utility
+    'header.search': 'Qidiruv',
+    'header.search.placeholder': 'Qidirish...',
+    'header.myBerliner': 'Mening Berliner',
+    'header.login': 'Kirish',
+    'header.register': "Ro'yxatdan o'tish",
     
     // News
     'news.title': 'Yangiliklar',

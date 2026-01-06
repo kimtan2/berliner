@@ -16,19 +16,19 @@ export function CoursesSection() {
       id: 'ausbildung', 
       badge: 'AUSBILDUNG',
       number: '02',
-      bgClass: 'bg-orange-500',
+      bgClass: 'bg-[hsl(var(--chart-1))]',
     },
     { 
       id: 'testdaf', 
       badge: 'TESTDAF',
       number: '03',
-      bgClass: 'bg-emerald-500',
+      bgClass: 'bg-[hsl(var(--chart-2))]',
     },
     { 
       id: 'kids', 
       badge: 'KIDS',
       number: '04',
-      bgClass: 'bg-violet-500',
+      bgClass: 'bg-secondary',
     },
   ];
 

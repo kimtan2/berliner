@@ -20,7 +20,7 @@ export function Header() {
   const navLinks = [
     { href: "/", label: t("nav.home"), hideOnHome: true },
     { href: "/#courses", label: t("nav.courses") },
-    { href: "/#about", label: t("nav.about") },
+    { href: "/about", label: t("nav.about") },
     { href: "/contact", label: t("nav.contact") },
   ];
 

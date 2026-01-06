@@ -12,18 +12,18 @@ const translations: Record<Language, Record<string, string>> = {
   de: {
     // Navigation
     'nav.home': 'Startseite',
-    'nav.courses': 'Angebote',
+    'nav.courses': 'Kurse',
     'nav.about': 'Über uns',
     'nav.contact': 'Kontakt',
 
     // Hero
     'hero.title': 'Lernen Sie Deutsch mit Leidenschaft',
-    'hero.subtitle': 'Ihr Weg nach Deutschland beginnt hier in Urganch. Professionelle Deutschkurse von A1 bis C2.',
-    'hero.cta': 'Angebote entdecken',
+    'hero.subtitle': 'Ihr Weg nach Deutschland beginnt hier - bei "Berliner" in Urganch. Professionelle Deutschkurse von A1 bis C2.',
+    'hero.cta': 'Kurse entdecken',
 
     // Courses
-    'courses.title': 'Unsere Angebote',
-    'courses.subtitle': 'Ihr Weg nach Deutschland beginnt hier',
+    'courses.title': 'Unsere Kurse',
+    'courses.subtitle': 'Ihr Weg nach Deutschland beginnt hier - bei "Berliner"',
     'courses.germanA1C2': 'Deutsch A1-C2',
     'courses.germanA1C2.desc': 'Alle Niveaustufen von Anfänger bis Experte',
     'courses.ausbildung': 'Ausbildung & Arbeit',
@@ -78,18 +78,18 @@ const translations: Record<Language, Record<string, string>> = {
   ru: {
     // Navigation
     'nav.home': 'Главная',
-    'nav.courses': 'Предложения',
+    'nav.courses': 'Курсы',
     'nav.about': 'О нас',
     'nav.contact': 'Контакты',
 
     // Hero
     'hero.title': 'Изучайте немецкий с увлечением',
-    'hero.subtitle': 'Ваш путь в Германию начинается здесь, в Ургенче. Профессиональные курсы немецкого от A1 до C2.',
-    'hero.cta': 'Наши предложения',
+    'hero.subtitle': 'Ваш путь в Германию начинается здесь - в "Berliner", в Ургенче. Профессиональные курсы немецкого от A1 до C2.',
+    'hero.cta': 'Наши курсы',
 
     // Courses
-    'courses.title': 'Наши предложения',
-    'courses.subtitle': 'Ваш путь в Германию начинается здесь',
+    'courses.title': 'Наши курсы',
+    'courses.subtitle': 'Ваш путь в Германию начинается здесь - в "Berliner"',
     'courses.germanA1C2': 'Немецкий A1-C2',
     'courses.germanA1C2.desc': 'Все уровни от начинающего до эксперта',
     'courses.ausbildung': 'Аусбильдунг и работа',
@@ -144,18 +144,18 @@ const translations: Record<Language, Record<string, string>> = {
   uz: {
     // Navigation
     'nav.home': 'Bosh sahifa',
-    'nav.courses': 'Xizmatlar',
+    'nav.courses': 'Kurslar',
     'nav.about': 'Biz haqimizda',
     'nav.contact': 'Aloqa',
 
     // Hero
     'hero.title': "Nemis tilini ishtiyoq bilan o'rganing",
-    'hero.subtitle': "Germaniyaga yo'lingiz shu yerda, Urganchda boshlanadi. A1 dan C2 gacha professional nemis tili kurslari.",
-    'hero.cta': 'Xizmatlarimiz bilan tanishing',
+    'hero.subtitle': 'Germaniyaga yo\'lingiz shu yerda - "Berliner"da boshlanadi. A1 dan C2 gacha professional nemis tili kurslari.',
+    'hero.cta': 'Kurslarimiz bilan tanishing',
 
     // Courses
-    'courses.title': 'Bizning xizmatlar',
-    'courses.subtitle': "Germaniyaga yo'lingiz shu yerdan boshlanadi",
+    'courses.title': 'Bizning kurslar',
+    'courses.subtitle': 'Germaniyaga yo\'lingiz shu yerda - "Berliner"da boshlanadi',
     'courses.germanA1C2': 'Nemis tili A1-C2',
     'courses.germanA1C2.desc': "Boshlang'ichdan ekspertgacha barcha darajalar",
     'courses.ausbildung': 'Ausbildung va ish',

@@ -8,11 +8,45 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-foreground text-background py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+    <footer className="bg-muted text-foreground">
+      {/* Social Media Section */}
+      <div className="py-12 border-b border-border">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-2xl font-bold mb-6">{t('footer.social')}</h3>
+          <div className="flex justify-center gap-6">
+            <a 
+              href="https://t.me/sprachschule_berliner" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-14 h-14 rounded-full bg-[#0088cc] flex items-center justify-center hover:scale-110 transition-transform"
+            >
+              <Send className="h-6 w-6 text-white" />
+            </a>
+            <a 
+              href="https://www.instagram.com/sprachschule_berliner/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-14 h-14 rounded-full bg-gradient-to-br from-[#f09433] via-[#dc2743] to-[#bc1888] flex items-center justify-center hover:scale-110 transition-transform"
+            >
+              <Instagram className="h-6 w-6 text-white" />
+            </a>
+            <a 
+              href="https://www.youtube.com/@sprachschuleberliner" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-14 h-14 rounded-full bg-[#FF0000] flex items-center justify-center hover:scale-110 transition-transform"
+            >
+              <Youtube className="h-6 w-6 text-white" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo & Description */}
-          <div className="md:col-span-2">
+          <div>
             <div className="flex items-center gap-2 mb-4">
               <img 
                 src={logo} 
@@ -23,7 +57,7 @@ export function Footer() {
                 Berliner <span className="text-primary">Sprachschule</span>
               </span>
             </div>
-            <p className="text-background/70 max-w-md">
+            <p className="text-muted-foreground max-w-md">
               {t('footer.tagline')}
             </p>
           </div>
@@ -33,22 +67,22 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-lg">Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-background/70 hover:text-primary transition-colors">
+                <a href="#home" className="text-muted-foreground hover:text-primary transition-colors">
                   {t('nav.home')}
                 </a>
               </li>
               <li>
-                <a href="#courses" className="text-background/70 hover:text-primary transition-colors">
+                <a href="#courses" className="text-muted-foreground hover:text-primary transition-colors">
                   {t('nav.courses')}
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-background/70 hover:text-primary transition-colors">
+                <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
                   {t('nav.about')}
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-background/70 hover:text-primary transition-colors">
+                <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
                   {t('nav.contact')}
                 </a>
               </li>
@@ -59,52 +93,24 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-lg">{t('nav.contact')}</h4>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-background/70">
+              <li className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="h-4 w-4 text-primary" />
                 <span>Hamid Olimjon ko'chasi 2b uy, Urgench</span>
               </li>
-              <li className="flex items-center gap-2 text-background/70">
+              <li className="flex items-center gap-2 text-muted-foreground">
                 <Phone className="h-4 w-4 text-primary" />
                 <span>+998 99 132 55 21</span>
               </li>
-              <li className="flex items-center gap-2 text-background/70">
+              <li className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="h-4 w-4 text-primary" />
                 <span>info@sprachschule-berliner.uz</span>
               </li>
             </ul>
-            
-            {/* Social Media Links */}
-            <div className="flex gap-3 mt-4">
-              <a 
-                href="https://www.instagram.com/sprachschule_berliner/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors"
-              >
-                <Instagram className="h-4 w-4" />
-              </a>
-              <a 
-                href="https://t.me/sprachschule_berliner" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors"
-              >
-                <Send className="h-4 w-4" />
-              </a>
-              <a 
-                href="https://www.youtube.com/@sprachschuleberliner" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors"
-              >
-                <Youtube className="h-4 w-4" />
-              </a>
-            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-background/20 text-center text-background/60 text-sm">
+        <div className="pt-8 border-t border-border text-center text-muted-foreground text-sm">
           © {currentYear} Berliner Sprachschule. {t('footer.rights')}
         </div>
       </div>

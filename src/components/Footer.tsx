@@ -8,7 +8,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-muted text-foreground">
+    <footer className="bg-background text-foreground">
       {/* Social Media Section */}
       <div className="py-12 border-b border-border">
         <div className="container mx-auto px-4 text-center">

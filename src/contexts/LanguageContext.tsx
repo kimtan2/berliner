@@ -58,6 +58,15 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.rights': 'Alle Rechte vorbehalten',
     'footer.tagline': 'Ihre Deutschsprachschule in Urganch',
     'footer.social': 'Soziale Netzwerke',
+    
+    // Testimonials
+    'testimonials.title': 'Отзывы наших учеников',
+    'testimonials.subtitle': 'Узнайте, что говорят о нас наши ученики',
+    
+    // News
+    'news.title': 'Neuigkeiten',
+    'news.subtitle': 'Aktuelle Nachrichten aus unserer Sprachschule',
+    'news.readMore': 'Weiterlesen',
   },
   ru: {
     // Navigation
@@ -108,6 +117,15 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.rights': 'Все права защищены',
     'footer.tagline': 'Ваша школа немецкого языка в Ургенче',
     'footer.social': 'Социальные сети',
+    
+    // Testimonials
+    'testimonials.title': 'Отзывы наших учеников',
+    'testimonials.subtitle': 'Узнайте, что говорят о нас наши ученики',
+    
+    // News
+    'news.title': 'Новости',
+    'news.subtitle': 'Актуальные новости из нашей языковой школы',
+    'news.readMore': 'Читать далее',
   },
   uz: {
     // Navigation
@@ -158,6 +176,15 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.rights': "Barcha huquqlar himoyalangan",
     'footer.tagline': 'Urganchdagi nemis tili maktabingiz',
     'footer.social': 'Ijtimoiy tarmoqlar',
+    
+    // Testimonials
+    'testimonials.title': "O'quvchilarimiz fikrlari",
+    'testimonials.subtitle': "O'quvchilarimiz biz haqimizda nima deyishlarini bilib oling",
+    
+    // News
+    'news.title': 'Yangiliklar',
+    'news.subtitle': "Til maktabimizdan so'nggi yangiliklar",
+    'news.readMore': "Ko'proq o'qish",
   },
 };
 

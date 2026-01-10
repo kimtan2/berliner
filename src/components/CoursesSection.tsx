@@ -14,7 +14,7 @@ export function CoursesSection() {
     },
     {
       id: 'ausbildung',
-      badge: 'AUSBILDUNG',
+      badge: 'STUDIUM & AUSBILDUNG',
       number: '02',
       bgClass: 'bg-[hsl(var(--chart-1))]',
     },

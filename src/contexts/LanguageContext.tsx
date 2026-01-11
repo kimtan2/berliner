@@ -23,6 +23,9 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.passion': 'mit Leidenschaft',
     'hero.subtitle': 'Ihr Weg nach Deutschland beginnt hier in Urganch. Professionelle Deutschkurse von A1 bis C2.',
     'hero.cta': 'Angebote entdecken',
+    'hero.reason1': 'Zertifizierte Lehrer',
+    'hero.reason2': 'Kleine Gruppen',
+    'hero.reason3': 'Erfolgsgarantie',
 
     // Courses
     'courses.title': 'Unsere Angebote',
@@ -113,6 +116,9 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.passion': 'с увлечением',
     'hero.subtitle': 'Ваш путь в Германию начинается здесь, в Ургенче. Профессиональные курсы немецкого от A1 до C2.',
     'hero.cta': 'Наши предложения',
+    'hero.reason1': 'Сертифицированные преподаватели',
+    'hero.reason2': 'Маленькие группы',
+    'hero.reason3': 'Гарантия успеха',
 
     // Courses
     'courses.title': 'Наши предложения',
@@ -203,6 +209,9 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.passion': 'ishtiyoq bilan',
     'hero.subtitle': "Germaniyaga yo'lingiz shu yerda, Urganchda boshlanadi. A1 dan C2 gacha professional nemis tili kurslari.",
     'hero.cta': 'Xizmatlarimiz bilan tanishing',
+    'hero.reason1': "Sertifikatlangan o'qituvchilar",
+    'hero.reason2': 'Kichik guruhlar',
+    'hero.reason3': "Muvaffaqiyat kafolati",
 
     // Courses
     'courses.title': 'Bizning xizmatlar',

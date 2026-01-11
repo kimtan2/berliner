@@ -1,6 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, BookOpen, Sparkles } from 'lucide-react';
+import { ArrowRight, BookOpen, GraduationCap, Users, Award } from 'lucide-react';
 import heroImage from '@/assets/hero-classroom.jpg';
 
 export function HeroSection() {
@@ -94,18 +94,16 @@ export function HeroSection() {
             </Button>
           </div>
 
-          {/* Stats Row */}
-          <div className="flex flex-wrap gap-8 mt-16 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
+          {/* Reasons to Choose Berliner */}
+          <div className="flex flex-wrap gap-6 mt-16 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
             {[
-              { value: '500+', label: 'Schüler' },
-              { value: '15+', label: 'Jahre' },
-              { value: '20+', label: 'Lehrer' }
-            ].map((stat, idx) => (
-              <div key={idx} className="group cursor-default">
-                <div className="text-4xl font-bold text-primary group-hover:scale-110 transition-transform">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+              { icon: GraduationCap, text: t('hero.reason1') },
+              { icon: Users, text: t('hero.reason2') },
+              { icon: Award, text: t('hero.reason3') }
+            ].map((reason, idx) => (
+              <div key={idx} className="flex items-center gap-3 group cursor-default bg-background/60 backdrop-blur-sm px-4 py-3 rounded-xl border border-border/50 hover:border-primary/30 transition-all">
+                <reason.icon className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
+                <span className="text-sm font-medium text-foreground">{reason.text}</span>
               </div>
             ))}
           </div>

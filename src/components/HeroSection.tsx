@@ -53,14 +53,14 @@ export function HeroSection() {
           {/* Badge with Icon */}
           <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-primary/15 backdrop-blur-sm text-primary border border-primary/30 mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 hover:bg-primary/20 transition-all group">
             <Sparkles className="h-4 w-4 group-hover:rotate-12 transition-transform" />
-            <span className="text-sm font-semibold tracking-wide">Sprachschule Berliner</span>
+            <span className="text-sm font-semibold tracking-wide">{t('hero.badge')}</span>
           </div>
 
           {/* Title with Creative Typography */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 leading-[1.1] animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
             {t('hero.title')}
             <span className="block mt-3 text-primary relative">
-              mit Leidenschaft
+              {t('hero.passion')}
               <svg className="absolute -bottom-2 left-0 w-full h-3" viewBox="0 0 400 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 10C150 2 250 2 398 10" stroke="currentColor" strokeWidth="3" strokeLinecap="round" className="text-primary/40" />
               </svg>

@@ -18,7 +18,9 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.ausbildung': 'Ausbildung & Arbeit',
 
     // Hero
-    'hero.title': 'Lernen Sie Deutsch mit Leidenschaft',
+    'hero.badge': 'Sprachschule Berliner',
+    'hero.title': 'Lernen Sie Deutsch',
+    'hero.passion': 'mit Leidenschaft',
     'hero.subtitle': 'Ihr Weg nach Deutschland beginnt hier in Urganch. Professionelle Deutschkurse von A1 bis C2.',
     'hero.cta': 'Angebote entdecken',
 
@@ -106,7 +108,9 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.ausbildung': 'Аусбильдунг и работа',
 
     // Hero
-    'hero.title': 'Изучайте немецкий с увлечением',
+    'hero.badge': 'Sprachschule Berliner',
+    'hero.title': 'Изучайте немецкий',
+    'hero.passion': 'с увлечением',
     'hero.subtitle': 'Ваш путь в Германию начинается здесь, в Ургенче. Профессиональные курсы немецкого от A1 до C2.',
     'hero.cta': 'Наши предложения',
 
@@ -194,7 +198,9 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.ausbildung': 'Ausbildung va ish',
 
     // Hero
-    'hero.title': "Nemis tilini ishtiyoq bilan o'rganing",
+    'hero.badge': 'Sprachschule Berliner',
+    'hero.title': "Nemis tilini o'rganing",
+    'hero.passion': 'ishtiyoq bilan',
     'hero.subtitle': "Germaniyaga yo'lingiz shu yerda, Urganchda boshlanadi. A1 dan C2 gacha professional nemis tili kurslari.",
     'hero.cta': 'Xizmatlarimiz bilan tanishing',
 

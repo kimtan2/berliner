@@ -106,7 +106,7 @@ export function Header() {
                   className="text-foreground hover:text-primary gap-1.5 text-sm font-normal hover:bg-primary/10 rounded-full"
                 >
                   <Globe className="h-4 w-4" />
-                  <span className="hidden sm:inline">{currentLang?.flag} {currentLang?.code.toUpperCase()}</span>
+                  <span className="hidden sm:inline">{currentLang?.code.toUpperCase()}</span>
                   <ChevronDown className="h-3 w-3" />
                 </Button>
               </DropdownMenuTrigger>
@@ -117,7 +117,6 @@ export function Header() {
                     onClick={() => setLanguage(lang.code)}
                     className={`cursor-pointer gap-2 hover:bg-primary/10 focus:bg-primary/10 ${language === lang.code ? "bg-primary/20 font-semibold" : ""}`}
                   >
-                    <span>{lang.flag}</span>
                     <span>{lang.label}</span>
                   </DropdownMenuItem>
                 ))}
@@ -137,9 +136,9 @@ export function Header() {
                 <img
                   src={logo}
                   alt="Berliner Sprachschule Logo"
-                  className="h-14 w-14 md:h-16 md:w-16 rounded-2xl object-cover group-hover:scale-105 transition-transform shadow-lg ring-2 ring-primary/20 group-hover:ring-primary/40"
+                  className="h-14 w-14 md:h-16 md:w-16 rounded-full object-cover group-hover:scale-105 transition-transform shadow-lg"
                 />
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
 
               <div className="flex items-center gap-4">

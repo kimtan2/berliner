@@ -15,6 +15,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.courses': 'Angebote',
     'nav.about': 'Über uns',
     'nav.contact': 'Kontakt',
+    'nav.ausbildung': 'Ausbildung & Arbeit',
 
     // Hero
     'hero.title': 'Lernen Sie Deutsch mit Leidenschaft',
@@ -42,6 +43,27 @@ const translations: Record<Language, Record<string, string>> = {
     'about.students': 'Zufriedene Schüler',
     'about.experience': 'Jahre Erfahrung',
     'about.teachers': 'Qualifizierte Lehrer',
+    'about.history.title': 'Geschichte von Berliner',
+    'about.history.text': 'Die Berliner Sprachschule wurde mit der Vision gegründet, eine Brücke zwischen Usbekistan und Deutschland zu schlagen. Seit unserer Gründung haben wir uns zum Ziel gesetzt, nicht nur die deutsche Sprache zu vermitteln, sondern auch Türen für die berufliche und akademische Zukunft unserer Schüler zu öffnen.',
+    'about.team.title': 'Unser Team',
+    'about.team.desc': 'Lernen Sie die Menschen kennen, die Ihren Erfolg möglich machen.',
+    'about.success.title': 'Unsere Erfolge',
+    'about.success.desc': 'Hunderte von Schülern haben bereits ihren Weg nach Deutschland gefunden.',
+
+    // Ausbildung Page
+    'ausbildung.title': 'Studium, Ausbildung und Arbeit in Deutschland',
+    'ausbildung.subtitle': 'Ihr kompletter Wegweiser von Urganch nach Deutschland',
+    'ausbildung.process.title': 'Wie alles abläuft',
+    'ausbildung.process.step1.title': 'Sprachliche Vorbereitung',
+    'ausbildung.process.step1.desc': 'Intensive Deutschkurse von A1 bis B2/C1, um die sprachlichen Voraussetzungen zu erfüllen.',
+    'ausbildung.process.step2.title': 'Beratung & Orientierung',
+    'ausbildung.process.step2.desc': 'Wir helfen Ihnen, das passende Studium oder die richtige Ausbildung in Deutschland zu finden.',
+    'ausbildung.process.step3.title': 'Bewerbungsservice',
+    'ausbildung.process.step3.desc': 'Professionelle Unterstützung bei der Erstellung von Lebensläufen und Motivationsschreiben.',
+    'ausbildung.process.step4.title': 'Visum & Integration',
+    'ausbildung.process.step4.desc': 'Begleitung beim Visumsprozess und Vorbereitung auf das Leben in Deutschland.',
+    'ausbildung.help.title': 'Beratung und Hilfe bei Bewerbung',
+    'ausbildung.help.desc': 'Abgesehen von den sprachlichen Elementen unterstützen wir Sie bei der gesamten Bürokratie und den Bewerbungsprozessen bei deutschen Arbeitgebern und Universitäten.',
 
     // Contact
     'contact.title': 'Kontaktieren Sie uns',
@@ -81,6 +103,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.courses': 'Предложения',
     'nav.about': 'О нас',
     'nav.contact': 'Контакты',
+    'nav.ausbildung': 'Аусбильдунг и работа',
 
     // Hero
     'hero.title': 'Изучайте немецкий с увлечением',
@@ -108,6 +131,27 @@ const translations: Record<Language, Record<string, string>> = {
     'about.students': 'Довольных учеников',
     'about.experience': 'Лет опыта',
     'about.teachers': 'Квалифицированных преподавателей',
+    'about.history.title': 'История Berliner',
+    'about.history.text': 'Языковая школа Berliner была основана с видением создания моста между Узбекистаном и Германией. С момента нашего основания мы поставили перед собой цель не только обучать немецкому языку, но и открывать двери для профессионального и академического будущего наших учеников.',
+    'about.team.title': 'Наша команда',
+    'about.team.desc': 'Познакомьтесь с людьми, которые делают ваш успех возможным.',
+    'about.success.title': 'Наши успехи',
+    'about.success.desc': 'Сотни студентов уже нашли свой путь в Германию.',
+
+    // Ausbildung Page
+    'ausbildung.title': 'Учёба, Аусбильдунг и работа в Германии',
+    'ausbildung.subtitle': 'Ваш полный путеводитель из Ургенча в Германию',
+    'ausbildung.process.title': 'Как всё проходит',
+    'ausbildung.process.step1.title': 'Языковая подготовка',
+    'ausbildung.process.step1.desc': 'Интенсивные курсы немецкого языка от A1 до B2/C1 для соответствия языковым требованиям.',
+    'ausbildung.process.step2.title': 'Консультация и ориентация',
+    'ausbildung.process.step2.desc': 'Мы помогаем вам найти подходящую учебу или профессиональное обучение в Германии.',
+    'ausbildung.process.step3.title': 'Сервис по подаче заявок',
+    'ausbildung.process.step3.desc': 'Профессиональная поддержка в составлении резюме и мотивационных писем.',
+    'ausbildung.process.step4.title': 'Виза и интеграция',
+    'ausbildung.process.step4.desc': 'Сопровождение в процессе получения визы и подготовка к жизни в Германии.',
+    'ausbildung.help.title': 'Консультация и помощь в подаче заявки',
+    'ausbildung.help.desc': 'Помимо языковых аспектов, мы поддерживаем вас во всей бюрократии и процессах подачи заявок немецким работодателям и университетам.',
 
     // Contact
     'contact.title': 'Свяжитесь с нами',
@@ -147,6 +191,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.courses': 'Xizmatlar',
     'nav.about': 'Biz haqimizda',
     'nav.contact': 'Aloqa',
+    'nav.ausbildung': 'Ausbildung va ish',
 
     // Hero
     'hero.title': "Nemis tilini ishtiyoq bilan o'rganing",
@@ -174,6 +219,27 @@ const translations: Record<Language, Record<string, string>> = {
     'about.students': "Mamnun o'quvchilar",
     'about.experience': 'Yillik tajriba',
     'about.teachers': "Malakali o'qituvchilar",
+    'about.history.title': 'Berliner tarixi',
+    'about.history.text': "Berliner til maktabi O'zbekiston va Germaniya o'rtasida ko'prik yaratish maqsadida tashkil etilgan. Tashkil etilganimizdan buyon biz nafaqat nemis tilini o'rgatishni, balki o'quvchilarimizning professional va akademik kelajagi uchun eshiklarni ochishni maqsad qilganmiz.",
+    'about.team.title': 'Bizning jamoa',
+    'about.team.desc': 'Sizning muvaffaqiyatingizni ta\'minlaydigan insonlar bilan tanishing.',
+    'about.success.title': 'Muvaffaqiyatlarimiz',
+    'about.success.desc': "Yuzlab o'quvchilarimiz allaqachon Germaniyaga yo'l topishgan.",
+
+    // Ausbildung Page
+    'ausbildung.title': "Germaniyada o'qish, Ausbildung va ish",
+    'ausbildung.subtitle': "Urganchdan Germaniyagacha bo'lgan to'liq yo'riqnomangiz",
+    'ausbildung.process.title': 'Jarayon qanday kechadi',
+    'ausbildung.process.step1.title': 'Til tayyorgarligi',
+    'ausbildung.process.step1.desc': "Til talablariga javob berish uchun A1 dan B2/C1 gacha intensiv nemis tili kurslari.",
+    'ausbildung.process.step2.title': "Maslahat va yo'naltirish",
+    'ausbildung.process.step2.desc': "Biz sizga Germaniyada mos keladigan o'qish yoki Ausbildungni topishda yordam beramiz.",
+    'ausbildung.process.step3.title': 'Hujjat topshirish xizmati',
+    'ausbildung.process.step3.desc': "Rezyume va motivatsiya xatlarini tayyorlashda professional yordam.",
+    'ausbildung.process.step4.title': 'Viza va integratsiya',
+    'ausbildung.process.step4.desc': "Viza olish jarayonida hamrohlik va Germaniyadagi hayotga tayyorgarlik.",
+    'ausbildung.help.title': 'Hujjat topshirishda maslahat va yordam',
+    'ausbildung.help.desc': "Til o'rganishdan tashqari, biz sizga barcha byurokratiya va Germaniya ish beruvchilari hamda universitetlariga hujjat topshirish jarayonlarida yordam beramiz.",
 
     // Contact
     'contact.title': 'Biz bilan bog\'laning',

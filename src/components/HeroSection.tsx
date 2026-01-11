@@ -1,6 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, BookOpen } from 'lucide-react';
+import { ArrowRight, BookOpen, Sparkles } from 'lucide-react';
 import heroImage from '@/assets/hero-classroom.jpg';
 
 export function HeroSection() {
@@ -11,50 +11,114 @@ export function HeroSection() {
       id="home"
       className="relative min-h-screen flex items-center pt-20 overflow-hidden"
     >
-      {/* Background Image with Overlay */}
+      {/* Background with Creative Overlays */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
           alt="Language classroom"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/60" />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
+
+        {/* Diagonal Accent Shape */}
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent"
+          style={{
+            clipPath: 'polygon(0 0, 100% 0, 100% 30%, 0 50%)',
+            mixBlendMode: 'multiply'
+          }}
+        />
+
+        {/* Geometric Pattern Overlay */}
+        <div className="absolute inset-0 opacity-5">
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+                <circle cx="25" cy="25" r="1" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+          </svg>
+        </div>
       </div>
+
+      {/* Floating Accent Elements */}
+      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-32 left-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse delay-1000" />
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-2xl">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <BookOpen className="h-4 w-4" />
-            <span className="text-sm font-medium">Sprachschule Berliner</span>
+        <div className="max-w-3xl">
+          {/* Badge with Icon */}
+          <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-primary/15 backdrop-blur-sm text-primary border border-primary/30 mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 hover:bg-primary/20 transition-all group">
+            <Sparkles className="h-4 w-4 group-hover:rotate-12 transition-transform" />
+            <span className="text-sm font-semibold tracking-wide">Sprachschule Berliner</span>
           </div>
 
-          {/* Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
+          {/* Title with Creative Typography */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 leading-[1.1] animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
             {t('hero.title')}
+            <span className="block mt-3 text-primary relative">
+              mit Leidenschaft
+              <svg className="absolute -bottom-2 left-0 w-full h-3" viewBox="0 0 400 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 10C150 2 250 2 398 10" stroke="currentColor" strokeWidth="3" strokeLinecap="round" className="text-primary/40" />
+              </svg>
+            </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200 max-w-2xl">
             {t('hero.subtitle')}
           </p>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-            <Button size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105" asChild>
-              <a href="#courses">
-                {t('hero.cta')}
-                <ArrowRight className="ml-2 h-5 w-5" />
+            <Button
+              size="lg"
+              className="text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all hover:scale-105 group relative overflow-hidden"
+              asChild
+            >
+              <a href="#courses" className="relative z-10">
+                <span className="relative z-10">{t('hero.cta')}</span>
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform relative z-10" />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80 group-hover:scale-105 transition-transform" />
+              </a>
+            </Button>
+
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-lg px-10 py-7 border-2 backdrop-blur-sm bg-background/80 hover:bg-background/90 hover:scale-105 transition-all group"
+              asChild
+            >
+              <a href="#about">
+                <BookOpen className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
+                Mehr erfahren
               </a>
             </Button>
           </div>
 
+          {/* Stats Row */}
+          <div className="flex flex-wrap gap-8 mt-16 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
+            {[
+              { value: '500+', label: 'Schüler' },
+              { value: '15+', label: 'Jahre' },
+              { value: '20+', label: 'Lehrer' }
+            ].map((stat, idx) => (
+              <div key={idx} className="group cursor-default">
+                <div className="text-4xl font-bold text-primary group-hover:scale-110 transition-transform">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
+      {/* Bottom Gradient Fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background to-transparent z-10" />
     </section>
   );
 }

@@ -50,11 +50,6 @@ export function HeroSection() {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
-          {/* Badge with Icon */}
-          <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-primary/15 backdrop-blur-sm text-primary border border-primary/30 mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 hover:bg-primary/20 transition-all group">
-            <Sparkles className="h-4 w-4 group-hover:rotate-12 transition-transform" />
-            <span className="text-sm font-semibold tracking-wide">{t('hero.badge')}</span>
-          </div>
 
           {/* Title with Creative Typography */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 leading-[1.1] animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">

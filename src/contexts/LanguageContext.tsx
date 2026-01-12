@@ -76,13 +76,17 @@ const translations: Record<Language, Record<string, string>> = {
     'ausbildung.help.desc': 'Abgesehen von den sprachlichen Elementen unterstützen wir Sie bei der gesamten Bürokratie und den Bewerbungsprozessen bei deutschen Arbeitgebern und Universitäten.',
 
     // Contact
-    'contact.title': 'Kontaktieren Sie uns',
-    'contact.subtitle': 'Wir freuen uns auf Ihre Nachricht',
-    'contact.name': 'Name',
-    'contact.email': 'E-Mail',
-    'contact.message': 'Nachricht',
-    'contact.send': 'Nachricht senden',
+    'contact.hero.title': 'Ihre Fragen',
+    'contact.hero.accent': 'beantworten wir gerne',
+    'contact.hero.subtitle': 'Erfahren Sie mehr über unsere Kurse, Preise und Möglichkeiten nach Deutschland zu gehen. Schreiben Sie uns einfach oder besuchen Sie uns.',
+    'contact.telegram.label': 'Schnelle Antwort',
+    'contact.telegram.title': 'Schreiben Sie uns auf Telegram',
+    'contact.instagram.label': 'Unser Alltag',
     'contact.address': 'Adresse',
+    'contact.address.hint': '(Neben der Post)',
+    'contact.hours.label': 'Öffnungszeiten',
+    'contact.hours.days': 'Montag — Samstag',
+    'contact.hours.coffee': 'Kaffee gibt\'s bei uns :)',
     'contact.phone': 'Telefon',
 
     // Footer
@@ -174,13 +178,17 @@ const translations: Record<Language, Record<string, string>> = {
     'ausbildung.help.desc': 'Помимо языковых аспектов, мы поддерживаем вас во всей бюрократии и процессах подачи заявок немецким работодателям и университетам.',
 
     // Contact
-    'contact.title': 'Свяжитесь с нами',
-    'contact.subtitle': 'Мы будем рады вашему сообщению',
-    'contact.name': 'Имя',
-    'contact.email': 'Эл. почта',
-    'contact.message': 'Сообщение',
-    'contact.send': 'Отправить сообщение',
+    'contact.hero.title': 'На ваши вопросы',
+    'contact.hero.accent': 'мы ответим с удовольствием',
+    'contact.hero.subtitle': 'Узнайте больше о наших курсах, ценах и возможностях поехать в Германию. Просто напишите нам или посетите нас.',
+    'contact.telegram.label': 'Быстрый ответ',
+    'contact.telegram.title': 'Напишите нам в Telegram',
+    'contact.instagram.label': 'Наши будни',
     'contact.address': 'Адрес',
+    'contact.address.hint': '(Рядом с почтой)',
+    'contact.hours.label': 'Часы работы',
+    'contact.hours.days': 'Понедельник — Суббота',
+    'contact.hours.coffee': 'Кофе у нас есть :)',
     'contact.phone': 'Телефон',
 
     // Footer
@@ -272,13 +280,17 @@ const translations: Record<Language, Record<string, string>> = {
     'ausbildung.help.desc': "Til o'rganishdan tashqari, biz sizga barcha byurokratiya va Germaniya ish beruvchilari hamda universitetlariga hujjat topshirish jarayonlarida yordam beramiz.",
 
     // Contact
-    'contact.title': 'Biz bilan bog\'laning',
-    'contact.subtitle': "Xabaringizni kutib qolamiz",
-    'contact.name': 'Ism',
-    'contact.email': 'Elektron pochta',
-    'contact.message': 'Xabar',
-    'contact.send': 'Xabar yuborish',
+    'contact.hero.title': 'Savollaringizga',
+    'contact.hero.accent': 'javob beramiz',
+    'contact.hero.subtitle': "Kurslarimiz, narxlar va Germaniyaga ketish imkoniyatlari haqida bepul ma'lumot oling. Shunchaki yozing yoki markazimizga keling.",
+    'contact.telegram.label': 'Tezkor javob',
+    'contact.telegram.title': 'Telegram orqali yozish',
+    'contact.instagram.label': 'Kundalik hayotimiz',
     'contact.address': 'Manzil',
+    'contact.address.hint': '(Pochta yonida)',
+    'contact.hours.label': 'Ish vaqti',
+    'contact.hours.days': 'Dushanba — Shanba',
+    'contact.hours.coffee': 'Kofe bizdan :)',
     'contact.phone': 'Telefon',
 
     // Footer

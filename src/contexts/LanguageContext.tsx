@@ -274,7 +274,7 @@ const translations: Record<Language, Record<string, string>> = {
     // About
     'about.hero.line1': 'Bizning',
     'about.hero.line2': 'falsafamiz',
-    'about.hero.quote': 'Berliner markazi – bu shunchaki til o\'rganish emas, bu sizning Germaniya sari tashlagan birinchi va eng ishonchli qadamingizdir.',
+    'about.hero.quote': 'Berliner til maktabi – bu shunchaki til o\'rganish emas, bu sizning Germaniya sari tashlagan birinchi va eng ishonchli qadamingizdir.',
     'about.overlay.title': 'Urganchda',
     'about.overlay.text': 'Biz nemis tili sifatini Xorazm markaziga olib keldik.',
     'about.why.title': 'Nima uchun Berliner?',

@@ -31,6 +31,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.feature3.sub': 'Modernste Methoden nach Goethe-Standards',
     'hero.feature4': 'Intensivkurse',
     'hero.feature4.sub': '5 Tage die Woche für maximalen Erfolg',
+    'hero.contactBtn': 'Kontaktieren Sie uns',
 
     // Courses
     'courses.title': 'Unsere Angebote',
@@ -142,6 +143,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.feature3.sub': 'Современные методы по стандартам Goethe',
     'hero.feature4': 'Интенсивные курсы',
     'hero.feature4.sub': '5 дней в неделю для максимального успеха',
+    'hero.contactBtn': 'Связаться с нами',
 
     // Courses
     'courses.title': 'Наши предложения',
@@ -253,6 +255,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.feature3.sub': "Goethe standartlari bo'yicha zamonaviy usullar",
     'hero.feature4': 'Intensiv kurslar',
     'hero.feature4.sub': "Maksimal muvaffaqiyat uchun haftada 5 kun",
+    'hero.contactBtn': "Biz bilan bog'laning",
 
     // Courses
     'courses.title': 'Bizning xizmatlar',

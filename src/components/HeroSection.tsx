@@ -1,6 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, BookOpen, GraduationCap, Users, Award, Sparkles, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, MessageCircle, GraduationCap, Users, Award, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-classroom.jpg';
 
 export function HeroSection() {
@@ -112,10 +113,10 @@ export function HeroSection() {
               className="text-lg px-10 py-7 border-2 backdrop-blur-sm bg-background/80 hover:bg-background/90 hover:scale-105 transition-all group"
               asChild
             >
-              <a href="#about">
-                <BookOpen className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-                Mehr erfahren
-              </a>
+              <Link to="/contact">
+                <MessageCircle className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
+                {t('hero.contactBtn')}
+              </Link>
             </Button>
           </div>
 

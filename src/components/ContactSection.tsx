@@ -1,6 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
-import { MapPin, Clock, Send, ArrowRight } from 'lucide-react';
+import { Clock, Send, ArrowRight, Phone } from 'lucide-react';
 
 export function ContactSection() {
   const { t } = useLanguage();
@@ -22,25 +22,23 @@ export function ContactSection() {
         </div>
 
         <div className="space-y-6 max-w-3xl">
-          {/* Telegram Card - Primary CTA */}
+          {/* Phone Card - Primary CTA */}
           <a
-            href="https://t.me/berliner_urganch"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="tel:+998991325521"
             className="block"
           >
             <Card className="bg-primary hover:bg-primary/90 transition-all duration-300 p-6 md:p-8 group cursor-pointer border-0">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4 md:gap-6">
                   <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-                    <Send className="h-6 w-6 md:h-7 md:w-7 text-primary-foreground" />
+                    <Phone className="h-6 w-6 md:h-7 md:w-7 text-primary-foreground" />
                   </div>
                   <div>
                     <p className="text-xs md:text-sm font-medium text-primary-foreground/80 uppercase tracking-wider mb-1">
-                      {t('contact.telegram.label')}
+                      {t('contact.phone.label')}
                     </p>
                     <p className="text-xl md:text-2xl font-bold text-primary-foreground">
-                      {t('contact.telegram.title')}
+                      +998 99 132 55 21
                     </p>
                   </div>
                 </div>
@@ -49,9 +47,36 @@ export function ContactSection() {
             </Card>
           </a>
 
+          {/* Telegram Card */}
+          <a
+            href="https://t.me/sprachschule_berliner"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <Card className="bg-card hover:bg-accent/50 transition-all duration-300 p-6 md:p-8 group cursor-pointer border border-border">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4 md:gap-6">
+                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#0088cc] flex items-center justify-center">
+                    <Send className="h-6 w-6 md:h-7 md:w-7 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-xs md:text-sm font-medium text-muted-foreground uppercase tracking-wider mb-1">
+                      {t('contact.telegram.label')}
+                    </p>
+                    <p className="text-xl md:text-2xl font-bold text-foreground">
+                      {t('contact.telegram.title')}
+                    </p>
+                  </div>
+                </div>
+                <ArrowRight className="h-6 w-6 md:h-7 md:w-7 text-muted-foreground group-hover:translate-x-1 group-hover:text-foreground transition-all" />
+              </div>
+            </Card>
+          </a>
+
           {/* Instagram Card */}
           <a
-            href="https://instagram.com/berliner_urganch"
+            href="https://www.instagram.com/sprachschule_berliner/"
             target="_blank"
             rel="noopener noreferrer"
             className="block"
@@ -86,13 +111,10 @@ export function ContactSection() {
                 {t('contact.address')}
               </p>
               <p className="text-lg md:text-xl font-semibold text-foreground">
-                {t('city.name')} sh.,
+                Hamid Olimjon ko'chasi 2b uy,
               </p>
               <p className="text-lg md:text-xl font-semibold text-foreground">
-                Al-Xorazmiy ko'chasi, 24
-              </p>
-              <p className="text-muted-foreground mt-1">
-                {t('contact.address.hint')}
+                Urgench
               </p>
             </div>
 
@@ -105,11 +127,7 @@ export function ContactSection() {
                 {t('contact.hours.days')}
               </p>
               <p className="text-lg md:text-xl font-semibold text-foreground">
-                09:00 dan 19:00 gacha
-              </p>
-              <p className="text-muted-foreground mt-1 flex items-center gap-2">
-                <Clock className="h-4 w-4" />
-                {t('contact.hours.coffee')}
+                08:00 — 20:00
               </p>
             </div>
           </div>

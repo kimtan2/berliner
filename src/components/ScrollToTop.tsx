@@ -10,9 +10,9 @@ export function ScrollToTop() {
       setTimeout(() => {
         const element = document.querySelector(hash);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          element.scrollIntoView({ behavior: 'instant' });
         }
-      }, 100);
+      }, 50);
     } else {
       window.scrollTo(0, 0);
     }

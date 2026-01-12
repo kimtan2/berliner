@@ -1,24 +1,55 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card } from '@/components/ui/card';
-import { Clock, Send, ArrowRight, Phone } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Clock, Send, ArrowRight, Phone, BookOpen, GraduationCap, Baby, FileText } from 'lucide-react';
 
-export function ContactSection() {
+const courseIcons: Record<string, React.ElementType> = {
+  a1c2: BookOpen,
+  testdaf: FileText,
+  kids: Baby,
+  studium: GraduationCap,
+};
+
+interface ContactSectionProps {
+  course?: string | null;
+}
+
+export function ContactSection({ course }: ContactSectionProps) {
   const { t } = useLanguage();
+  
+  const CourseIcon = course ? courseIcons[course] || BookOpen : null;
 
   return (
     <section id="contact" className="py-20 md:py-32 bg-background scroll-mt-24">
       <div className="container mx-auto px-4">
-        {/* Hero Header */}
+        {/* Hero Header - Course-specific or default */}
         <div className="max-w-3xl mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-2">
-            {t('contact.hero.title')}
-          </h1>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold italic text-primary mb-8">
-            {t('contact.hero.accent')}
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
-            {t('contact.hero.subtitle')}
-          </p>
+          {course ? (
+            <>
+              <Badge variant="outline" className="mb-4 text-primary border-primary/30">
+                {CourseIcon && <CourseIcon className="h-3 w-3 mr-1" />}
+                {t(`contact.course.${course}.badge`)}
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
+                {t(`contact.course.${course}.title`)}
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
+                {t(`contact.course.${course}.desc`)}
+              </p>
+            </>
+          ) : (
+            <>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-2">
+                {t('contact.hero.title')}
+              </h1>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold italic text-primary mb-8">
+                {t('contact.hero.accent')}
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
+                {t('contact.hero.subtitle')}
+              </p>
+            </>
+          )}
         </div>
 
         <div className="space-y-6 max-w-3xl">

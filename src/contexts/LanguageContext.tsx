@@ -12,7 +12,7 @@ const translations: Record<Language, Record<string, string>> = {
   de: {
     // Navigation
     'nav.home': 'Startseite',
-    'nav.courses': 'Angebote',
+    'nav.courses': 'Kurse',
     'nav.about': 'Über uns',
     'nav.contact': 'Kontakt',
     'nav.ausbildung': 'Ausbildung & Arbeit',
@@ -22,7 +22,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.title': 'Lernen Sie Deutsch',
     'hero.passion': 'mit Leidenschaft',
     'hero.subtitle': 'Ihr Weg nach Deutschland beginnt hier in Urganch. Professionelle Deutschkurse von A1 bis C2.',
-    'hero.cta': 'Angebote entdecken',
+    'hero.cta': 'Kurse entdecken',
     'hero.feature1': 'Goethe Prüfungszentrum',
     'hero.feature1.sub': 'Offizielle Prüfungen direkt bei uns',
     'hero.feature2': 'Moderne Ausstattung',
@@ -34,7 +34,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.contactBtn': 'Kontaktieren Sie uns',
 
     // Courses
-    'courses.title': 'Unsere Angebote',
+    'courses.title': 'Unsere Kurse',
     'courses.subtitle': 'Ihr Weg nach Deutschland beginnt hier',
     'courses.germanA1C2': 'Deutsch A1-C2',
     'courses.germanA1C2.desc': 'Alle Niveaustufen von A1 bis C2. Unterricht 5 Tage die Woche – Intensität für Ihren maximalen Erfolg.',
@@ -124,7 +124,7 @@ const translations: Record<Language, Record<string, string>> = {
   ru: {
     // Navigation
     'nav.home': 'Главная',
-    'nav.courses': 'Предложения',
+    'nav.courses': 'Курсы',
     'nav.about': 'О нас',
     'nav.contact': 'Контакты',
     'nav.ausbildung': 'Аусбильдунг и работа',
@@ -134,7 +134,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.title': 'Изучайте немецкий',
     'hero.passion': 'с увлечением',
     'hero.subtitle': 'Ваш путь в Германию начинается здесь, в Ургенче. Профессиональные курсы немецкого от A1 до C2.',
-    'hero.cta': 'Наши предложения',
+    'hero.cta': 'Наши курсы',
     'hero.feature1': 'Центр экзаменов Goethe',
     'hero.feature1.sub': 'Официальные экзамены проводятся у нас',
     'hero.feature2': 'Современное оснащение',
@@ -146,7 +146,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.contactBtn': 'Связаться с нами',
 
     // Courses
-    'courses.title': 'Наши предложения',
+    'courses.title': 'Наши курсы',
     'courses.subtitle': 'Ваш путь в Германию начинается здесь',
     'courses.germanA1C2': 'Немецкий A1-C2',
     'courses.germanA1C2.desc': 'Все уровни от A1 до C2. Занятия 5 дней в неделю — интенсивность для вашего максимального успеха.',
@@ -236,7 +236,7 @@ const translations: Record<Language, Record<string, string>> = {
   uz: {
     // Navigation
     'nav.home': 'Bosh sahifa',
-    'nav.courses': 'Xizmatlar',
+    'nav.courses': 'Kurslar',
     'nav.about': 'Biz haqimizda',
     'nav.contact': 'Aloqa',
     'nav.ausbildung': 'Ausbildung va ish',
@@ -246,7 +246,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.title': "Nemis tilini o'rganing",
     'hero.passion': 'ishtiyoq bilan',
     'hero.subtitle': "Germaniyaga yo'lingiz shu yerda, Urganchda boshlanadi. A1 dan C2 gacha professional nemis tili kurslari.",
-    'hero.cta': 'Xizmatlarimiz bilan tanishing',
+    'hero.cta': 'Kurslarimiz bilan tanishing',
     'hero.feature1': 'Goethe imtihon markazi',
     'hero.feature1.sub': "Rasmiy imtihonlar bizda o'tkaziladi",
     'hero.feature2': 'Zamonaviy jihozlar',
@@ -258,7 +258,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.contactBtn': "Biz bilan bog'laning",
 
     // Courses
-    'courses.title': 'Bizning xizmatlar',
+    'courses.title': 'Bizning kurslar',
     'courses.subtitle': "Germaniyaga yo'lingiz shu yerdan boshlanadi",
     'courses.germanA1C2': 'Nemis tili A1-C2',
     'courses.germanA1C2.desc': "A1 dan C2 gacha barcha darajalar. Haftada 5 kun darslar — maksimal natija uchun intensiv ta'lim.",

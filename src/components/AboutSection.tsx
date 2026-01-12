@@ -79,8 +79,31 @@ export function AboutSection() {
           </div>
         </div>
 
+        {/* VALUES: Minimalistic List */}
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 mb-32 md:mb-40 px-0 md:px-6">
+          <div className="lg:col-span-4">
+            <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter lg:sticky lg:top-32">
+              {t('about.values.title.line1')} <br className="hidden lg:block" />{t('about.values.title.line2')}
+            </h3>
+          </div>
+          <div className="lg:col-span-8 space-y-16 md:space-y-24">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+              <div>
+                <span className="text-primary font-black text-5xl md:text-6xl block mb-4 md:mb-6">01</span>
+                <h5 className="text-xl md:text-2xl font-black mb-3 md:mb-4 italic">{t('about.values.1.title')}</h5>
+                <p className="text-muted-foreground font-medium leading-relaxed">{t('about.values.1.text')}</p>
+              </div>
+              <div>
+                <span className="text-primary font-black text-5xl md:text-6xl block mb-4 md:mb-6">02</span>
+                <h5 className="text-xl md:text-2xl font-black mb-3 md:mb-4 italic">{t('about.values.2.title')}</h5>
+                <p className="text-muted-foreground font-medium leading-relaxed">{t('about.values.2.text')}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* ATMOSPHERE: Full-Width Callout */}
-        <div className="bg-foreground text-background rounded-[40px] md:rounded-[60px] p-8 md:p-16 lg:p-32 mb-32 md:mb-40 relative overflow-hidden">
+        <div className="bg-foreground text-background rounded-[40px] md:rounded-[60px] p-8 md:p-16 lg:p-32 mb-20 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent)] pointer-events-none" />
           
           <div className="relative z-10 max-w-4xl">
@@ -105,29 +128,6 @@ export function AboutSection() {
                     {t('about.callout.cta')} <ArrowRight />
                   </Link>
                 </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* VALUES: Minimalistic List */}
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 mb-20 px-0 md:px-6">
-          <div className="lg:col-span-4">
-            <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter lg:sticky lg:top-32">
-              {t('about.values.title.line1')} <br className="hidden lg:block" />{t('about.values.title.line2')}
-            </h3>
-          </div>
-          <div className="lg:col-span-8 space-y-16 md:space-y-24">
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-              <div>
-                <span className="text-primary font-black text-5xl md:text-6xl block mb-4 md:mb-6">01</span>
-                <h5 className="text-xl md:text-2xl font-black mb-3 md:mb-4 italic">{t('about.values.1.title')}</h5>
-                <p className="text-muted-foreground font-medium leading-relaxed">{t('about.values.1.text')}</p>
-              </div>
-              <div>
-                <span className="text-primary font-black text-5xl md:text-6xl block mb-4 md:mb-6">02</span>
-                <h5 className="text-xl md:text-2xl font-black mb-3 md:mb-4 italic">{t('about.values.2.title')}</h5>
-                <p className="text-muted-foreground font-medium leading-relaxed">{t('about.values.2.text')}</p>
               </div>
             </div>
           </div>

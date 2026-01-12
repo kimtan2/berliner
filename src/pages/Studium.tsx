@@ -199,23 +199,6 @@ const Studium = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                   
-                  {/* Floating Stats Card */}
-                  <div className="absolute bottom-6 left-6 right-6 bg-card/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
-                    <div className="grid grid-cols-3 gap-4 text-center">
-                      <div>
-                        <p className="text-2xl md:text-3xl font-bold text-primary">500+</p>
-                        <p className="text-sm text-muted-foreground">{t('studium.stats.students')}</p>
-                      </div>
-                      <div>
-                        <p className="text-2xl md:text-3xl font-bold text-primary">95%</p>
-                        <p className="text-sm text-muted-foreground">{t('studium.stats.success')}</p>
-                      </div>
-                      <div>
-                        <p className="text-2xl md:text-3xl font-bold text-primary">10+</p>
-                        <p className="text-sm text-muted-foreground">{t('studium.stats.years')}</p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
 

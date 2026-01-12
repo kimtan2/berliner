@@ -137,21 +137,40 @@ export function HeroSection() {
                   className="group relative"
                   style={{ animationDelay: `${600 + idx * 100}ms` }}
                 >
-                  {/* Card */}
-                  <div className={`relative overflow-hidden rounded-2xl bg-background/80 backdrop-blur-xl border border-border/50 p-6 transition-all duration-500 hover:border-primary/40 hover:shadow-2xl ${feature.shadowColor} hover:-translate-y-2`}>
-                    {/* Gradient Background on Hover */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-[0.08] transition-opacity duration-500`} />
+                  {/* Warm Glassmorphism Card */}
+                  <div className="relative overflow-hidden rounded-3xl p-6 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl group/card"
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(255, 237, 213, 0.25) 0%, rgba(254, 215, 170, 0.15) 50%, rgba(251, 191, 36, 0.1) 100%)',
+                      backdropFilter: 'blur(20px)',
+                      WebkitBackdropFilter: 'blur(20px)',
+                      border: '1px solid rgba(251, 191, 36, 0.2)',
+                      boxShadow: '0 8px 32px rgba(245, 158, 11, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3)'
+                    }}
+                  >
+                    {/* Warm Glow Effect on Hover */}
+                    <div className="absolute inset-0 rounded-3xl opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"
+                      style={{
+                        background: 'radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.15) 0%, transparent 70%)'
+                      }}
+                    />
 
-                    {/* Decorative Top Line */}
-                    <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${feature.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+                    {/* Subtle Inner Highlight */}
+                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-300/40 to-transparent" />
 
                     {/* Top Row: Icon + Highlight Number */}
                     <div className="flex items-start justify-between mb-4 relative z-10">
-                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
-                        <feature.icon className="h-7 w-7 text-white" />
+                      <div className="w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover/card:scale-110 group-hover/card:rotate-3"
+                        style={{
+                          background: 'linear-gradient(135deg, rgba(251, 191, 36, 0.3) 0%, rgba(245, 158, 11, 0.2) 100%)',
+                          backdropFilter: 'blur(10px)',
+                          border: '1px solid rgba(251, 191, 36, 0.3)',
+                          boxShadow: '0 4px 16px rgba(245, 158, 11, 0.2)'
+                        }}
+                      >
+                        <feature.icon className="h-7 w-7 text-amber-600 dark:text-amber-400" />
                       </div>
                       <div className="text-right">
-                        <div className="text-3xl md:text-4xl font-black text-foreground group-hover:text-primary transition-colors tracking-tight">
+                        <div className="text-3xl md:text-4xl font-black text-foreground group-hover/card:text-amber-600 dark:group-hover/card:text-amber-400 transition-colors tracking-tight">
                           {feature.highlight}
                         </div>
                         <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider">
@@ -160,21 +179,23 @@ export function HeroSection() {
                       </div>
                     </div>
 
-                    {/* Divider */}
-                    <div className="w-full h-px bg-gradient-to-r from-border via-border/50 to-transparent mb-4" />
+                    {/* Warm Divider */}
+                    <div className="w-full h-px mb-4" style={{ background: 'linear-gradient(to right, rgba(251, 191, 36, 0.3), rgba(251, 191, 36, 0.1), transparent)' }} />
 
                     {/* Feature Text */}
                     <div className="relative z-10">
                       <div className="flex items-center gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0" />
+                        <CheckCircle2 className="h-4 w-4 text-amber-500 flex-shrink-0" />
                         <span className="text-sm font-semibold text-foreground">
                           {feature.text}
                         </span>
                       </div>
                     </div>
 
-                    {/* Decorative Corner Circle */}
-                    <div className={`absolute -bottom-12 -right-12 w-32 h-32 rounded-full bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl`} />
+                    {/* Warm Corner Glow */}
+                    <div className="absolute -bottom-16 -right-16 w-40 h-40 rounded-full opacity-0 group-hover/card:opacity-30 transition-opacity duration-500 blur-2xl"
+                      style={{ background: 'radial-gradient(circle, rgba(251, 191, 36, 0.5) 0%, transparent 70%)' }}
+                    />
                   </div>
 
                   {/* Connector Line (visible between cards on desktop) */}

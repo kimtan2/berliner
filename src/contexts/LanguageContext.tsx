@@ -68,7 +68,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.values.title.line1': 'Unsere',
     'about.values.title.line2': 'Werte',
     'about.values.1.title': 'Qualität an erster Stelle',
-    'about.values.1.text': 'Bei uns ist der Unterricht keine Massenproduktion. Jeder Schüler ist für uns eine einzigartige Persönlichkeit.',
+    'about.values.1.text': 'Wir setzen auf individuelle Betreuung statt Massenunterricht. Jeder Schüler erhält die persönliche Aufmerksamkeit, die er verdient.',
     'about.values.2.title': 'Deutsche Atmosphäre',
     'about.values.2.text': 'Fühlen Sie sich wie auf den Straßen Berlins, während Sie in Urganch sind.',
 
@@ -180,7 +180,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.values.title.line1': 'Наши',
     'about.values.title.line2': 'принципы',
     'about.values.1.title': 'Качество на первом месте',
-    'about.values.1.text': 'У нас уроки — не конвейер. Каждый ученик для нас — уникальная личность.',
+    'about.values.1.text': 'Мы делаем ставку на индивидуальный подход вместо массового обучения. Каждый ученик получает персональное внимание, которого заслуживает.',
     'about.values.2.title': 'Немецкая атмосфера',
     'about.values.2.text': 'Почувствуйте себя на улицах Берлина, находясь в Ургенче.',
 
@@ -292,7 +292,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.values.title.line1': 'Bizning',
     'about.values.title.line2': 'tamoyillarimiz',
     'about.values.1.title': 'Sifat birinchi o\'rinda',
-    'about.values.1.text': 'Bizda darslar konsveyer emas. Har bir talaba biz uchun alohida shaxs.',
+    'about.values.1.text': 'Biz ommaviy darslar o\'rniga individual yondashuvni tanlaymiz. Har bir talaba o\'ziga xos e\'tiborga loyiq.',
     'about.values.2.title': 'Germaniya muhiti',
     'about.values.2.text': 'Urganchda turib o\'zingizni Berlin ko\'chalarida yurgandek his qilasiz.',
 

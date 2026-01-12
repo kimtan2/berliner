@@ -1,138 +1,139 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Users, Award, BookOpen, History, Heart, Target } from 'lucide-react';
+import { ArrowRight, Globe, Star, ShieldCheck, Sparkles } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import berlinGate from '@/assets/berlin-brandenburg-gate.jpg';
-import berlinSkyline from '@/assets/berlin-skyline.jpg';
 
 export function AboutSection() {
   const { t } = useLanguage();
 
-  const stats = [
-    { icon: Users, text: 'about.students', value: '500+' },
-    { icon: Award, text: 'about.experience', value: '15+' },
-    { icon: BookOpen, text: 'about.teachers', value: '20+' },
-  ];
-
-  const team = [
-    { name: 'Dilshodbek', role: 'Founder & Director', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400' },
-    { name: 'Elena', role: 'Head of German Department', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=400' },
-    { name: 'Aziz', role: 'Senior Consultant', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400' },
-  ];
-
   return (
-    <section id="about" className="py-20 md:py-32 scroll-mt-24 overflow-hidden">
-      <div className="container mx-auto px-4">
-        {/* Main Intro */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-32">
-          <div>
-            <Badge variant="outline" className="mb-4 text-primary border-primary/30">
-              <Users className="h-3 w-3 mr-1" />
-              {t('nav.about')}
-            </Badge>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              {t('about.title')}
+    <section className="py-20 md:py-32 scroll-mt-24 overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-6">
+        
+        {/* HERO: The Vision (Big & Bold) */}
+        <div className="mb-32 md:mb-40">
+          <div className="max-w-5xl">
+            <h1 className="text-5xl md:text-7xl lg:text-[120px] font-black tracking-tighter leading-[0.85] mb-12">
+              {t('about.hero.line1')} <br />
+              <span className="text-primary italic">{t('about.hero.line2')}</span>
+            </h1>
+            <p className="text-xl md:text-3xl lg:text-4xl font-medium text-muted-foreground leading-tight max-w-4xl italic">
+              "{t('about.hero.quote')}"
+            </p>
+          </div>
+        </div>
+
+        {/* STORY SECTION: Image-Text Mix (Asymmetric) */}
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center mb-32 md:mb-40">
+          <div className="relative">
+            <div className="aspect-[3/4] rounded-[40px] bg-muted overflow-hidden shadow-2xl">
+              <img 
+                src={berlinGate} 
+                alt="Berlin Brandenburg Gate" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Small overlay card */}
+            <div className="absolute -bottom-8 -right-4 md:-bottom-10 md:-right-10 bg-primary text-primary-foreground p-8 md:p-10 rounded-[32px] md:rounded-[40px] shadow-2xl max-w-[280px] md:max-w-xs">
+              <h3 className="text-xl md:text-2xl font-black mb-2 italic">{t('about.overlay.title')}</h3>
+              <p className="font-bold opacity-90 leading-tight text-sm md:text-base">{t('about.overlay.text')}</p>
+            </div>
+          </div>
+
+          <div className="space-y-8 md:space-y-10 pt-16 lg:pt-0">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tighter">{t('about.why.title')}</h2>
+            <div className="space-y-6 md:space-y-8">
+              
+              <div className="group border-b border-border pb-6 md:pb-8">
+                <div className="flex items-center gap-4 mb-3">
+                  <Globe className="text-primary" size={24} />
+                  <h4 className="text-lg md:text-xl font-black uppercase tracking-widest">{t('about.why.global.title')}</h4>
+                </div>
+                <p className="text-base md:text-lg text-muted-foreground font-medium">
+                  {t('about.why.global.text')}
+                </p>
+              </div>
+
+              <div className="group border-b border-border pb-6 md:pb-8">
+                <div className="flex items-center gap-4 mb-3">
+                  <Star className="text-primary" size={24} />
+                  <h4 className="text-lg md:text-xl font-black uppercase tracking-widest">{t('about.why.teachers.title')}</h4>
+                </div>
+                <p className="text-base md:text-lg text-muted-foreground font-medium">
+                  {t('about.why.teachers.text')}
+                </p>
+              </div>
+
+              <div className="group border-b border-border pb-6 md:pb-8">
+                <div className="flex items-center gap-4 mb-3">
+                  <ShieldCheck className="text-primary" size={24} />
+                  <h4 className="text-lg md:text-xl font-black uppercase tracking-widest">{t('about.why.help.title')}</h4>
+                </div>
+                <p className="text-base md:text-lg text-muted-foreground font-medium">
+                  {t('about.why.help.text')}
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        {/* ATMOSPHERE: Full-Width Callout */}
+        <div className="bg-foreground text-background rounded-[40px] md:rounded-[60px] p-8 md:p-16 lg:p-32 mb-32 md:mb-40 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent)] pointer-events-none" />
+          
+          <div className="relative z-10 max-w-4xl">
+            <h2 className="text-3xl md:text-4xl lg:text-6xl font-black tracking-tighter leading-tight mb-8 md:mb-10">
+              {t('about.callout.line1')} <br />
+              {t('about.callout.line2')} <span className="text-primary italic">{t('about.callout.accent')}</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              {t('about.text1')}
-            </p>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              {t('about.text2')}
-            </p>
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <div className="relative overflow-hidden rounded-xl aspect-video">
-                <img src={berlinGate} alt="Berlin" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-                <span className="absolute bottom-2 left-2 text-xs text-white/80 font-medium">Berlin 🇩🇪</span>
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 pt-8 md:pt-10 border-t border-background/10">
+              <div>
+                <Sparkles className="text-primary mb-4" size={32} />
+                <p className="text-lg md:text-xl text-muted italic">
+                  "{t('about.callout.quote')}"
+                </p>
               </div>
-              <div className="relative overflow-hidden rounded-xl aspect-video">
-                <img src={berlinSkyline} alt="Berlin" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-                <span className="absolute bottom-2 left-2 text-xs text-white/80 font-medium">Deutschland 🇩🇪</span>
+              <div className="flex items-center">
+                <Button 
+                  asChild
+                  size="lg"
+                  className="rounded-full px-8 md:px-10 py-5 md:py-6 font-black text-lg md:text-xl shadow-2xl hover:scale-105 transition-transform"
+                >
+                  <Link to="/contact" className="flex items-center gap-4">
+                    {t('about.callout.cta')} <ArrowRight />
+                  </Link>
+                </Button>
               </div>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-6">
-            {stats.map((stat, index) => (
-              <div key={index} className="p-8 rounded-3xl bg-card border border-border/50 flex flex-col items-center lg:flex-row lg:gap-6 hover:shadow-xl transition-all duration-300">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-4 lg:mb-0">
-                  <stat.icon className="h-8 w-8" />
-                </div>
-                <div className="text-center lg:text-left">
-                  <div className="text-4xl font-bold text-primary">{stat.value}</div>
-                  <div className="text-muted-foreground font-medium">{t(stat.text)}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* History Section */}
-        <div className="mb-32">
-          <div className="max-w-4xl mx-auto bg-primary/5 rounded-[40px] p-8 md:p-16 relative overflow-hidden">
-            <History className="absolute -right-10 -top-10 h-64 w-64 text-primary/5 rotate-12" />
-            <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center">
-                  <History className="h-6 w-6" />
-                </div>
-                <h3 className="text-3xl font-bold">{t('about.history.title')}</h3>
-              </div>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                {t('about.history.text')}
-              </p>
             </div>
           </div>
         </div>
 
-        {/* Team Section */}
-        <div className="mb-32">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">{t('about.team.title')}</h3>
-            <p className="text-lg text-muted-foreground">{t('about.team.desc')}</p>
+        {/* VALUES: Minimalistic List */}
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 mb-20 px-0 md:px-6">
+          <div className="lg:col-span-4">
+            <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter lg:sticky lg:top-32">
+              {t('about.values.title.line1')} <br className="hidden lg:block" />{t('about.values.title.line2')}
+            </h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member, i) => (
-              <div key={i} className="group">
-                <div className="relative mb-6 overflow-hidden rounded-[32px] aspect-[4/5]">
-                  <img src={member.image} alt={member.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-                <h4 className="text-2xl font-bold mb-1">{member.name}</h4>
-                <p className="text-primary font-medium">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Success Section */}
-        <div>
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">{t('about.success.title')}</h3>
-            <p className="text-lg text-muted-foreground">{t('about.success.desc')}</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-10 rounded-[40px] bg-card border border-border flex gap-8 items-start hover:border-primary/50 transition-colors">
-              <div className="w-16 h-16 rounded-2xl bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0">
-                <Heart className="h-8 w-8" />
+          <div className="lg:col-span-8 space-y-16 md:space-y-24">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+              <div>
+                <span className="text-primary font-black text-5xl md:text-6xl block mb-4 md:mb-6">01</span>
+                <h5 className="text-xl md:text-2xl font-black mb-3 md:mb-4 italic">{t('about.values.1.title')}</h5>
+                <p className="text-muted-foreground font-medium leading-relaxed">{t('about.values.1.text')}</p>
               </div>
               <div>
-                <h4 className="text-2xl font-bold mb-4">98% Kundenzufriedenheit</h4>
-                <p className="text-muted-foreground leading-relaxed">Unsere Schüler schätzen die persönliche Betreuung und die familiäre Atmosphäre in unserer Schule.</p>
-              </div>
-            </div>
-            <div className="p-10 rounded-[40px] bg-card border border-border flex gap-8 items-start hover:border-primary/50 transition-colors">
-              <div className="w-16 h-16 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
-                <Target className="h-8 w-8" />
-              </div>
-              <div>
-                <h4 className="text-2xl font-bold mb-4">Über 500 Visa-Erfolge</h4>
-                <p className="text-muted-foreground leading-relaxed">Wir haben bereits über 500 Schülern erfolgreich bei ihrem Visumsprozess für Deutschland geholfen.</p>
+                <span className="text-primary font-black text-5xl md:text-6xl block mb-4 md:mb-6">02</span>
+                <h5 className="text-xl md:text-2xl font-black mb-3 md:mb-4 italic">{t('about.values.2.title')}</h5>
+                <p className="text-muted-foreground font-medium leading-relaxed">{t('about.values.2.text')}</p>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
 }
-

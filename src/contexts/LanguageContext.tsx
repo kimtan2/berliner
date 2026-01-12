@@ -16,6 +16,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.about': 'Über uns',
     'nav.contact': 'Kontakt',
     'nav.ausbildung': 'Ausbildung & Arbeit',
+    'nav.studium': 'Studium & Ausbildung',
 
     // Hero
     'hero.badge': 'Sprachschule Berliner',
@@ -193,6 +194,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.about': 'О нас',
     'nav.contact': 'Контакты',
     'nav.ausbildung': 'Аусбильдунг и работа',
+    'nav.studium': 'Учёба и Аусбильдунг',
 
     // Hero
     'hero.badge': 'Sprachschule Berliner',
@@ -370,6 +372,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.about': 'Biz haqimizda',
     'nav.contact': 'Aloqa',
     'nav.ausbildung': 'Ausbildung va ish',
+    'nav.studium': 'Studium va Ausbildung',
 
     // Hero
     'hero.badge': 'Sprachschule Berliner',

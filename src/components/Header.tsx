@@ -162,8 +162,9 @@ export function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-2">
-              {filteredLinks.map((link) => (
-                link.href.startsWith("/#") ? (
+              {filteredLinks.map((link) => {
+                const isActive = link.href === pathname || (link.href === "/" && pathname === "/");
+                return link.href.startsWith("/#") ? (
                   <a
                     key={link.href}
                     href={link.href}
@@ -176,13 +177,19 @@ export function Header() {
                   <Link
                     key={link.href}
                     to={link.href}
-                    className="relative px-4 py-2 text-foreground hover:text-primary transition-colors font-medium text-base tracking-wide group"
+                    className={`relative px-4 py-2 transition-colors font-medium text-base tracking-wide group ${
+                      isActive 
+                        ? 'text-primary font-semibold' 
+                        : 'text-foreground hover:text-primary'
+                    }`}
                   >
                     {link.label}
-                    <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                    <span className={`absolute bottom-1 left-4 right-4 h-0.5 bg-primary transition-transform origin-left ${
+                      isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                    }`} />
                   </Link>
-                )
-              ))}
+                );
+              })}
             </nav>
 
             {/* Mobile Menu Button */}
@@ -202,8 +209,9 @@ export function Header() {
       {isMenuOpen && (
         <div className="md:hidden py-4 px-4 bg-background/98 backdrop-blur-xl border-t border-border/30 animate-in slide-in-from-top duration-300">
           <nav className="flex flex-col gap-1">
-            {filteredLinks.map((link) => (
-              link.href.startsWith("/#") ? (
+            {filteredLinks.map((link) => {
+              const isActive = link.href === pathname;
+              return link.href.startsWith("/#") ? (
                 <a
                   key={link.href}
                   href={link.href}
@@ -216,13 +224,17 @@ export function Header() {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-foreground hover:text-primary hover:bg-primary/10 transition-all font-medium py-3 px-4 rounded-xl"
+                  className={`transition-all font-medium py-3 px-4 rounded-xl ${
+                    isActive 
+                      ? 'text-primary bg-primary/10 font-semibold' 
+                      : 'text-foreground hover:text-primary hover:bg-primary/10'
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
-              )
-            ))}
+              );
+            })}
           </nav>
         </div>
       )}

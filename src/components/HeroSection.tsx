@@ -8,28 +8,24 @@ export function HeroSection() {
 
   const features = [
     {
+      icon: Award,
+      text: t('hero.feature1'),
+      sublabel: t('hero.feature1.sub'),
+    },
+    {
+      icon: Sparkles,
+      text: t('hero.feature2'),
+      sublabel: t('hero.feature2.sub'),
+    },
+    {
       icon: GraduationCap,
-      text: t('hero.reason1'),
-      highlight: '20+',
-      sublabel: 'Experten',
-      color: 'from-amber-500 to-orange-600',
-      shadowColor: 'shadow-amber-500/20'
+      text: t('hero.feature3'),
+      sublabel: t('hero.feature3.sub'),
     },
     {
       icon: Users,
-      text: t('hero.reason2'),
-      highlight: '8-12',
-      sublabel: 'pro Gruppe',
-      color: 'from-emerald-500 to-teal-600',
-      shadowColor: 'shadow-emerald-500/20'
-    },
-    {
-      icon: Award,
-      text: t('hero.reason3'),
-      highlight: '98%',
-      sublabel: 'Erfolgsquote',
-      color: 'from-violet-500 to-purple-600',
-      shadowColor: 'shadow-violet-500/20'
+      text: t('hero.feature4'),
+      sublabel: t('hero.feature4.sub'),
     }
   ];
 
@@ -125,7 +121,7 @@ export function HeroSection() {
 
           {/* Enhanced Feature Cards */}
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {features.map((feature, idx) => (
                 <div
                   key={idx}
@@ -152,9 +148,9 @@ export function HeroSection() {
                     {/* Subtle Inner Highlight */}
                     <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-300/40 to-transparent" />
 
-                    {/* Top Row: Icon + Highlight Number */}
-                    <div className="flex items-start justify-between mb-4 relative z-10">
-                      <div className="w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover/card:scale-110 group-hover/card:rotate-3"
+                    {/* Icon */}
+                    <div className="flex items-center gap-3 mb-3 relative z-10">
+                      <div className="w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover/card:scale-110 group-hover/card:rotate-3"
                         style={{
                           background: 'linear-gradient(135deg, rgba(251, 191, 36, 0.3) 0%, rgba(245, 158, 11, 0.2) 100%)',
                           backdropFilter: 'blur(10px)',
@@ -162,29 +158,18 @@ export function HeroSection() {
                           boxShadow: '0 4px 16px rgba(245, 158, 11, 0.2)'
                         }}
                       >
-                        <feature.icon className="h-7 w-7 text-amber-600 dark:text-amber-400" />
-                      </div>
-                      <div className="text-right">
-                        <div className="text-3xl md:text-4xl font-black text-foreground group-hover/card:text-amber-600 dark:group-hover/card:text-amber-400 transition-colors tracking-tight">
-                          {feature.highlight}
-                        </div>
-                        <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider">
-                          {feature.sublabel}
-                        </div>
+                        <feature.icon className="h-6 w-6 text-amber-600 dark:text-amber-400" />
                       </div>
                     </div>
 
-                    {/* Warm Divider */}
-                    <div className="w-full h-px mb-4" style={{ background: 'linear-gradient(to right, rgba(251, 191, 36, 0.3), rgba(251, 191, 36, 0.1), transparent)' }} />
-
                     {/* Feature Text */}
                     <div className="relative z-10">
-                      <div className="flex items-center gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-amber-500 flex-shrink-0" />
-                        <span className="text-sm font-semibold text-foreground">
-                          {feature.text}
-                        </span>
-                      </div>
+                      <h3 className="text-base font-bold text-foreground mb-1">
+                        {feature.text}
+                      </h3>
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        {feature.sublabel}
+                      </p>
                     </div>
 
                     {/* Warm Corner Glow */}

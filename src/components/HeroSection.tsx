@@ -36,7 +36,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-20 pb-32 overflow-hidden"
     >
       {/* Background with Creative Overlays */}
       <div className="absolute inset-0 z-0">

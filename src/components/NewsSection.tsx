@@ -9,7 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-import goetheExamsImage from '@/assets/goethe-exams.png';
+import goetheLogoImage from '@/assets/goethe-logo.png';
 
 interface NewsItem {
   id: number;
@@ -38,7 +38,7 @@ interface NewsItem {
 const newsItems: NewsItem[] = [
   {
     id: 1,
-    image: goetheExamsImage,
+    image: goetheLogoImage,
     date: "24.10.2025",
     title: {
       uz: "Urganchda Goethe imtihonlari",
@@ -203,9 +203,13 @@ export function NewsSection() {
                   <Calendar className="h-4 w-4" />
                   <span>{selectedNews.date}</span>
                 </div>
-                <p className="text-foreground leading-relaxed">
-                  {selectedNews.fullText[language]}
-                </p>
+                <div className="text-foreground leading-relaxed whitespace-pre-line space-y-2">
+                  {selectedNews.fullText[language].split('\n').map((line, index) => (
+                    <p key={index} className={`${line.startsWith('🟢') ? 'font-semibold text-green-600 dark:text-green-400' : ''} ${line.startsWith('💛') ? 'text-amber-600 dark:text-amber-400' : ''} ${line.startsWith('❗') ? 'text-red-600 dark:text-red-400 font-medium' : ''}`}>
+                      {line}
+                    </p>
+                  ))}
+                </div>
               </div>
             </>
           )}

@@ -1,95 +1,75 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useEffect, useState } from 'react';
-import { Star } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { useEffect, useRef } from 'react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
-interface Testimonial {
-  id: number;
-  name: string;
-  image: string;
-  text: {
-    de: string;
-    ru: string;
-    uz: string;
-  };
-  rating: number;
-}
-
-const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    name: "G'anisher Mamadaliyev",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    text: {
-      de: "Ich habe das internationale Goethe B1-Zertifikat in 7 Monaten erhalten und bin den Lehrern des Berliner Zentrums sehr dankbar für ihre Unterstützung.",
-      ru: "Я получил международный сертификат Гёте B1 за 7 месяцев и благодарен преподавателям Берлинского центра за их поддержку.",
-      uz: "Men 7 oy ichida xalqaro Goethe B1 sertifikatini oldim va Berliner markazining o'qituvchilariga yordam uchun minnatdorman."
-    },
-    rating: 5
-  },
-  {
-    id: 2,
-    name: "Muhammadsodiq Abdullayev",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-    text: {
-      de: "Ich habe die Ausbildung im Berlin Zentrum absolviert und erfolgreich die Prüfungen bestanden. Jetzt mache ich eine Ausbildung in Deutschland.",
-      ru: "Прошел обучение в Berlin Zentrum и успешно сдал экзамены. Сейчас прохожу Ausbildung в компании Papenburg в Германии.",
-      uz: "Berlin Zentrumda o'qishni tugatdim va imtihonlardan muvaffaqiyatli o'tdim. Hozir Germaniyada Ausbildung o'tayapman."
-    },
-    rating: 5
-  },
-  {
-    id: 3,
-    name: "Oyatillo Sotvoldiyev",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-    text: {
-      de: "Wir haben im Berliner Zentrum gelernt und gute Prüfungsergebnisse erzielt. Wir möchten uns bei allen Lehrern für ihre Unterstützung bedanken.",
-      ru: "Мы учились в Берлинском центре и добились хороших результатов на экзаменах. Мы хотели бы поблагодарить всех учителей за поддержку.",
-      uz: "Biz Berliner markazida o'qidik va imtihonlarda yaxshi natijalar ega bo'ldik. Barcha o'qituvchilarga yordam uchun minnatdorchilik bildirmoqchimiz."
-    },
-    rating: 5
-  },
-  {
-    id: 4,
-    name: "Dilnoza Karimova",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-    text: {
-      de: "Die beste Sprachschule in Urgench! Die Lehrer sind sehr geduldig und professionell. Ich habe in kurzer Zeit große Fortschritte gemacht.",
-      ru: "Лучшая языковая школа в Ургенче! Преподаватели очень терпеливые и профессиональные. Я добилась больших успехов за короткое время.",
-      uz: "Urganchdagi eng yaxshi til maktabi! O'qituvchilar juda sabr-toqatli va professional. Qisqa vaqt ichida katta yutuqlarga erishdim."
-    },
-    rating: 5
-  },
-  {
-    id: 5,
-    name: "Sardor Rahimov",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
-    text: {
-      de: "Dank Sprachschule Berliner habe ich mein B2-Zertifikat bekommen und arbeite jetzt in Deutschland. Sehr empfehlenswert!",
-      ru: "Благодаря Sprachschule Berliner я получил сертификат B2 и теперь работаю в Германии. Очень рекомендую!",
-      uz: "Sprachschule Berliner tufayli B2 sertifikatini oldim va hozir Germaniyada ishlayman. Juda tavsiya qilaman!"
-    },
-    rating: 5
-  }
+// Instagram video URLs - will be updated with real links later
+const instagramVideos = [
+  "https://www.instagram.com/reel/DSKzWj7DGgr/",
+  "https://www.instagram.com/reel/DSKzWj7DGgr/",
+  "https://www.instagram.com/reel/DSKzWj7DGgr/",
+  "https://www.instagram.com/reel/DSKzWj7DGgr/",
+  "https://www.instagram.com/reel/DSKzWj7DGgr/",
 ];
 
-export function TestimonialsSection() {
-  const { t, language } = useLanguage();
-  const [offset, setOffset] = useState(0);
+function InstagramEmbed({ url }: { url: string }) {
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setOffset((prev) => prev + 1);
-    }, 50);
-    return () => clearInterval(interval);
-  }, []);
-
-  // Double the testimonials for seamless loop
-  const doubledTestimonials = [...testimonials, ...testimonials];
+    // Load Instagram embed script if not already loaded
+    if (!document.querySelector('script[src*="instagram.com/embed.js"]')) {
+      const script = document.createElement('script');
+      script.src = '//www.instagram.com/embed.js';
+      script.async = true;
+      document.body.appendChild(script);
+    } else {
+      // If script already exists, process embeds
+      if ((window as any).instgrm) {
+        (window as any).instgrm.Embeds.process();
+      }
+    }
+  }, [url]);
 
   return (
-    <section id="testimonials" className="py-20 bg-background overflow-hidden">
+    <div ref={containerRef} className="instagram-embed-container">
+      <blockquote
+        className="instagram-media"
+        data-instgrm-permalink={url}
+        data-instgrm-version="14"
+        style={{
+          background: 'hsl(var(--card))',
+          border: 0,
+          borderRadius: '12px',
+          margin: '0 auto',
+          maxWidth: '540px',
+          minWidth: '280px',
+          width: '100%',
+        }}
+      />
+    </div>
+  );
+}
+
+export function TestimonialsSection() {
+  const { t } = useLanguage();
+
+  useEffect(() => {
+    // Process Instagram embeds when component mounts
+    const timer = setTimeout(() => {
+      if ((window as any).instgrm) {
+        (window as any).instgrm.Embeds.process();
+      }
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <section id="testimonials" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
@@ -99,45 +79,24 @@ export function TestimonialsSection() {
             {t('testimonials.subtitle')}
           </p>
         </div>
-      </div>
 
-      {/* Scrolling container */}
-      <div className="relative w-full">
-        <div 
-          className="flex gap-6 transition-none"
-          style={{ 
-            transform: `translateX(${-offset % (testimonials.length * 340)}px)`,
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
           }}
+          className="w-full max-w-6xl mx-auto"
         >
-          {doubledTestimonials.map((testimonial, idx) => (
-            <Card 
-              key={`${testimonial.id}-${idx}`}
-              className="bg-card border border-border hover:shadow-lg transition-shadow duration-300 flex-shrink-0 w-[320px]"
-            >
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <Avatar className="h-14 w-14">
-                    <AvatarImage src={testimonial.image} alt={testimonial.name} />
-                    <AvatarFallback className="bg-primary text-primary-foreground">
-                      {testimonial.name.split(' ').map(n => n[0]).join('')}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-                    <div className="flex gap-0.5">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-muted-foreground leading-relaxed text-sm">
-                  {testimonial.text[language]}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+          <CarouselContent className="-ml-4">
+            {instagramVideos.map((url, index) => (
+              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <InstagramEmbed url={url} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex -left-12" />
+          <CarouselNext className="hidden md:flex -right-12" />
+        </Carousel>
       </div>
     </section>
   );

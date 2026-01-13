@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import {
   Carousel,
@@ -8,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Button } from '@/components/ui/button';
 
 // Instagram video URLs
@@ -30,65 +31,43 @@ function shuffleArray<T>(array: T[]): T[] {
   return shuffled;
 }
 
+function getInstagramReelEmbedSrc(url: string): string | null {
+  const match = url.match(/\/reel\/([^/]+)/i);
+  if (!match?.[1]) return null;
+  const shortcode = match[1];
+  return `https://www.instagram.com/reel/${shortcode}/embed/`;
+}
+
 function InstagramEmbed({ url }: { url: string }) {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Load Instagram embed script if not already loaded
-    if (!document.querySelector('script[src*="instagram.com/embed.js"]')) {
-      const script = document.createElement('script');
-      script.src = '//www.instagram.com/embed.js';
-      script.async = true;
-      document.body.appendChild(script);
-    } else {
-      // If script already exists, process embeds
-      if ((window as any).instgrm) {
-        (window as any).instgrm.Embeds.process();
-      }
-    }
-  }, [url]);
-
-  const handleOpenInstagram = () => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
+  const embedSrc = getInstagramReelEmbedSrc(url);
 
   return (
-    <div ref={containerRef} className="instagram-embed-container flex flex-col gap-3">
-      <div className="relative group">
-        <blockquote
-          className="instagram-media"
-          data-instgrm-permalink={url}
-          data-instgrm-version="14"
-          data-instgrm-captioned=""
-          style={{
-            background: 'hsl(var(--card))',
-            border: 0,
-            borderRadius: '12px',
-            margin: '0 auto',
-            maxWidth: '540px',
-            minWidth: '280px',
-            width: '100%',
-          }}
-        />
-        {/* Clickable overlay for opening in new tab */}
-        <div 
-          onClick={handleOpenInstagram}
-          className="absolute inset-0 cursor-pointer z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-background/20 backdrop-blur-[1px] rounded-xl"
-        >
-          <div className="bg-primary text-primary-foreground px-4 py-2 rounded-full flex items-center gap-2 font-medium shadow-lg">
-            <ExternalLink className="h-4 w-4" />
-            Auf Instagram öffnen
-          </div>
-        </div>
+    <div className="flex flex-col gap-3">
+      <div className="rounded-xl border border-border bg-card overflow-hidden">
+        <AspectRatio ratio={9 / 16}>
+          {embedSrc ? (
+            <iframe
+              src={embedSrc}
+              title="Instagram Reel"
+              className="h-full w-full"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+          ) : (
+            <div className="h-full w-full flex items-center justify-center text-muted-foreground text-sm">
+              Video konnte nicht geladen werden
+            </div>
+          )}
+        </AspectRatio>
       </div>
-      <Button 
-        variant="outline" 
-        size="sm" 
-        onClick={handleOpenInstagram}
-        className="mx-auto"
-      >
-        <ExternalLink className="h-4 w-4 mr-2" />
-        Auf Instagram ansehen
+
+      <Button asChild variant="outline" size="sm" className="mx-auto">
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          <ExternalLink className="h-4 w-4 mr-2" />
+          Auf Instagram ansehen
+        </a>
       </Button>
     </div>
   );
@@ -97,16 +76,6 @@ function InstagramEmbed({ url }: { url: string }) {
 export function TestimonialsSection() {
   const { t } = useLanguage();
   const [shuffledVideos] = useState(() => shuffleArray(instagramVideos));
-
-  useEffect(() => {
-    // Process Instagram embeds when component mounts
-    const timer = setTimeout(() => {
-      if ((window as any).instgrm) {
-        (window as any).instgrm.Embeds.process();
-      }
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <section id="testimonials" className="py-20 bg-background">

@@ -10,6 +10,7 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import goetheLogoImage from '@/assets/goethe-logo.png';
+import goetheExamsImage from '@/assets/goethe-exams.png';
 import a1CourseImage from '@/assets/a1-course-news.png';
 import newYearImage from '@/assets/new-year-2026.jpg';
 
@@ -40,6 +41,29 @@ interface NewsItem {
 const newsItems: NewsItem[] = [
   {
     id: 1,
+    image: goetheExamsImage,
+    date: "07.01.2026",
+    title: {
+      uz: "Fevral oyida Goethe imtihonlari! 📋",
+      ru: "Экзамены Goethe в феврале! 📋",
+      de: "Goethe-Prüfungen im Februar! 📋",
+      en: "Goethe Exams in February! 📋"
+    },
+    excerpt: {
+      uz: "Fevral oyida Urganchda o'tkaziladigan Goethe imtihonlari sanalarini e'lon qilamiz...",
+      ru: "Объявляем даты экзаменов Goethe в Ургенче в феврале...",
+      de: "Wir geben die Termine der Goethe-Prüfungen in Urgentsch im Februar bekannt...",
+      en: "We announce the dates of Goethe exams in Urgench in February..."
+    },
+    fullText: {
+      uz: "⚡️Assalomu alaykum, qadrli kuzatuvchilar!\n\nQuyida fevral oyida Urganchda o'tkaziladigan Gyote imtihonlari bilan tanishishingiz mumkin:\n\n🟢Goethe-Zertifikat A2 - 02.02.2026\n\n🟢Goethe-Zertifikat B1 - 02.02.2026\n\n🟢Goethe-Zertifikat B2 - 03.02.2026\n\n🤝Ro'yxatdan o'tishga ulgurmasangiz:\nvaqti-vaqti bilan saytni tekshirib turishingiz kerak. Bekor qilingan joylar avtomatik ravishda saytda paydo bo'ladi.\n\n❗️Iimtihon kuni shaxsni tasdiqlovchi hujjatni o'zingiz bilan olib kelishingiz shart. Pasportsiz imtihonga kirishga ruxsat etilmaydi. Agar sizda xorijiy pasport mavjud bo'lsa, ichki ID karta o'rniga aynan shu hujjatni taqdim etishingiz tavsiya etiladi.\n\n❗️To'lov kechiktirilgan taqdirda:\nTo'lov imtihon band qilingandan boshlab 24 soat ichida amalga oshirishingiz kerak, aks holda joyingiz bekor qilinadi.\nTo'lovni faqat imtihonni band qilgandan keyin amalga oshiring.\n\n❗️Agar xato yoki ortiqcha to'lov amalga oshirilsa (bir imtihon uchun ikki marta to'lov qilinishi, imtihonga oldindan ro'yxatdan o'tmasdan to'lov amalga oshirilishi, to'lov miqdoridan ko'proq pul o'tkazish), o'tkazilgan mablag' to'lov summasidan 5% miqdorda ma'muriy to'lov undirilgan holda qaytariladi.\n\n▶️ Imtihonni band qilish",
+      ru: "⚡️Здравствуйте, дорогие подписчики!\n\nНиже вы можете ознакомиться с датами экзаменов Goethe, которые пройдут в Ургенче в феврале:\n\n🟢Goethe-Zertifikat A2 - 02.02.2026\n\n🟢Goethe-Zertifikat B1 - 02.02.2026\n\n🟢Goethe-Zertifikat B2 - 03.02.2026\n\n🤝Если не успели зарегистрироваться:\nпериодически проверяйте сайт. Отмененные места автоматически появляются на сайте.\n\n❗️В день экзамена обязательно возьмите с собой удостоверение личности. Без паспорта на экзамен не допускают. Если у вас есть заграничный паспорт, рекомендуется предоставить именно его вместо внутреннего ID.\n\n❗️При задержке оплаты:\nОплата должна быть произведена в течение 24 часов после бронирования экзамена, иначе ваше место будет аннулировано.\nОплачивайте только после бронирования экзамена.\n\n❗️В случае ошибочного или излишнего платежа (двойная оплата за один экзамен, оплата без предварительной регистрации, перевод суммы больше требуемой), переведенная сумма будет возвращена с удержанием административного сбора в размере 5% от суммы платежа.\n\n▶️ Забронировать экзамен",
+      de: "⚡️Hallo liebe Follower!\n\nHier sind die Termine der Goethe-Prüfungen, die im Februar in Urgentsch stattfinden:\n\n🟢Goethe-Zertifikat A2 - 02.02.2026\n\n🟢Goethe-Zertifikat B1 - 02.02.2026\n\n🟢Goethe-Zertifikat B2 - 03.02.2026\n\n🤝Falls Sie sich nicht rechtzeitig anmelden konnten:\nÜberprüfen Sie regelmäßig die Website. Stornierte Plätze werden automatisch auf der Website angezeigt.\n\n❗️Am Prüfungstag müssen Sie unbedingt Ihren Ausweis mitbringen. Ohne Reisepass ist der Zutritt zur Prüfung nicht gestattet. Wenn Sie einen Reisepass haben, wird empfohlen, diesen anstelle des internen Ausweises vorzulegen.\n\n❗️Bei verspäteter Zahlung:\nDie Zahlung muss innerhalb von 24 Stunden nach der Prüfungsbuchung erfolgen, andernfalls wird Ihr Platz storniert.\nZahlen Sie erst nach der Buchung der Prüfung.\n\n❗️Bei fehlerhafter oder überschüssiger Zahlung (doppelte Zahlung für eine Prüfung, Zahlung ohne Voranmeldung, Überweisung eines höheren Betrags), wird der überwiesene Betrag unter Abzug einer Verwaltungsgebühr von 5% des Zahlungsbetrags zurückerstattet.\n\n▶️ Prüfung buchen",
+      en: "⚡️Hello dear followers!\n\nBelow you can find the Goethe exam dates to be held in Urgench in February:\n\n🟢Goethe-Zertifikat A2 - 02.02.2026\n\n🟢Goethe-Zertifikat B1 - 02.02.2026\n\n🟢Goethe-Zertifikat B2 - 03.02.2026\n\n🤝If you missed registration:\nCheck the website periodically. Cancelled spots automatically appear on the website.\n\n❗️On exam day, you must bring your ID with you. Without a passport, admission to the exam is not allowed. If you have a foreign passport, it is recommended to present it instead of an internal ID card.\n\n❗️In case of delayed payment:\nPayment must be made within 24 hours of booking the exam, otherwise your spot will be cancelled.\nOnly pay after booking the exam.\n\n❗️In case of erroneous or excess payment (double payment for one exam, payment without prior registration, transfer of an amount greater than required), the transferred amount will be refunded with a 5% administrative fee deducted from the payment amount.\n\n▶️ Book exam"
+    }
+  },
+  {
+    id: 2,
     image: a1CourseImage,
     date: "03.01.2026",
     title: {
@@ -62,7 +86,7 @@ const newsItems: NewsItem[] = [
     }
   },
   {
-    id: 2,
+    id: 3,
     image: newYearImage,
     date: "31.12.2025",
     title: {
@@ -85,7 +109,7 @@ const newsItems: NewsItem[] = [
     }
   },
   {
-    id: 3,
+    id: 4,
     image: goetheLogoImage,
     date: "24.10.2025",
     title: {
@@ -132,11 +156,11 @@ export function NewsSection() {
               className="bg-card border border-border overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group"
               onClick={() => setSelectedNews(item)}
             >
-              <div className={`aspect-video overflow-hidden ${item.id === 3 ? 'bg-[#8DC04B]' : ''}`}>
+              <div className={`aspect-video overflow-hidden ${item.id === 1 || item.id === 4 ? 'bg-[#8DC04B]' : ''}`}>
                 <img 
                   src={item.image} 
                   alt={item.title[language]}
-                  className={`w-full h-full group-hover:scale-105 transition-transform duration-300 ${item.id === 3 ? 'object-contain p-4' : 'object-cover'}`}
+                  className={`w-full h-full group-hover:scale-105 transition-transform duration-300 ${item.id === 1 || item.id === 4 ? 'object-contain p-4' : 'object-cover'}`}
                 />
               </div>
               <CardContent className="p-6">

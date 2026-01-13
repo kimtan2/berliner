@@ -37,9 +37,10 @@ export function Header() {
   const filteredLinks = navLinks.filter(link => !(link.hideOnHome && pathname === "/"));
 
   const languages = [
-    { code: "de" as const, label: "Deutsch", flag: "🇩🇪" },
-    { code: "ru" as const, label: "Русский", flag: "🇷🇺" },
     { code: "uz" as const, label: "O'zbekcha", flag: "🇺🇿" },
+    { code: "ru" as const, label: "Русский", flag: "🇷🇺" },
+    { code: "de" as const, label: "Deutsch", flag: "🇩🇪" },
+    { code: "en" as const, label: "English", flag: "🇬🇧" },
   ];
 
   const currentLang = languages.find((l) => l.code === language);

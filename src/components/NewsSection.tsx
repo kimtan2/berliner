@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/dialog';
 import goetheLogoImage from '@/assets/goethe-logo.png';
 import a1CourseImage from '@/assets/a1-course-news.png';
+import newYearImage from '@/assets/new-year-2026.jpg';
 
 interface NewsItem {
   id: number;
@@ -62,6 +63,29 @@ const newsItems: NewsItem[] = [
   },
   {
     id: 2,
+    image: newYearImage,
+    date: "31.12.2025",
+    title: {
+      uz: "Yangi yil tabriklari! 🎉",
+      ru: "Новогодние поздравления! 🎉",
+      de: "Neujahrsgrüße! 🎉",
+      en: "New Year Greetings! 🎉"
+    },
+    excerpt: {
+      uz: "Barcha nemis tili ishqibozlariga eng iliq tilaklarimizni yo'llaymiz...",
+      ru: "Шлём самые тёплые пожелания всем любителям немецкого языка...",
+      de: "Wir senden die wärmsten Wünsche an alle Deutschliebhaber...",
+      en: "We send our warmest wishes to all German language enthusiasts..."
+    },
+    fullText: {
+      uz: "Barcha nemis tili ishqibozlariga eng iliq tilaklarimizni yo'llaymiz. 💛 Siz bilan o'tgan yil biz uchun unutilmas bo'ldi: kulish, o'rganish, yangi mahoratlarni kashf etish va har bir lahzadan zavqlanish — bularning barchasi siz bilan bo'ldi.\n\nKelgusi yil ham shunday quvonch, motivatsiya va yangi sarguzashtlarga to'lsin. Har bir kunimiz birga o'rganish, rivojlanish va yangi cho'qqilarga erishish bilan boyitilsin. ⭐️\n\nBiz siz bilan bo'lganimizdan doimo ilhomlanamiz va har biringiz bizning jamoamizning ajralmas qismisiz. Yangi yil barcha uchun yangi imkoniyatlar va yangi yutuqlar olib kelsin! 💫\n\nBerliner til maktabi jamoasi",
+      ru: "Шлём самые тёплые пожелания всем любителям немецкого языка. 💛 Прошедший год с вами стал для нас незабываемым: смех, учёба, открытие новых навыков и наслаждение каждым моментом — всё это было вместе с вами.\n\nПусть наступающий год будет таким же полным радости, мотивации и новых приключений. Пусть каждый наш день обогащается совместным обучением, развитием и достижением новых вершин. ⭐️\n\nМы всегда вдохновляемся тем, что мы вместе с вами, и каждый из вас — неотъемлемая часть нашей команды. Пусть Новый год принесёт всем новые возможности и новые победы! 💫\n\nКоманда языковой школы Berliner",
+      de: "Wir senden die wärmsten Wünsche an alle Deutschliebhaber. 💛 Das vergangene Jahr mit Ihnen war für uns unvergesslich: Lachen, Lernen, neue Fähigkeiten entdecken und jeden Moment genießen — all das haben wir gemeinsam erlebt.\n\nMöge das kommende Jahr genauso voller Freude, Motivation und neuer Abenteuer sein. Möge jeder Tag durch gemeinsames Lernen, Entwicklung und das Erreichen neuer Höhen bereichert werden. ⭐️\n\nWir sind immer inspiriert, dass wir mit Ihnen zusammen sind, und jeder von Ihnen ist ein untrennbarer Teil unseres Teams. Möge das neue Jahr allen neue Möglichkeiten und neue Erfolge bringen! 💫\n\nDas Team der Sprachschule Berliner",
+      en: "We send our warmest wishes to all German language enthusiasts. 💛 The past year with you has been unforgettable for us: laughter, learning, discovering new skills, and enjoying every moment — all of this was shared with you.\n\nMay the coming year be just as full of joy, motivation, and new adventures. May each day be enriched by learning together, growing, and reaching new heights. ⭐️\n\nWe are always inspired by being with you, and each of you is an inseparable part of our team. May the New Year bring new opportunities and new achievements for everyone! 💫\n\nThe Berliner Language School Team"
+    }
+  },
+  {
+    id: 3,
     image: goetheLogoImage,
     date: "24.10.2025",
     title: {
@@ -108,11 +132,11 @@ export function NewsSection() {
               className="bg-card border border-border overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group"
               onClick={() => setSelectedNews(item)}
             >
-              <div className={`aspect-video overflow-hidden ${item.id === 2 ? 'bg-white' : ''}`}>
+              <div className={`aspect-video overflow-hidden ${item.id === 3 ? 'bg-white' : ''}`}>
                 <img 
                   src={item.image} 
                   alt={item.title[language]}
-                  className={`w-full h-full group-hover:scale-105 transition-transform duration-300 ${item.id === 2 ? 'object-contain p-4' : 'object-cover'}`}
+                  className={`w-full h-full group-hover:scale-105 transition-transform duration-300 ${item.id === 3 ? 'object-contain p-4' : 'object-cover'}`}
                 />
               </div>
               <CardContent className="p-6">

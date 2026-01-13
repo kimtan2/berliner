@@ -132,7 +132,7 @@ export function NewsSection() {
               className="bg-card border border-border overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group"
               onClick={() => setSelectedNews(item)}
             >
-              <div className={`aspect-video overflow-hidden ${item.id === 3 ? 'bg-white' : ''}`}>
+              <div className={`aspect-video overflow-hidden ${item.id === 3 ? 'bg-[#8DC04B]' : ''}`}>
                 <img 
                   src={item.image} 
                   alt={item.title[language]}

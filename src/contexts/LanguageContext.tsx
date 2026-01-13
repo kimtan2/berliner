@@ -725,15 +725,36 @@ const translations: Record<Language, Record<string, string>> = {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+function detectBrowserLanguage(): Language {
+  const stored = localStorage.getItem('preferred-language');
+  if (stored && ['de', 'ru', 'uz', 'en'].includes(stored)) {
+    return stored as Language;
+  }
+
+  const browserLang = navigator.language.toLowerCase();
+  
+  if (browserLang.startsWith('uz')) return 'uz';
+  if (browserLang.startsWith('ru')) return 'ru';
+  if (browserLang.startsWith('de')) return 'de';
+  if (browserLang.startsWith('en')) return 'en';
+  
+  return 'uz'; // Default to Uzbek
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('uz');
+  const [language, setLanguage] = useState<Language>(() => detectBrowserLanguage());
+
+  const handleSetLanguage = (lang: Language) => {
+    setLanguage(lang);
+    localStorage.setItem('preferred-language', lang);
+  };
 
   const t = (key: string): string => {
     return translations[language][key] || key;
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );

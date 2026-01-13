@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   Carousel,
   CarouselContent,
@@ -8,14 +8,25 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 
-// Instagram video URLs - will be updated with real links later
+// Instagram video URLs
 const instagramVideos = [
   "https://www.instagram.com/reel/DSKzWj7DGgr/",
-  "https://www.instagram.com/reel/DSKzWj7DGgr/",
-  "https://www.instagram.com/reel/DSKzWj7DGgr/",
-  "https://www.instagram.com/reel/DSKzWj7DGgr/",
-  "https://www.instagram.com/reel/DSKzWj7DGgr/",
+  "https://www.instagram.com/reel/DQVk6idiFOC/",
+  "https://www.instagram.com/reel/DPu6sbviEof/",
+  "https://www.instagram.com/reel/DHYBtblsUQn/",
+  "https://www.instagram.com/reel/C8mqHRdIoa9/",
+  "https://www.instagram.com/reel/Cy-86XZsMZ_/",
 ];
+
+// Shuffle array using Fisher-Yates algorithm
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
 
 function InstagramEmbed({ url }: { url: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -57,6 +68,7 @@ function InstagramEmbed({ url }: { url: string }) {
 
 export function TestimonialsSection() {
   const { t } = useLanguage();
+  const [shuffledVideos] = useState(() => shuffleArray(instagramVideos));
 
   useEffect(() => {
     // Process Instagram embeds when component mounts
@@ -88,7 +100,7 @@ export function TestimonialsSection() {
           className="w-full max-w-6xl mx-auto"
         >
           <CarouselContent className="-ml-4">
-            {instagramVideos.map((url, index) => (
+            {shuffledVideos.map((url, index) => (
               <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                 <InstagramEmbed url={url} />
               </CarouselItem>

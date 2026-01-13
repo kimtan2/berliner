@@ -24,7 +24,7 @@ export function Footer() {
               <Send className="h-6 w-6 text-white" />
             </a>
             <a
-              href="https://www.instagram.com/sprachschule_berliner/"
+              href="https://www.instagram.com/sprachschule_berliner?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
               rel="noopener noreferrer"
               className="w-14 h-14 rounded-full bg-gradient-to-br from-[#f09433] via-[#dc2743] to-[#bc1888] flex items-center justify-center hover:scale-110 transition-transform"

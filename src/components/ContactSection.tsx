@@ -107,7 +107,7 @@ export function ContactSection({ course }: ContactSectionProps) {
 
           {/* Instagram Card */}
           <a
-            href="https://www.instagram.com/sprachschule_berliner/"
+            href="https://www.instagram.com/sprachschule_berliner?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             target="_blank"
             rel="noopener noreferrer"
             className="block"

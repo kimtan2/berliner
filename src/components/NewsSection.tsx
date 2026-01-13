@@ -10,7 +10,6 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import goetheLogoImage from '@/assets/goethe-logo.png';
-import goetheExamsImage from '@/assets/goethe-exams.png';
 import a1CourseImage from '@/assets/a1-course-news.png';
 import newYearImage from '@/assets/new-year-2026.jpg';
 
@@ -41,7 +40,7 @@ interface NewsItem {
 const newsItems: NewsItem[] = [
   {
     id: 1,
-    image: goetheExamsImage,
+    image: goetheLogoImage,
     date: "07.01.2026",
     title: {
       uz: "Fevral oyida Goethe imtihonlari! 📋",

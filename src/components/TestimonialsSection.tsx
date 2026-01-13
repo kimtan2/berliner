@@ -1,5 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useEffect, useRef, useState } from 'react';
+import { ExternalLink } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -7,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { Button } from '@/components/ui/button';
 
 // Instagram video URLs
 const instagramVideos = [
@@ -46,22 +48,48 @@ function InstagramEmbed({ url }: { url: string }) {
     }
   }, [url]);
 
+  const handleOpenInstagram = () => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
-    <div ref={containerRef} className="instagram-embed-container">
-      <blockquote
-        className="instagram-media"
-        data-instgrm-permalink={url}
-        data-instgrm-version="14"
-        style={{
-          background: 'hsl(var(--card))',
-          border: 0,
-          borderRadius: '12px',
-          margin: '0 auto',
-          maxWidth: '540px',
-          minWidth: '280px',
-          width: '100%',
-        }}
-      />
+    <div ref={containerRef} className="instagram-embed-container flex flex-col gap-3">
+      <div className="relative group">
+        <blockquote
+          className="instagram-media"
+          data-instgrm-permalink={url}
+          data-instgrm-version="14"
+          data-instgrm-captioned=""
+          style={{
+            background: 'hsl(var(--card))',
+            border: 0,
+            borderRadius: '12px',
+            margin: '0 auto',
+            maxWidth: '540px',
+            minWidth: '280px',
+            width: '100%',
+          }}
+        />
+        {/* Clickable overlay for opening in new tab */}
+        <div 
+          onClick={handleOpenInstagram}
+          className="absolute inset-0 cursor-pointer z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-background/20 backdrop-blur-[1px] rounded-xl"
+        >
+          <div className="bg-primary text-primary-foreground px-4 py-2 rounded-full flex items-center gap-2 font-medium shadow-lg">
+            <ExternalLink className="h-4 w-4" />
+            Auf Instagram öffnen
+          </div>
+        </div>
+      </div>
+      <Button 
+        variant="outline" 
+        size="sm" 
+        onClick={handleOpenInstagram}
+        className="mx-auto"
+      >
+        <ExternalLink className="h-4 w-4 mr-2" />
+        Auf Instagram ansehen
+      </Button>
     </div>
   );
 }

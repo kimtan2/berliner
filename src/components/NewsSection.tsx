@@ -153,11 +153,11 @@ export function NewsSection() {
               className="bg-card border border-border overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group"
               onClick={() => setSelectedNews(item)}
             >
-              <div className="aspect-video overflow-hidden bg-muted">
+              <div className={`aspect-video overflow-hidden ${item.id === 1 ? 'bg-white' : ''}`}>
                 <img 
                   src={item.image} 
                   alt={item.title[language]}
-                  className={`w-full h-full group-hover:scale-105 transition-transform duration-300 ${item.id === 1 ? 'object-contain' : 'object-cover'}`}
+                  className={`w-full h-full group-hover:scale-105 transition-transform duration-300 ${item.id === 1 ? 'object-contain p-4' : 'object-cover'}`}
                 />
               </div>
               <CardContent className="p-6">

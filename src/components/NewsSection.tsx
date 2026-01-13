@@ -10,6 +10,7 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import goetheLogoImage from '@/assets/goethe-logo.png';
+import a1CourseImage from '@/assets/a1-course-news.png';
 
 interface NewsItem {
   id: number;
@@ -38,6 +39,29 @@ interface NewsItem {
 const newsItems: NewsItem[] = [
   {
     id: 1,
+    image: a1CourseImage,
+    date: "03.01.2026",
+    title: {
+      uz: "Yangi A1.1 guruhlari ochildi!",
+      ru: "Новые группы A1.1 открыты!",
+      de: "Neue A1.1 Gruppen gestartet!",
+      en: "New A1.1 Groups Started!"
+    },
+    excerpt: {
+      uz: "2026-yilni nemis tili bilan boshlashga tayyormisiz? Yangi guruhlarga qabul davom etmoqda...",
+      ru: "Готовы начать 2026 год с немецкого языка? Набор в новые группы продолжается...",
+      de: "Bereit, 2026 mit Deutsch zu beginnen? Die Anmeldung für neue Gruppen läuft...",
+      en: "Ready to start 2026 with German? Registration for new groups is ongoing..."
+    },
+    fullText: {
+      uz: "🔥BUGUN QAROR QILING — ERTAGA NATIJA! 🎁\n🌟 Yangi yil — yangi imkoniyatlar!\n\n⏩2026-yilni nemis tili bilan boshlashga tayyormisiz?\nUnda hozir ayni payt!\n\n🎁SPRACHSCHULE BERLINER\n🌟YANGI GURUHLARGA QABUL DAVOM ETMOQDA!\n\n◡̈ \"Keyin boshlayman\" degan bahona endi ishlamaydi.\n\n📆Boshlanish sanasi: 5-yanvar, 2026-yil\n⏰Dars vaqtlari:\n09:00\n14:00\n17:00\n\n🚀BERLINER — bu oddiy kurs emas!\nBu — sifat, natija va kelajak.\n\n🔥SIZ UCHUN MAXSUS DASTUR:\n✨ Nemis tilini 0 dan tez va oson o'zlashtirish\n✨ Har bir dars — jonli muloqot va interaktiv tajriba\n✨ Professional va shijoatli o'qituvchilar jamoasi\n✨ \"TIRILTIRUVCHI DARSLAR\" — gapirshni majbur o'rganasiz",
+      ru: "🔥РЕШАЙТЕ СЕГОДНЯ — РЕЗУЛЬТАТ ЗАВТРА! 🎁\n🌟 Новый год — новые возможности!\n\n⏩Готовы начать 2026 год с немецкого языка?\nСейчас самое время!\n\n🎁SPRACHSCHULE BERLINER\n🌟НАБОР В НОВЫЕ ГРУППЫ ПРОДОЛЖАЕТСЯ!\n\n◡̈ Отговорка \"начну потом\" больше не работает.\n\n📆Дата начала: 5 января 2026 года\n⏰Время занятий:\n09:00\n14:00\n17:00\n\n🚀BERLINER — это не просто курсы!\nЭто — качество, результат и будущее.\n\n🔥СПЕЦИАЛЬНАЯ ПРОГРАММА ДЛЯ ВАС:\n✨ Быстрое и легкое освоение немецкого с нуля\n✨ Каждый урок — живое общение и интерактивный опыт\n✨ Команда профессиональных и увлеченных преподавателей\n✨ \"ОЖИВЛЯЮЩИЕ УРОКИ\" — вы обязательно научитесь говорить",
+      de: "🔥ENTSCHEIDEN SIE HEUTE — ERGEBNIS MORGEN! 🎁\n🌟 Neues Jahr — neue Möglichkeiten!\n\n⏩Bereit, 2026 mit Deutsch zu beginnen?\nJetzt ist der perfekte Zeitpunkt!\n\n🎁SPRACHSCHULE BERLINER\n🌟ANMELDUNG FÜR NEUE GRUPPEN LÄUFT!\n\n◡̈ Die Ausrede \"Ich fange später an\" funktioniert nicht mehr.\n\n📆Startdatum: 5. Januar 2026\n⏰Unterrichtszeiten:\n09:00\n14:00\n17:00\n\n🚀BERLINER — das ist nicht nur ein Kurs!\nDas ist — Qualität, Ergebnis und Zukunft.\n\n🔥SPEZIELLES PROGRAMM FÜR SIE:\n✨ Schnelles und einfaches Deutschlernen von Null\n✨ Jede Stunde — lebendige Kommunikation und interaktive Erfahrung\n✨ Team aus professionellen und engagierten Lehrern\n✨ \"BELEBENDE LEKTIONEN\" — Sie werden garantiert sprechen lernen",
+      en: "🔥DECIDE TODAY — RESULTS TOMORROW! 🎁\n🌟 New year — new opportunities!\n\n⏩Ready to start 2026 with German?\nNow is the perfect time!\n\n🎁SPRACHSCHULE BERLINER\n🌟REGISTRATION FOR NEW GROUPS IS ONGOING!\n\n◡̈ The excuse \"I'll start later\" no longer works.\n\n📆Start date: January 5, 2026\n⏰Class times:\n09:00\n14:00\n17:00\n\n🚀BERLINER — this is not just a course!\nThis is — quality, results and future.\n\n🔥SPECIAL PROGRAM FOR YOU:\n✨ Fast and easy German learning from zero\n✨ Every lesson — live communication and interactive experience\n✨ Team of professional and passionate teachers\n✨ \"REVIVING LESSONS\" — you will definitely learn to speak"
+    }
+  },
+  {
+    id: 2,
     image: goetheLogoImage,
     date: "24.10.2025",
     title: {
@@ -57,75 +81,6 @@ const newsItems: NewsItem[] = [
       ru: "Здравствуйте, дорогие подписчики!\n\nНиже вы можете ознакомиться с датами экзаменов Goethe, которые пройдут в Ургенче в ноябре:\n\n🟢 Goethe-Zertifikat A2 - 14.11.2025\n🟢 Goethe-Zertifikat B1 - 14.11.2025\n🟢 Goethe-Zertifikat B2 - 15.11.2025\n\n💛 Если не успели зарегистрироваться: периодически проверяйте сайт. Отмененные места автоматически появляются на сайте.\n\n❗ В день экзамена обязательно возьмите с собой удостоверение личности. Без паспорта на экзамен не допускают.\n\n❗ При задержке оплаты: Оплата должна быть произведена в течение 24 часов после бронирования экзамена, иначе ваше место будет аннулировано.",
       de: "Hallo liebe Follower!\n\nHier sind die Termine der Goethe-Prüfungen, die im November in Urgentsch stattfinden:\n\n🟢 Goethe-Zertifikat A2 - 14.11.2025\n🟢 Goethe-Zertifikat B1 - 14.11.2025\n🟢 Goethe-Zertifikat B2 - 15.11.2025\n\n💛 Falls Sie sich nicht rechtzeitig anmelden konnten: Überprüfen Sie regelmäßig die Website. Stornierte Plätze werden automatisch auf der Website angezeigt.\n\n❗ Am Prüfungstag müssen Sie unbedingt Ihren Ausweis mitbringen. Ohne Reisepass ist der Zutritt zur Prüfung nicht gestattet.\n\n❗ Bei verspäteter Zahlung: Die Zahlung muss innerhalb von 24 Stunden nach der Prüfungsbuchung erfolgen, andernfalls wird Ihr Platz storniert.",
       en: "Hello dear followers!\n\nBelow you can find the Goethe exam dates to be held in Urgench in November:\n\n🟢 Goethe-Zertifikat A2 - 14.11.2025\n🟢 Goethe-Zertifikat B1 - 14.11.2025\n🟢 Goethe-Zertifikat B2 - 15.11.2025\n\n💛 If you missed registration: Check the website periodically. Cancelled spots automatically appear on the website.\n\n❗ On exam day, you must bring your ID with you. Without a passport, admission to the exam is not allowed.\n\n❗ In case of delayed payment: Payment must be made within 24 hours of booking the exam, otherwise your spot will be cancelled."
-    }
-  },
-  {
-    id: 2,
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop",
-    date: "15.12.2025",
-    title: {
-      uz: "Yangi Vitamin de nashri",
-      ru: "Новый выпуск журнала Vitamin de",
-      de: "Neue Vitamin de Ausgabe",
-      en: "New Vitamin de Issue"
-    },
-    excerpt: {
-      uz: "Vitamin de – bu Goethe instituti tomonidan yoshlar uchun nashr etiladigan jurnal...",
-      ru: "Vitamin de – это журнал, издаваемый Гёте-Институтом для подростков и молодёжи...",
-      de: "Vitamin de ist eine Zeitschrift des Goethe-Instituts für Jugendliche...",
-      en: "Vitamin de is a magazine published by the Goethe Institute for young people..."
-    },
-    fullText: {
-      uz: "Vitamin de – bu Goethe instituti tomonidan nemis tilini o'rganayotgan yoshlar va o'smirlar uchun nashr etiladigan jurnal. Yangi nashri Germaniyada hayot haqida qiziqarli maqolalar, qiziqarli shaxslar bilan intervyular va nemis tilini o'rganish bo'yicha amaliy maslahatlarni o'z ichiga oladi. Bizning o'quvchilarimiz ushbu jurnalni bepul o'qish va o'qish ko'nikmalarini yaxshilash imkoniyatiga ega.",
-      ru: "Vitamin de – это журнал, издаваемый Гёте-Институтом для подростков и молодёжи, изучающих немецкий язык. Новый выпуск содержит увлекательные статьи о жизни в Германии, интервью с интересными личностями и практические советы по изучению немецкого языка. Наши ученики имеют возможность бесплатно читать этот журнал и улучшать свои навыки чтения.",
-      de: "Vitamin de ist eine Zeitschrift des Goethe-Instituts für Jugendliche und junge Erwachsene, die Deutsch lernen. Die neue Ausgabe enthält spannende Artikel über das Leben in Deutschland, Interviews mit interessanten Persönlichkeiten und praktische Tipps zum Deutschlernen. Unsere Schüler haben die Möglichkeit, diese Zeitschrift kostenlos zu lesen und ihr Leseverständnis zu verbessern.",
-      en: "Vitamin de is a magazine published by the Goethe Institute for teenagers and young adults learning German. The new issue contains exciting articles about life in Germany, interviews with interesting personalities and practical tips for learning German. Our students have the opportunity to read this magazine for free and improve their reading skills."
-    }
-  },
-  {
-    id: 3,
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop",
-    date: "10.12.2025",
-    title: {
-      uz: "Farg'onada malaka oshirish kursi",
-      ru: "Курс повышения квалификации в Фергане",
-      de: "Fortbildungskurs in Fergana",
-      en: "Training Course in Fergana"
-    },
-    excerpt: {
-      uz: "Goethe instituti bilan hamkorlikda tashkil etilgan seminar-trenining oflayn bosqichi...",
-      ru: "Оффлайн-этап семинара-тренинга, организованного совместно с Гёте-Институтом...",
-      de: "Offline-Seminar in Zusammenarbeit mit dem Goethe-Institut...",
-      en: "Offline seminar organized in cooperation with the Goethe Institute..."
-    },
-    fullText: {
-      uz: "Bizning o'qituvchilarimiz Goethe instituti bilan hamkorlikda tashkil etilgan oflayn seminarda qatnashdilar. Kurs zamonaviy o'qitish usullari va nemis tili darslarida raqamli vositalardan foydalanishga bag'ishlandi. Ishtirokchilar zamonaviy pedagogik yondashuvlar haqida qimmatli bilimlar oldilar va boshqa maktablardan kelgan hamkasblari bilan tajriba almashish imkoniyatiga ega bo'ldilar.",
-      ru: "Наши преподаватели приняли участие в офлайн-семинаре, организованном совместно с Гёте-Институтом. Курс был посвящен современным методам преподавания и использованию цифровых средств на уроках немецкого языка. Участники получили ценные знания о современных педагогических подходах и смогли обменяться опытом с коллегами из других школ.",
-      de: "Unsere Lehrer haben am Offline-Seminar teilgenommen, das in Zusammenarbeit mit dem Goethe-Institut organisiert wurde. Der Kurs konzentrierte sich auf moderne Lehrmethoden und den Einsatz digitaler Medien im Deutschunterricht. Die Teilnehmer erhielten wertvolle Einblicke in aktuelle pädagogische Ansätze und konnten ihr Wissen mit Kollegen aus anderen Schulen teilen.",
-      en: "Our teachers participated in an offline seminar organized in cooperation with the Goethe Institute. The course focused on modern teaching methods and the use of digital media in German language classes. Participants gained valuable insights into current pedagogical approaches and were able to share their knowledge with colleagues from other schools."
-    }
-  },
-  {
-    id: 4,
-    image: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=600&h=400&fit=crop",
-    date: "05.12.2025",
-    title: {
-      uz: "Ausbildung o'quvchilarining taassurotlari",
-      ru: "Впечатления учеников Ausbildung",
-      de: "Erlebnisse von Azubis",
-      en: "Experiences of Apprentices"
-    },
-    excerpt: {
-      uz: "Bitiruvchilarimiz Germaniyada hayot va o'qish taassurotlari bilan bo'lishmoqdalar...",
-      ru: "Наши выпускники делятся впечатлениями о жизни и обучении в Германии...",
-      de: "Unsere ehemaligen Schüler berichten über ihre Erfahrungen in Deutschland...",
-      en: "Our graduates share their experiences of life and training in Germany..."
-    },
-    fullText: {
-      uz: "Hurmatli markazimiz tinglovchilari, sizlar uchun 'Erlebnisse von Azubis' nomli uchrashuv tashkil etildi. Hozirda Germaniyada Ausbildung o'tayotgan bitiruvchilarimiz o'z tajribalari bilan bo'lishdilar. Ular Germaniyada hayot, ish va duch kelgan qiyinchiliklar haqida gapirib berdilar. Bu tadbir hozirgi o'quvchilarimiz uchun katta ilhom manbai bo'ldi.",
-      ru: "Уважаемые слушатели нашего центра, для вас была организована встреча под названием 'Erlebnisse von Azubis'. Наши выпускники, которые сейчас проходят Ausbildung в Германии, поделились своим опытом. Они рассказали о жизни в Германии, работе и трудностях, с которыми им пришлось столкнуться. Это мероприятие стало большим вдохновением для наших нынешних учеников.",
-      de: "Liebe Schüler unseres Zentrums, für euch wurde eine Veranstaltung unter dem Namen 'Erlebnisse von Azubis' organisiert. Unsere ehemaligen Schüler, die jetzt eine Ausbildung in Deutschland machen, haben ihre Erfahrungen geteilt. Sie erzählten über das Leben in Deutschland, die Arbeit und die Herausforderungen, die sie bewältigen mussten. Diese Veranstaltung war eine große Inspiration für unsere aktuellen Schüler.",
-      en: "Dear students of our center, an event called 'Erlebnisse von Azubis' was organized for you. Our graduates who are currently doing Ausbildung in Germany shared their experiences. They talked about life in Germany, work and the challenges they had to overcome. This event was a great inspiration for our current students."
     }
   }
 ];
@@ -153,11 +108,11 @@ export function NewsSection() {
               className="bg-card border border-border overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group"
               onClick={() => setSelectedNews(item)}
             >
-              <div className={`aspect-video overflow-hidden ${item.id === 1 ? 'bg-white' : ''}`}>
+              <div className={`aspect-video overflow-hidden ${item.id === 2 ? 'bg-white' : ''}`}>
                 <img 
                   src={item.image} 
                   alt={item.title[language]}
-                  className={`w-full h-full group-hover:scale-105 transition-transform duration-300 ${item.id === 1 ? 'object-contain p-4' : 'object-cover'}`}
+                  className={`w-full h-full group-hover:scale-105 transition-transform duration-300 ${item.id === 2 ? 'object-contain p-4' : 'object-cover'}`}
                 />
               </div>
               <CardContent className="p-6">

@@ -1,18 +1,45 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { ArrowRight, Globe, Star, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import berlinGate from '@/assets/berlin-brandenburg-gate.jpg';
+import aboutClassroom from '@/assets/about-classroom.jpg';
+import aboutTeachers from '@/assets/about-teachers.jpg';
+import aboutVisaHelp from '@/assets/about-visa-help.jpg';
+import aboutGoethe from '@/assets/about-goethe-standard.jpg';
 
 export function AboutSection() {
   const { t } = useLanguage();
+
+  const whyBerlinerCards = [
+    {
+      image: berlinGate,
+      labelKey: 'about.card.urganchda',
+      alt: 'Urganchda - Berlin Brandenburg Gate'
+    },
+    {
+      image: aboutGoethe,
+      labelKey: 'about.card.global',
+      alt: 'Global Standard - Goethe Institut'
+    },
+    {
+      image: aboutTeachers,
+      labelKey: 'about.card.teachers',
+      alt: 'Experienced Teachers'
+    },
+    {
+      image: aboutVisaHelp,
+      labelKey: 'about.card.help',
+      alt: 'Real Help with Visa'
+    }
+  ];
 
   return (
     <section className="py-20 md:py-32 scroll-mt-24 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6">
         
         {/* HERO: The Vision (Big & Bold) */}
-        <div className="mb-32 md:mb-40">
+        <div className="mb-24 md:mb-32">
           <div className="max-w-5xl">
             <h1 className="text-5xl md:text-7xl lg:text-[120px] font-black tracking-tighter leading-[0.85] mb-12">
               {t('about.hero.line1')} <br />
@@ -24,58 +51,30 @@ export function AboutSection() {
           </div>
         </div>
 
-        {/* STORY SECTION: Image-Text Mix (Asymmetric) */}
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center mb-32 md:mb-40">
-          <div className="relative">
-            <div className="aspect-[3/4] rounded-[40px] bg-muted overflow-hidden shadow-2xl">
-              <img 
-                src={berlinGate} 
-                alt="Berlin Brandenburg Gate" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            {/* Small overlay card */}
-            <div className="absolute -bottom-8 -right-4 md:-bottom-10 md:-right-10 bg-primary text-primary-foreground p-8 md:p-10 rounded-[32px] md:rounded-[40px] shadow-2xl max-w-[280px] md:max-w-xs">
-              <h3 className="text-xl md:text-2xl font-black mb-2 italic">{t('about.overlay.title')}</h3>
-              <p className="font-bold opacity-90 leading-tight text-sm md:text-base">{t('about.overlay.text')}</p>
-            </div>
-          </div>
-
-          <div className="space-y-8 md:space-y-10 pt-16 lg:pt-0">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tighter">{t('about.why.title')}</h2>
-            <div className="space-y-6 md:space-y-8">
-              
-              <div className="group border-b border-border pb-6 md:pb-8">
-                <div className="flex items-center gap-4 mb-3">
-                  <Globe className="text-primary" size={24} />
-                  <h4 className="text-lg md:text-xl font-black uppercase tracking-widest">{t('about.why.global.title')}</h4>
+        {/* WHY BERLINER: 4 Image Cards with Labels */}
+        <div className="mb-32 md:mb-40">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter mb-12 md:mb-16">
+            {t('about.why.title')}
+          </h2>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {whyBerlinerCards.map((card, index) => (
+              <div key={index} className="relative group">
+                <div className="aspect-[3/4] rounded-[32px] md:rounded-[40px] bg-muted overflow-hidden shadow-2xl">
+                  <img 
+                    src={card.image} 
+                    alt={card.alt} 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
-                <p className="text-base md:text-lg text-muted-foreground font-medium">
-                  {t('about.why.global.text')}
-                </p>
-              </div>
-
-              <div className="group border-b border-border pb-6 md:pb-8">
-                <div className="flex items-center gap-4 mb-3">
-                  <Star className="text-primary" size={24} />
-                  <h4 className="text-lg md:text-xl font-black uppercase tracking-widest">{t('about.why.teachers.title')}</h4>
+                {/* Orange Label Overlay */}
+                <div className="absolute -bottom-4 left-4 right-4 md:-bottom-6 md:left-6 md:right-6 bg-primary text-primary-foreground p-4 md:p-6 rounded-[20px] md:rounded-[24px] shadow-2xl">
+                  <h3 className="text-base md:text-lg lg:text-xl font-black italic leading-tight text-center">
+                    {t(card.labelKey)}
+                  </h3>
                 </div>
-                <p className="text-base md:text-lg text-muted-foreground font-medium">
-                  {t('about.why.teachers.text')}
-                </p>
               </div>
-
-              <div className="group border-b border-border pb-6 md:pb-8">
-                <div className="flex items-center gap-4 mb-3">
-                  <ShieldCheck className="text-primary" size={24} />
-                  <h4 className="text-lg md:text-xl font-black uppercase tracking-widest">{t('about.why.help.title')}</h4>
-                </div>
-                <p className="text-base md:text-lg text-muted-foreground font-medium">
-                  {t('about.why.help.text')}
-                </p>
-              </div>
-
-            </div>
+            ))}
           </div>
         </div>
 

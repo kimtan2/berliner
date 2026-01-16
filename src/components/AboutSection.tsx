@@ -10,7 +10,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import berlinGate from '@/assets/berlin-brandenburg-gate.jpg';
-import aboutClassroom from '@/assets/about-classroom.jpg';
+import aboutIntensity from '@/assets/about-intensity.jpg';
 import aboutTeachers from '@/assets/about-teachers.jpg';
 import aboutVisaHelp from '@/assets/about-visa-help.jpg';
 import aboutGoethe from '@/assets/about-goethe-standard.jpg';
@@ -20,10 +20,10 @@ export function AboutSection() {
 
   const whyBerlinerCards = [
     {
-      image: berlinGate,
-      titleKey: 'about.card.urganchda',
-      textKey: 'about.card.urganchda.text',
-      alt: 'Urganchda - Berlin Brandenburg Gate'
+      image: aboutIntensity,
+      titleKey: 'about.card.intensity',
+      textKey: 'about.card.intensity.text',
+      alt: 'Intensive German courses - 5 days a week'
     },
     {
       image: aboutGoethe,

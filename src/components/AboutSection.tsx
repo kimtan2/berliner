@@ -13,7 +13,7 @@ import berlinGate from '@/assets/berlin-brandenburg-gate.jpg';
 import aboutIntensity from '@/assets/about-intensity.jpg';
 import aboutTeachers from '@/assets/about-teachers.jpg';
 import aboutVisaHelp from '@/assets/about-visa-help.jpg';
-import aboutGoethe from '@/assets/about-goethe-standard.jpg';
+import aboutGoethe from '@/assets/about-goethe-classroom.jpg';
 
 export function AboutSection() {
   const { t } = useLanguage();

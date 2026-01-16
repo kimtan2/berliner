@@ -73,12 +73,12 @@ export function AboutSection() {
               align: "start",
               loop: true,
             }}
-            className="w-full"
+            className="w-full overflow-visible"
           >
-            <CarouselContent className="-ml-4 md:-ml-6">
+            <CarouselContent className="-ml-4 md:-ml-6 overflow-visible pb-20 md:pb-24">
               {whyBerlinerCards.map((card, index) => (
-                <CarouselItem key={index} className="pl-4 md:pl-6 basis-[85%] sm:basis-[70%] md:basis-1/2 lg:basis-[45%]">
-                  <div className="relative group pb-12 md:pb-16">
+                <CarouselItem key={index} className="pl-4 md:pl-6 basis-[85%] sm:basis-[70%] md:basis-1/2 lg:basis-[45%] overflow-visible">
+                  <div className="relative group">
                     <div className="aspect-[3/4] rounded-[32px] md:rounded-[40px] bg-muted overflow-hidden shadow-2xl">
                       <img 
                         src={card.image} 
@@ -87,7 +87,7 @@ export function AboutSection() {
                       />
                     </div>
                     {/* Orange Label Overlay - like original */}
-                    <div className="absolute -bottom-4 left-4 right-4 md:-bottom-6 md:left-6 md:right-6 bg-primary text-primary-foreground p-6 md:p-8 rounded-[24px] md:rounded-[32px] shadow-2xl">
+                    <div className="absolute -bottom-10 md:-bottom-12 left-4 right-4 md:left-6 md:right-6 bg-primary text-primary-foreground p-6 md:p-8 rounded-[24px] md:rounded-[32px] shadow-2xl">
                       <h3 className="text-xl md:text-2xl font-black mb-2 italic">
                         {t(card.titleKey)}
                       </h3>

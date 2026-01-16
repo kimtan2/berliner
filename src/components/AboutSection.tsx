@@ -1,7 +1,14 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 import berlinGate from '@/assets/berlin-brandenburg-gate.jpg';
 import aboutClassroom from '@/assets/about-classroom.jpg';
 import aboutTeachers from '@/assets/about-teachers.jpg';
@@ -14,22 +21,26 @@ export function AboutSection() {
   const whyBerlinerCards = [
     {
       image: berlinGate,
-      labelKey: 'about.card.urganchda',
+      titleKey: 'about.card.urganchda',
+      textKey: 'about.card.urganchda.text',
       alt: 'Urganchda - Berlin Brandenburg Gate'
     },
     {
       image: aboutGoethe,
-      labelKey: 'about.card.global',
+      titleKey: 'about.card.global',
+      textKey: 'about.card.global.text',
       alt: 'Global Standard - Goethe Institut'
     },
     {
       image: aboutTeachers,
-      labelKey: 'about.card.teachers',
+      titleKey: 'about.card.teachers',
+      textKey: 'about.card.teachers.text',
       alt: 'Experienced Teachers'
     },
     {
       image: aboutVisaHelp,
-      labelKey: 'about.card.help',
+      titleKey: 'about.card.help',
+      textKey: 'about.card.help.text',
       alt: 'Real Help with Visa'
     }
   ];
@@ -51,31 +62,48 @@ export function AboutSection() {
           </div>
         </div>
 
-        {/* WHY BERLINER: 4 Image Cards with Labels */}
+        {/* WHY BERLINER: Carousel with Image Cards */}
         <div className="mb-32 md:mb-40">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter mb-12 md:mb-16">
             {t('about.why.title')}
           </h2>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {whyBerlinerCards.map((card, index) => (
-              <div key={index} className="relative group">
-                <div className="aspect-[3/4] rounded-[32px] md:rounded-[40px] bg-muted overflow-hidden shadow-2xl">
-                  <img 
-                    src={card.image} 
-                    alt={card.alt} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                {/* Orange Label Overlay */}
-                <div className="absolute -bottom-4 left-4 right-4 md:-bottom-6 md:left-6 md:right-6 bg-primary text-primary-foreground p-4 md:p-6 rounded-[20px] md:rounded-[24px] shadow-2xl">
-                  <h3 className="text-base md:text-lg lg:text-xl font-black italic leading-tight text-center">
-                    {t(card.labelKey)}
-                  </h3>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4 md:-ml-6">
+              {whyBerlinerCards.map((card, index) => (
+                <CarouselItem key={index} className="pl-4 md:pl-6 basis-[85%] sm:basis-[70%] md:basis-1/2 lg:basis-[45%]">
+                  <div className="relative group pb-12 md:pb-16">
+                    <div className="aspect-[3/4] rounded-[32px] md:rounded-[40px] bg-muted overflow-hidden shadow-2xl">
+                      <img 
+                        src={card.image} 
+                        alt={card.alt} 
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    {/* Orange Label Overlay - like original */}
+                    <div className="absolute -bottom-4 left-4 right-4 md:-bottom-6 md:left-6 md:right-6 bg-primary text-primary-foreground p-6 md:p-8 rounded-[24px] md:rounded-[32px] shadow-2xl">
+                      <h3 className="text-xl md:text-2xl font-black mb-2 italic">
+                        {t(card.titleKey)}
+                      </h3>
+                      <p className="font-bold opacity-90 leading-tight text-sm md:text-base">
+                        {t(card.textKey)}
+                      </p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex items-center justify-center gap-4 mt-8 md:mt-12">
+              <CarouselPrevious className="static translate-y-0 h-12 w-12 md:h-14 md:w-14 border-2 border-foreground/20 hover:bg-primary hover:text-primary-foreground hover:border-primary" />
+              <CarouselNext className="static translate-y-0 h-12 w-12 md:h-14 md:w-14 border-2 border-foreground/20 hover:bg-primary hover:text-primary-foreground hover:border-primary" />
+            </div>
+          </Carousel>
         </div>
 
         {/* VALUES: Minimalistic List */}

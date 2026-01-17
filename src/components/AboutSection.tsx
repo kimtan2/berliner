@@ -93,14 +93,23 @@ export function AboutSection() {
                   }`}
                 >
                   <div className="relative group">
-                    <div className={`rounded-[32px] md:rounded-[40px] overflow-hidden shadow-2xl ${'wide' in card && card.wide ? "aspect-[3/4] bg-gradient-to-br from-muted to-muted/80" : "aspect-[3/4] bg-muted"}`}>
+                    <div className={`rounded-[32px] md:rounded-[40px] overflow-hidden shadow-2xl aspect-[3/4] bg-muted`}>
                       {'wide' in card && card.wide ? (
-                        <div className="w-full h-full flex items-center justify-center p-8 md:p-12">
+                        <div className="relative w-full h-full">
+                          {/* Background image - blurred/dimmed */}
                           <img
                             src={card.image}
-                            alt={card.alt}
-                            className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                            alt=""
+                            className="absolute inset-0 w-full h-full object-cover opacity-30 blur-sm"
                           />
+                          {/* Full logo overlay - centered */}
+                          <div className="absolute inset-0 flex items-center justify-center p-6 md:p-10">
+                            <img
+                              src={card.image}
+                              alt={card.alt}
+                              className="max-w-[85%] max-h-[70%] object-contain transition-transform duration-500 group-hover:scale-105"
+                            />
+                          </div>
                         </div>
                       ) : (
                         <img

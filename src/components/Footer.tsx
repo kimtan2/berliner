@@ -104,7 +104,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="h-4 w-4 text-primary" />
-                <span>info@berliner.uz</span>
+                <span>berlineruz@gmail.com</span>
               </li>
             </ul>
           </div>

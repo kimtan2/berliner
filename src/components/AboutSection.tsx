@@ -93,12 +93,22 @@ export function AboutSection() {
                   }`}
                 >
                   <div className="relative group">
-                    <div className={`rounded-[32px] md:rounded-[40px] bg-muted overflow-hidden shadow-2xl ${'wide' in card && card.wide ? "aspect-[5/4]" : "aspect-[3/4]"}`}>
-                      <img
-                        src={card.image}
-                        alt={card.alt}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
+                    <div className={`rounded-[32px] md:rounded-[40px] overflow-hidden shadow-2xl ${'wide' in card && card.wide ? "aspect-[3/4] bg-gradient-to-br from-muted to-muted/80" : "aspect-[3/4] bg-muted"}`}>
+                      {'wide' in card && card.wide ? (
+                        <div className="w-full h-full flex items-center justify-center p-8 md:p-12">
+                          <img
+                            src={card.image}
+                            alt={card.alt}
+                            className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                          />
+                        </div>
+                      ) : (
+                        <img
+                          src={card.image}
+                          alt={card.alt}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      )}
                     </div>
                     {/* Orange Label Overlay - like original */}
                     <div className="absolute -bottom-10 md:-bottom-12 left-4 right-4 md:left-6 md:right-6 bg-primary text-primary-foreground p-6 md:p-8 rounded-[24px] md:rounded-[32px] shadow-2xl">

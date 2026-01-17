@@ -28,7 +28,6 @@ export function AboutSection() {
     },
     {
       image: aboutGoetheStatus,
-      wide: true,
       titleKey: 'about.card.goethe.status',
       textKey: 'about.card.goethe.status.text',
       alt: 'Official Goethe Exam Center Status'
@@ -87,14 +86,10 @@ export function AboutSection() {
               {whyBerlinerCards.map((card, index) => (
                 <CarouselItem
                   key={index}
-                  className={`pl-4 md:pl-6 overflow-visible ${card.wide
-                    ? "basis-[95%] sm:basis-[85%] md:basis-[75%] lg:basis-[65%]"
-                    : "basis-[85%] sm:basis-[70%] md:basis-1/2 lg:basis-[45%]"
-                    }`}
+                  className="pl-4 md:pl-6 overflow-visible basis-[85%] sm:basis-[70%] md:basis-1/2 lg:basis-[45%]"
                 >
                   <div className="relative group">
-                    <div className={`rounded-[32px] md:rounded-[40px] bg-muted overflow-hidden shadow-2xl ${card.wide ? "aspect-video" : "aspect-[3/4]"
-                      }`}>
+                    <div className="rounded-[32px] md:rounded-[40px] bg-muted overflow-hidden shadow-2xl aspect-[3/4]">
                       <img
                         src={card.image}
                         alt={card.alt}

@@ -59,6 +59,8 @@ const translations: Record<Language, Record<string, string>> = {
     'about.why.title': 'Nima uchun Berliner?',
     'about.card.intensity': 'Intensiver Unterricht',
     'about.card.intensity.text': 'Höchste Qualitätsstandards und 5 Tage die Woche intensives Lernen für maximalen Erfolg.',
+    'about.card.goethe.status': 'Offizieller Prüfungsort',
+    'about.card.goethe.status.text': 'Vom Goethe-Institut verliehener Status als offizieller Prüfungsort unserer Sprachschule.',
     'about.card.global': 'Globaler Standard',
     'about.card.global.text': 'Unser Unterricht basiert auf internationalen Goethe-Institut Methoden. Bei uns gibt es Ergebnisse.',
     'about.card.teachers': 'Erfahrene Lehrer',
@@ -245,6 +247,8 @@ const translations: Record<Language, Record<string, string>> = {
     'about.why.title': 'Nima uchun Berliner?',
     'about.card.intensity': 'Интенсивное обучение',
     'about.card.intensity.text': 'Высочайшие стандарты качества и интенсивные занятия 5 дней в неделю для максимального успеха.',
+    'about.card.goethe.status': 'Официальный экзаменационный центр',
+    'about.card.goethe.status.text': 'Статус официального места проведения экзаменов, присвоенный нашей языковой школе Гёте-Институтом.',
     'about.card.global': 'Мировой стандарт',
     'about.card.global.text': 'Наши занятия проводятся по международным методикам Goethe-Institut. У нас есть результаты.',
     'about.card.teachers': 'Опытные преподаватели',
@@ -431,6 +435,8 @@ const translations: Record<Language, Record<string, string>> = {
     'about.why.title': 'Nima uchun Berliner?',
     'about.card.intensity': 'Intensiv Darslar',
     'about.card.intensity.text': 'Eng yuqori sifat standartlari va haftasiga 5 kun intensiv ta\'lim – maksimal muvaffaqiyat uchun.',
+    'about.card.goethe.status': 'Rasmiy imtihon markazi',
+    'about.card.goethe.status.text': 'Goethe-Institut tomonidan til maktabimizga berilgan rasmiy imtihon o\'tkazish joyi maqomi.',
     'about.card.global': 'Global Standart',
     'about.card.global.text': 'Darslarimiz xalqaro Goethe-Institut metodikasi asosida olib boriladi. Bizda natija bor.',
     'about.card.teachers': 'Tajribali Ustozlar',
@@ -617,6 +623,8 @@ const translations: Record<Language, Record<string, string>> = {
     'about.why.title': 'Nima uchun Berliner?',
     'about.card.intensity': 'Intensive Courses',
     'about.card.intensity.text': 'Highest quality standards and 5 days a week intensive learning for maximum success.',
+    'about.card.goethe.status': 'Official Exam Center',
+    'about.card.goethe.status.text': 'Official exam center status awarded to our language school by the Goethe-Institut.',
     'about.card.global': 'Global Standard',
     'about.card.global.text': 'Our teaching is based on international Goethe Institute methods. With us, there are results.',
     'about.card.teachers': 'Experienced Teachers',
@@ -764,12 +772,12 @@ function detectBrowserLanguage(): Language {
   }
 
   const browserLang = navigator.language.toLowerCase();
-  
+
   if (browserLang.startsWith('uz')) return 'uz';
   if (browserLang.startsWith('ru')) return 'ru';
   if (browserLang.startsWith('de')) return 'de';
   if (browserLang.startsWith('en')) return 'en';
-  
+
   return 'uz'; // Default to Uzbek
 }
 

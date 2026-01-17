@@ -14,6 +14,7 @@ import aboutIntensity from '@/assets/about-intensity.jpg';
 import aboutTeachers from '@/assets/about-teachers.jpg';
 import aboutVisaHelp from '@/assets/about-visa-help.jpg';
 import aboutGoethe from '@/assets/about-goethe-classroom.jpg';
+import aboutGoetheStatus from '@/assets/goethe-exam-status.jpg';
 
 export function AboutSection() {
   const { t } = useLanguage();
@@ -24,6 +25,13 @@ export function AboutSection() {
       titleKey: 'about.card.intensity',
       textKey: 'about.card.intensity.text',
       alt: 'Intensive German courses - 5 days a week'
+    },
+    {
+      image: aboutGoetheStatus,
+      wide: true,
+      titleKey: 'about.card.goethe.status',
+      textKey: 'about.card.goethe.status.text',
+      alt: 'Official Goethe Exam Center Status'
     },
     {
       image: aboutGoethe,
@@ -48,7 +56,7 @@ export function AboutSection() {
   return (
     <section className="py-20 md:py-32 scroll-mt-24 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6">
-        
+
         {/* HERO: The Vision (Big & Bold) */}
         <div className="mb-24 md:mb-32">
           <div className="max-w-5xl">
@@ -67,7 +75,7 @@ export function AboutSection() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter mb-12 md:mb-16">
             {t('about.why.title')}
           </h2>
-          
+
           <Carousel
             opts={{
               align: "start",
@@ -77,12 +85,19 @@ export function AboutSection() {
           >
             <CarouselContent className="-ml-4 md:-ml-6 overflow-visible pb-20 md:pb-24">
               {whyBerlinerCards.map((card, index) => (
-                <CarouselItem key={index} className="pl-4 md:pl-6 basis-[85%] sm:basis-[70%] md:basis-1/2 lg:basis-[45%] overflow-visible">
+                <CarouselItem
+                  key={index}
+                  className={`pl-4 md:pl-6 overflow-visible ${card.wide
+                    ? "basis-[95%] sm:basis-[85%] md:basis-[75%] lg:basis-[65%]"
+                    : "basis-[85%] sm:basis-[70%] md:basis-1/2 lg:basis-[45%]"
+                    }`}
+                >
                   <div className="relative group">
-                    <div className="aspect-[3/4] rounded-[32px] md:rounded-[40px] bg-muted overflow-hidden shadow-2xl">
-                      <img 
-                        src={card.image} 
-                        alt={card.alt} 
+                    <div className={`rounded-[32px] md:rounded-[40px] bg-muted overflow-hidden shadow-2xl ${card.wide ? "aspect-video" : "aspect-[3/4]"
+                      }`}>
+                      <img
+                        src={card.image}
+                        alt={card.alt}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
@@ -132,7 +147,7 @@ export function AboutSection() {
         {/* ATMOSPHERE: Full-Width Callout */}
         <div className="bg-foreground text-background rounded-[40px] md:rounded-[60px] p-8 md:p-16 lg:p-32 mb-20 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent)] pointer-events-none" />
-          
+
           <div className="relative z-10 max-w-4xl">
             <h2 className="text-3xl md:text-4xl lg:text-6xl font-black tracking-tighter leading-tight mb-8 md:mb-10">
               {t('about.callout.line1')} <br />
@@ -146,7 +161,7 @@ export function AboutSection() {
                 </p>
               </div>
               <div className="flex items-center">
-                <Button 
+                <Button
                   asChild
                   size="lg"
                   className="rounded-full px-8 md:px-10 py-5 md:py-6 font-black text-lg md:text-xl shadow-2xl hover:scale-105 transition-transform"

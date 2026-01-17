@@ -1,3 +1,4 @@
+import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ArrowRight, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -9,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 import berlinGate from '@/assets/berlin-brandenburg-gate.jpg';
 import aboutIntensity from '@/assets/about-intensity.jpg';
 import aboutTeachers from '@/assets/about-teachers.jpg';
@@ -16,8 +18,26 @@ import aboutVisaHelp from '@/assets/about-visa-help.jpg';
 import aboutGoethe from '@/assets/about-goethe-classroom.jpg';
 import aboutGoetheStatus from '@/assets/goethe-exam-status.jpg';
 
+import { cn } from '@/lib/utils';
+
 export function AboutSection() {
   const { t } = useLanguage();
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: false })
+  );
+
+  const [api, setApi] = React.useState<any>();
+  const [current, setCurrent] = React.useState(0);
+
+  React.useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   const whyBerlinerCards = [
     {
@@ -28,7 +48,7 @@ export function AboutSection() {
     },
     {
       image: aboutGoetheStatus,
-      wide: true,
+      isLogo: true,
       titleKey: 'about.card.goethe.status',
       textKey: 'about.card.goethe.status.text',
       alt: 'Official Goethe Exam Center Status'
@@ -77,24 +97,26 @@ export function AboutSection() {
           </h2>
 
           <Carousel
+            setApi={setApi}
             opts={{
               align: "start",
               loop: true,
             }}
+            plugins={[plugin.current]}
             className="w-full overflow-visible"
           >
             <CarouselContent className="-ml-4 md:-ml-6 overflow-visible pb-20 md:pb-24">
               {whyBerlinerCards.map((card, index) => (
                 <CarouselItem
                   key={index}
-                  className={`pl-4 md:pl-6 overflow-visible ${'wide' in card && card.wide
-                    ? "basis-[95%] sm:basis-[85%] md:basis-[75%] lg:basis-[65%]"
-                    : "basis-[85%] sm:basis-[70%] md:basis-1/2 lg:basis-[45%]"
-                  }`}
+                  className={`pl-4 md:pl-6 overflow-visible ${'isLogo' in card && card.isLogo
+                    ? "basis-[90%] sm:basis-[85%] md:basis-[80%] lg:basis-[70%]"
+                    : "basis-[75%] sm:basis-[60%] md:basis-[45%] lg:basis-[35%]"
+                    }`}
                 >
                   <div className="relative group">
-                    <div className={`rounded-[32px] md:rounded-[40px] overflow-hidden shadow-2xl aspect-[3/4] bg-muted`}>
-                      {'wide' in card && card.wide ? (
+                    <div className={`rounded-[32px] md:rounded-[40px] overflow-hidden shadow-2xl ${'isLogo' in card && card.isLogo ? 'aspect-[3/2]' : 'aspect-[3/4]'} bg-muted`}>
+                      {'isLogo' in card && card.isLogo ? (
                         <div className="relative w-full h-full">
                           {/* Background image - blurred/dimmed */}
                           <img
@@ -132,9 +154,20 @@ export function AboutSection() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="flex items-center justify-center gap-4 mt-8 md:mt-12">
-              <CarouselPrevious className="static translate-y-0 h-12 w-12 md:h-14 md:w-14 border-2 border-foreground/20 hover:bg-primary hover:text-primary-foreground hover:border-primary" />
-              <CarouselNext className="static translate-y-0 h-12 w-12 md:h-14 md:w-14 border-2 border-foreground/20 hover:bg-primary hover:text-primary-foreground hover:border-primary" />
+            <div className="flex items-center justify-center gap-3 mt-8 md:mt-12">
+              {whyBerlinerCards.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => api?.scrollTo(index)}
+                  className={cn(
+                    "h-3 rounded-full transition-all duration-300",
+                    current === index
+                      ? "w-10 bg-primary"
+                      : "w-3 bg-foreground/20 hover:bg-foreground/40"
+                  )}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
             </div>
           </Carousel>
         </div>

@@ -93,7 +93,7 @@ export function AboutSection() {
                   }`}
                 >
                   <div className="relative group">
-                    <div className={`rounded-[32px] md:rounded-[40px] bg-muted overflow-hidden shadow-2xl ${'wide' in card && card.wide ? "aspect-[16/9]" : "aspect-[3/4]"}`}>
+                    <div className={`rounded-[32px] md:rounded-[40px] bg-muted overflow-hidden shadow-2xl ${'wide' in card && card.wide ? "aspect-[5/4]" : "aspect-[3/4]"}`}>
                       <img
                         src={card.image}
                         alt={card.alt}

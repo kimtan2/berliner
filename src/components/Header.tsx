@@ -17,6 +17,23 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const searchablePages = [
+    { href: "/", label: t("nav.home"), keywords: ["home", "главная", "bosh sahifa", "startseite"] },
+    { href: "/#courses", label: t("nav.courses"), keywords: ["courses", "kurse", "kurslar", "курсы", "german", "deutsch", "nemis"] },
+    { href: "/studium", label: t("nav.studium"), keywords: ["studium", "study", "university", "учеба", "ta'lim", "высшее образование"] },
+    { href: "/about", label: t("nav.about"), keywords: ["about", "über uns", "biz haqimizda", "о нас"] },
+    { href: "/contact", label: t("nav.contact"), keywords: ["contact", "kontakt", "aloqa", "контакт"] },
+    { href: "/ausbildung", label: "Ausbildung", keywords: ["ausbildung", "training", "kasb", "обучение"] },
+  ];
+
+  const filteredResults = searchQuery.trim()
+    ? searchablePages.filter(page =>
+        page.label.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        page.keywords.some(kw => kw.toLowerCase().includes(searchQuery.toLowerCase()))
+      )
+    : [];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,10 +90,47 @@ export function Header() {
                   <input
                     type="text"
                     placeholder="Suche..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full px-4 py-2.5 text-sm border border-border/50 rounded-lg bg-background/50 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
                     autoFocus
                   />
                 </div>
+                {searchQuery.trim() && (
+                  <div className="px-2 pb-2">
+                    {filteredResults.length > 0 ? (
+                      filteredResults.map((result) => (
+                        result.href.startsWith("/#") ? (
+                          <a
+                            key={result.href}
+                            href={result.href}
+                            className="block px-3 py-2 text-sm rounded-md hover:bg-primary/10 text-foreground transition-colors"
+                            onClick={() => {
+                              setSearchQuery("");
+                              setIsSearchOpen(false);
+                            }}
+                          >
+                            {result.label}
+                          </a>
+                        ) : (
+                          <Link
+                            key={result.href}
+                            to={result.href}
+                            className="block px-3 py-2 text-sm rounded-md hover:bg-primary/10 text-foreground transition-colors"
+                            onClick={() => {
+                              setSearchQuery("");
+                              setIsSearchOpen(false);
+                            }}
+                          >
+                            {result.label}
+                          </Link>
+                        )
+                      ))
+                    ) : (
+                      <p className="px-3 py-2 text-sm text-muted-foreground">Keine Ergebnisse</p>
+                    )}
+                  </div>
+                )}
               </DropdownMenuContent>
             </DropdownMenu>
 

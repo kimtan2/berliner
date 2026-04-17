@@ -16,7 +16,7 @@ export function Footer() {
           <h3 className="text-2xl font-bold mb-6">{t('footer.social')}</h3>
           <div className="flex justify-center gap-6">
             <a
-              href="https://t.me/sprachschule_berliner"
+              href="https://t.me/berliner_uz"
               target="_blank"
               rel="noopener noreferrer"
               className="w-14 h-14 rounded-full bg-[#0088cc] flex items-center justify-center hover:scale-110 transition-transform"

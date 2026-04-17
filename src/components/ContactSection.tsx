@@ -80,7 +80,7 @@ export function ContactSection({ course }: ContactSectionProps) {
 
           {/* Telegram Card */}
           <a
-            href="https://t.me/sprachschule_berliner"
+            href="https://t.me/berliner_uz"
             target="_blank"
             rel="noopener noreferrer"
             className="block"

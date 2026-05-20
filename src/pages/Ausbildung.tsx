@@ -3,6 +3,7 @@ import { Footer } from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle2, ArrowRight, GraduationCap, Briefcase, FileText, Plane } from 'lucide-react';
+import { Seo } from '@/components/Seo';
 
 const Ausbildung = () => {
     const { t } = useLanguage();
@@ -32,6 +33,11 @@ const Ausbildung = () => {
 
     return (
         <div className="min-h-screen bg-background">
+            <Seo
+                title="Ausbildung in Deutschland — Berliner Sprachschule"
+                description="Ihr Weg zur Berufsausbildung in Deutschland: Sprachvorbereitung, Bewerbung, Visum und Begleitung mit der Berliner Sprachschule in Urganch."
+                path="/ausbildung"
+            />
             <Header />
             <main className="pt-32 pb-20">
                 <div className="container mx-auto px-4">

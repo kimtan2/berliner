@@ -21,6 +21,7 @@ import {
 import { Link } from 'react-router-dom';
 import berlinImage from '@/assets/berlin-brandenburg-gate.jpg';
 import skylineImage from '@/assets/berlin-skyline.jpg';
+import { Seo } from '@/components/Seo';
 
 const Studium = () => {
   const { t } = useLanguage();
@@ -62,6 +63,11 @@ const Studium = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Studium in Deutschland — Berliner Sprachschule"
+        description="Studieren in Deutschland: Beratung zu Hochschulen, TestDaF-Vorbereitung, Bewerbung und Visum — mit der Berliner Sprachschule in Urganch."
+        path="/studium"
+      />
       <Header />
       <main>
         {/* Hero Section */}

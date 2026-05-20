@@ -47,13 +47,6 @@ export default {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
   			},
-  			flag: {
-  				red: 'hsl(var(--flag-red))',
-  				gold: 'hsl(var(--flag-gold))',
-  				black: 'hsl(var(--flag-black))'
-  			},
-  			paper: 'hsl(var(--paper))',
-  			ink: 'hsl(var(--ink))',
   			sidebar: {
   				DEFAULT: 'hsl(var(--sidebar-background))',
   				foreground: 'hsl(var(--sidebar-foreground))',
@@ -103,7 +96,7 @@ export default {
   		},
   		fontFamily: {
   			sans: [
-  				'Work Sans',
+  				'Roboto',
   				'ui-sans-serif',
   				'system-ui',
   				'-apple-system',
@@ -115,7 +108,7 @@ export default {
   				'sans-serif'
   			],
   			serif: [
-  				'Instrument Serif',
+  				'Libre Caslon Text',
   				'ui-serif',
   				'Georgia',
   				'Cambria',
@@ -124,6 +117,7 @@ export default {
   				'serif'
   			],
   			mono: [
+  				'Roboto Mono',
   				'ui-monospace',
   				'SFMono-Regular',
   				'Menlo',

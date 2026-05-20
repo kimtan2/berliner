@@ -137,13 +137,13 @@ export function NewsSection() {
   const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
 
   return (
-    <section id="news" className="py-20 md:py-28 bg-white">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="flex items-end justify-between border-b-2 border-ink pb-4 mb-12">
-          <h2 className="font-serif text-5xl md:text-6xl text-ink leading-none">
+    <section id="news" className="py-20 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             {t('news.title')}
           </h2>
-          <p className="hidden md:block text-[10px] font-bold uppercase tracking-[0.3em] opacity-50">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             {t('news.subtitle')}
           </p>
         </div>

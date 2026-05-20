@@ -1,0 +1,11 @@
+# Berliner Sprachschule
+
+> Deutsche Sprachschule in Urganch, Usbekistan — Kurse von A1 bis C2, TestDaF-Vorbereitung sowie Beratung zu Ausbildung und Studium in Deutschland.
+
+## Pages
+
+- [Startseite](/): Übersicht der Schule, Kurse, Testimonials und Neuigkeiten.
+- [Über uns](/about): Geschichte, Methodik und Team der Berliner Sprachschule.
+- [Ausbildung](/ausbildung): Programm für die berufliche Ausbildung in Deutschland.
+- [Studium](/studium): Wege zum Studium an deutschen Hochschulen.
+- [Kontakt](/contact): Kontaktformular, Telefon, E-Mail und Standort.

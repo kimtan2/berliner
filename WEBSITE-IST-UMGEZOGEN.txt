@@ -1,0 +1,21 @@
+WEBSITE IST UMGEZOGEN
+=====================
+
+Seit 17.11.2026 kommt berliner.uz NICHT mehr aus diesem Repo / Lovable.
+
+Die aktuelle Website liegt hier:
+  Repo:    https://github.com/kimtan2/berlineruz
+  Branch:  redesign
+  Technik: Astro (statische Seite)
+  Hosting: Vercel, Projekt "berlineruz"
+  Domain:  https://www.berliner.uz  (berliner.uz leitet auf www weiter)
+
+Aenderungen in Lovable oder in diesem Repo haben keine Wirkung mehr auf berliner.uz.
+
+Sicherung der alten Lovable-Seite:
+  Branch backup/lovable-live-2026-11-17  (Stand, der bis 17.11.2026 live war, Commit d4ae507)
+  Branch backup/main-2026-11-17          (Stand von main am 17.11.2026)
+
+Zurueck zur alten Seite (falls noetig):
+  Cloudflare -> berliner.uz -> DNS: beide A-Eintraege (berliner.uz, www)
+  wieder auf 185.158.133.1 setzen (heute: 216.198.79.1 = Vercel).
